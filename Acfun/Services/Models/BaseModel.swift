@@ -8,17 +8,21 @@
 
 import Foundation
 import ObjectMapper
-class BaseModel:Mappable {
+class BaseModel<T>:Mappable {
     
     required init?(map: Map) {
         //DO NOTHING
     }
     
+    
     var code: Int?
     
+    var data :[T]?
+        
     var message: String?
     
     func mapping(map: Map) {
+        data <- map["data"]
         code <- map["code"]
         message <- map["message"]
     }

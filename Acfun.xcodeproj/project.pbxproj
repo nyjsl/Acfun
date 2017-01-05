@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		263C2B241E1D1CFE00885B47 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263C2B231E1D1CFE00885B47 /* BaseModel.swift */; };
-		263C2B261E1D1E6E00885B47 /* ChildChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263C2B251E1D1E6E00885B47 /* ChildChannel.swift */; };
 		263C2B281E1D1FCB00885B47 /* BaseChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263C2B271E1D1FCB00885B47 /* BaseChannel.swift */; };
 		26A912211E1BC4FD002F2F8D /* APIAcfun.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A912201E1BC4FD002F2F8D /* APIAcfun.swift */; };
 		26A912231E1BC535002F2F8D /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A912221E1BC535002F2F8D /* TargetType.swift */; };
@@ -23,12 +22,12 @@
 		26E12E971E1A33E400F39F1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26E12E951E1A33E400F39F1C /* Main.storyboard */; };
 		26E12E991E1A33E400F39F1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26E12E981E1A33E400F39F1C /* Assets.xcassets */; };
 		26E12E9C1E1A33E400F39F1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26E12E9A1E1A33E400F39F1C /* LaunchScreen.storyboard */; };
+		26EAF7791E1E85D600C09C85 /* BaseRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EAF7781E1E85D600C09C85 /* BaseRegion.swift */; };
 		3776F22901639E951D1D3554 /* Pods_Acfun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DB9599AD0BFCE6042B8A5AA /* Pods_Acfun.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		263C2B231E1D1CFE00885B47 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
-		263C2B251E1D1E6E00885B47 /* ChildChannel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildChannel.swift; sourceTree = "<group>"; };
 		263C2B271E1D1FCB00885B47 /* BaseChannel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseChannel.swift; sourceTree = "<group>"; };
 		26A912201E1BC4FD002F2F8D /* APIAcfun.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIAcfun.swift; sourceTree = "<group>"; };
 		26A912221E1BC535002F2F8D /* TargetType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TargetType.swift; path = ../TargetType.swift; sourceTree = "<group>"; };
@@ -45,6 +44,7 @@
 		26E12E981E1A33E400F39F1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26E12E9B1E1A33E400F39F1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		26E12E9D1E1A33E400F39F1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26EAF7781E1E85D600C09C85 /* BaseRegion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRegion.swift; sourceTree = "<group>"; };
 		2DB9599AD0BFCE6042B8A5AA /* Pods_Acfun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Acfun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58698AF5B7BC1AB039499F79 /* Pods-Acfun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Acfun.release.xcconfig"; path = "Pods/Target Support Files/Pods-Acfun/Pods-Acfun.release.xcconfig"; sourceTree = "<group>"; };
 		B5584CB2499978D8B2FD2DD8 /* Pods-Acfun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Acfun.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Acfun/Pods-Acfun.debug.xcconfig"; sourceTree = "<group>"; };
@@ -86,7 +86,7 @@
 			children = (
 				263C2B231E1D1CFE00885B47 /* BaseModel.swift */,
 				263C2B271E1D1FCB00885B47 /* BaseChannel.swift */,
-				263C2B251E1D1E6E00885B47 /* ChildChannel.swift */,
+				26EAF7781E1E85D600C09C85 /* BaseRegion.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -276,11 +276,11 @@
 				26B4463F1E1A4BFC00347154 /* Mapper.md in Sources */,
 				26B446431E1A4CA700347154 /* Rx.md in Sources */,
 				26A912251E1BC635002F2F8D /* EndPoint.swift in Sources */,
-				263C2B261E1D1E6E00885B47 /* ChildChannel.swift in Sources */,
 				26B446451E1A4CD400347154 /* YYWeb.md in Sources */,
 				26A912231E1BC535002F2F8D /* TargetType.swift in Sources */,
 				26A912211E1BC4FD002F2F8D /* APIAcfun.swift in Sources */,
 				26E12E921E1A33E400F39F1C /* AppDelegate.swift in Sources */,
+				26EAF7791E1E85D600C09C85 /* BaseRegion.swift in Sources */,
 				26B446411E1A4C6F00347154 /* Alamofire.md in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
