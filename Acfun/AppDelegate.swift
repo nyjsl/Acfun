@@ -15,6 +15,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        
+        let indexVC = IndexViewController(nibName: "IndexViewController", bundle: nil)
+        let channelVC = IndexViewController(nibName: "ChannelViewController", bundle: nil)
+        let watchVC = IndexViewController(nibName: "WatchViewController", bundle: nil)
+        let mineVC = IndexViewController(nibName: "MineViewController", bundle: nil)
+        
+        indexVC.title = "首页"
+        channelVC.title = "频道"
+        watchVC.title = "关注"
+        mineVC.title = "我的"
+        
+        indexVC.tabBarItem = UITabBarItem(title: "首页", image: #imageLiteral(resourceName: "tab_bar_icon_one_normal"), selectedImage: #imageLiteral(resourceName: "tab_bar_icon_one_selected"))
+        
+        channelVC.tabBarItem = UITabBarItem(title: "频道", image: #imageLiteral(resourceName: "tab_bar_icon_two_normal"), selectedImage: #imageLiteral(resourceName: "tab_bar_icon_two_selected"))
+        
+        watchVC.tabBarItem = UITabBarItem(title: "关注", image: #imageLiteral(resourceName: "tab_bar_icon_three_normal"), selectedImage: #imageLiteral(resourceName: "tab_bar_icon_three_selected"))
+        
+        mineVC.tabBarItem = UITabBarItem(title: "我的", image: #imageLiteral(resourceName: "tab_bar_icon_four_normal"), selectedImage: #imageLiteral(resourceName: "tab_bar_icon_four_selected"))
+        
+        let mainTabBar = UITabBarController()
+        
+        mainTabBar.tabBar.tintColor = UIColor(colorLiteralRed: 193/255, green: 60/255, blue: 73/255, alpha: 1)
+        
+        mainTabBar.viewControllers = [indexVC,channelVC,watchVC,mineVC]
+        window?.rootViewController = mainTabBar
+        
         return true
     }
 

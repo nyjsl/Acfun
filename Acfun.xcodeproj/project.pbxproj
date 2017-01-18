@@ -37,6 +37,14 @@
 		26C948431E2CDCD40040AC57 /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C9482D1E2CDCD40040AC57 /* UIScrollView+MJExtension.m */; };
 		26C948441E2CDCD40040AC57 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C9482F1E2CDCD40040AC57 /* UIScrollView+MJRefresh.m */; };
 		26C948451E2CDCD40040AC57 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C948311E2CDCD40040AC57 /* UIView+MJExtension.m */; };
+		26D57B471E2FA9F600B65EEF /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D57B451E2FA9F600B65EEF /* IndexViewController.swift */; };
+		26D57B481E2FA9F600B65EEF /* IndexViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26D57B461E2FA9F600B65EEF /* IndexViewController.xib */; };
+		26D57B4B1E2FAA1B00B65EEF /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D57B491E2FAA1B00B65EEF /* MineViewController.swift */; };
+		26D57B4C1E2FAA1B00B65EEF /* MineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26D57B4A1E2FAA1B00B65EEF /* MineViewController.xib */; };
+		26D57B4F1E2FAA3F00B65EEF /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D57B4D1E2FAA3F00B65EEF /* ChannelViewController.swift */; };
+		26D57B501E2FAA3F00B65EEF /* ChannelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26D57B4E1E2FAA3F00B65EEF /* ChannelViewController.xib */; };
+		26D57B531E2FAA6100B65EEF /* WatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D57B511E2FAA6100B65EEF /* WatchViewController.swift */; };
+		26D57B541E2FAA6100B65EEF /* WatchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26D57B521E2FAA6100B65EEF /* WatchViewController.xib */; };
 		26E12E921E1A33E400F39F1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E12E911E1A33E400F39F1C /* AppDelegate.swift */; };
 		26E12E941E1A33E400F39F1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E12E931E1A33E400F39F1C /* ViewController.swift */; };
 		26E12E971E1A33E400F39F1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26E12E951E1A33E400F39F1C /* Main.storyboard */; };
@@ -98,6 +106,14 @@
 		26C948301E2CDCD40040AC57 /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		26C948311E2CDCD40040AC57 /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
 		26C948481E2CE1A20040AC57 /* Acfun-bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Acfun-bridging-header.h"; sourceTree = "<group>"; };
+		26D57B451E2FA9F600B65EEF /* IndexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
+		26D57B461E2FA9F600B65EEF /* IndexViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IndexViewController.xib; sourceTree = "<group>"; };
+		26D57B491E2FAA1B00B65EEF /* MineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
+		26D57B4A1E2FAA1B00B65EEF /* MineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineViewController.xib; sourceTree = "<group>"; };
+		26D57B4D1E2FAA3F00B65EEF /* ChannelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
+		26D57B4E1E2FAA3F00B65EEF /* ChannelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChannelViewController.xib; sourceTree = "<group>"; };
+		26D57B511E2FAA6100B65EEF /* WatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchViewController.swift; sourceTree = "<group>"; };
+		26D57B521E2FAA6100B65EEF /* WatchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WatchViewController.xib; sourceTree = "<group>"; };
 		26E12E8E1E1A33E400F39F1C /* Acfun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Acfun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26E12E911E1A33E400F39F1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26E12E931E1A33E400F39F1C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +161,10 @@
 		26A9121E1E1BC4DB002F2F8D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				26D57B411E2FA7E600B65EEF /* channel */,
+				26D57B421E2FA7E600B65EEF /* index */,
+				26D57B431E2FA7E600B65EEF /* mine */,
+				26D57B441E2FA7E600B65EEF /* watch */,
 				263C2B231E1D1CFE00885B47 /* BaseModel.swift */,
 				263C2B271E1D1FCB00885B47 /* BaseChannel.swift */,
 				26EAF7781E1E85D600C09C85 /* BaseRegion.swift */,
@@ -257,6 +277,74 @@
 			path = Header;
 			sourceTree = "<group>";
 		};
+		26D57B3D1E2FA7D100B65EEF /* channel */ = {
+			isa = PBXGroup;
+			children = (
+				26D57B4D1E2FAA3F00B65EEF /* ChannelViewController.swift */,
+				26D57B4E1E2FAA3F00B65EEF /* ChannelViewController.xib */,
+			);
+			name = channel;
+			path = Services/channel;
+			sourceTree = "<group>";
+		};
+		26D57B3E1E2FA7D100B65EEF /* index */ = {
+			isa = PBXGroup;
+			children = (
+				26D57B451E2FA9F600B65EEF /* IndexViewController.swift */,
+				26D57B461E2FA9F600B65EEF /* IndexViewController.xib */,
+			);
+			name = index;
+			path = Services/index;
+			sourceTree = "<group>";
+		};
+		26D57B3F1E2FA7D100B65EEF /* mine */ = {
+			isa = PBXGroup;
+			children = (
+				26D57B491E2FAA1B00B65EEF /* MineViewController.swift */,
+				26D57B4A1E2FAA1B00B65EEF /* MineViewController.xib */,
+			);
+			name = mine;
+			path = Services/mine;
+			sourceTree = "<group>";
+		};
+		26D57B401E2FA7D100B65EEF /* watch */ = {
+			isa = PBXGroup;
+			children = (
+				26D57B511E2FAA6100B65EEF /* WatchViewController.swift */,
+				26D57B521E2FAA6100B65EEF /* WatchViewController.xib */,
+			);
+			name = watch;
+			path = Services/watch;
+			sourceTree = "<group>";
+		};
+		26D57B411E2FA7E600B65EEF /* channel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = channel;
+			sourceTree = "<group>";
+		};
+		26D57B421E2FA7E600B65EEF /* index */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = index;
+			sourceTree = "<group>";
+		};
+		26D57B431E2FA7E600B65EEF /* mine */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = mine;
+			sourceTree = "<group>";
+		};
+		26D57B441E2FA7E600B65EEF /* watch */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = watch;
+			sourceTree = "<group>";
+		};
 		26E12E851E1A33E400F39F1C = {
 			isa = PBXGroup;
 			children = (
@@ -282,6 +370,10 @@
 		26E12E901E1A33E400F39F1C /* Acfun */ = {
 			isa = PBXGroup;
 			children = (
+				26D57B3D1E2FA7D100B65EEF /* channel */,
+				26D57B3E1E2FA7D100B65EEF /* index */,
+				26D57B3F1E2FA7D100B65EEF /* mine */,
+				26D57B401E2FA7D100B65EEF /* watch */,
 				26C948031E2CDCD40040AC57 /* MJRefresh */,
 				26A9121D1E1BC4DB002F2F8D /* Services */,
 				26E12E911E1A33E400F39F1C /* AppDelegate.swift */,
@@ -366,10 +458,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26D57B481E2FA9F600B65EEF /* IndexViewController.xib in Resources */,
 				26E12E9C1E1A33E400F39F1C /* LaunchScreen.storyboard in Resources */,
 				26E12E991E1A33E400F39F1C /* Assets.xcassets in Resources */,
 				26C948401E2CDCD40040AC57 /* MJRefresh.bundle in Resources */,
 				26E12E971E1A33E400F39F1C /* Main.storyboard in Resources */,
+				26D57B4C1E2FAA1B00B65EEF /* MineViewController.xib in Resources */,
+				26D57B541E2FAA6100B65EEF /* WatchViewController.xib in Resources */,
+				26D57B501E2FAA3F00B65EEF /* ChannelViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +534,7 @@
 				26C948451E2CDCD40040AC57 /* UIView+MJExtension.m in Sources */,
 				26C948331E2CDCD40040AC57 /* MJRefreshBackFooter.m in Sources */,
 				26C948371E2CDCD40040AC57 /* MJRefreshAutoGifFooter.m in Sources */,
+				26D57B531E2FAA6100B65EEF /* WatchViewController.swift in Sources */,
 				26C9483D1E2CDCD40040AC57 /* MJRefreshGifHeader.m in Sources */,
 				263C2B241E1D1CFE00885B47 /* BaseModel.swift in Sources */,
 				26B4463F1E1A4BFC00347154 /* Mapper.md in Sources */,
@@ -447,7 +544,9 @@
 				26C948341E2CDCD40040AC57 /* MJRefreshComponent.m in Sources */,
 				26B446451E1A4CD400347154 /* YYWeb.md in Sources */,
 				26C948421E2CDCD40040AC57 /* NSBundle+MJRefresh.m in Sources */,
+				26D57B4F1E2FAA3F00B65EEF /* ChannelViewController.swift in Sources */,
 				26C9483E1E2CDCD40040AC57 /* MJRefreshNormalHeader.m in Sources */,
+				26D57B471E2FA9F600B65EEF /* IndexViewController.swift in Sources */,
 				26C9483B1E2CDCD40040AC57 /* MJRefreshBackNormalFooter.m in Sources */,
 				26C948321E2CDCD40040AC57 /* MJRefreshAutoFooter.m in Sources */,
 				26A912231E1BC535002F2F8D /* TargetType.swift in Sources */,
@@ -456,6 +555,7 @@
 				26C9483F1E2CDCD40040AC57 /* MJRefreshStateHeader.m in Sources */,
 				26C948431E2CDCD40040AC57 /* UIScrollView+MJExtension.m in Sources */,
 				26C9483C1E2CDCD40040AC57 /* MJRefreshBackStateFooter.m in Sources */,
+				26D57B4B1E2FAA1B00B65EEF /* MineViewController.swift in Sources */,
 				26C948411E2CDCD40040AC57 /* MJRefreshConst.m in Sources */,
 				26E12E921E1A33E400F39F1C /* AppDelegate.swift in Sources */,
 				26EAF7791E1E85D600C09C85 /* BaseRegion.swift in Sources */,
