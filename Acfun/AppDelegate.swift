@@ -16,9 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        initConstants(application)
+
         window?.rootViewController = initMainTabController()
         
-        initConstants(application)
         
         return true
     }
@@ -37,8 +38,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let indexNavVC = UINavigationController(rootViewController: indexVC)
         indexNavVC.tabBarItem = UITabBarItem(title: "首页", image: #imageLiteral(resourceName: "tab_bar_icon_one_normal"), selectedImage: #imageLiteral(resourceName: "tab_bar_icon_one_selected"))
         
-        indexNavVC.navigationBar.barTintColor = Constants.PRIMARY_COLOR
+        
         Constants.NAVIGATIONBAR_FRAME = indexNavVC.navigationBar.frame
+        indexNavVC.setNavigationBarHidden(true, animated: false)
+        
+        if let indexNavBar =  IndexNavBar.generate(){
+            let x = Constants.NAVIGATIONBAR_FRAME.origin.x
+            let y = Constants.STATUSBAR_FRAME.origin.y
+            let width = Constants.NAVIGATIONBAR_FRAME.size.width
+            let height = Constants.NAVIGATIONBAR_FRAME.size.height +  Constants.STATUSBAR_FRAME.size.height
+            indexNavBar.frame = CGRect(x: x, y: y, width: width, height: height)
+            indexNavBar.backgroundColor = Constants.PRIMARY_COLOR
+            indexNavBar.title.font = UIFont(name: "AcFunSymbol-Bold1.ttf", size: 20)
+            indexNavBar.title.textColor = UIColor.white
+            indexNavBar.title.text = "Acfun"
+            indexNavVC.view.addSubview(indexNavBar)
+        }
+        
         
         let channeNavlVc = UINavigationController(rootViewController: channelVC)
         channeNavlVc.tabBarItem = UITabBarItem(title: "频道", image: #imageLiteral(resourceName: "tab_bar_icon_two_normal"), selectedImage: #imageLiteral(resourceName: "tab_bar_icon_two_selected"))

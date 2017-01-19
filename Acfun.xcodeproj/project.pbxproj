@@ -53,6 +53,8 @@
 		26E185211E30F49D005A54F0 /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E185201E30F49D005A54F0 /* Contants.swift */; };
 		26E185251E30F738005A54F0 /* AcFunSymbol-Bold1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26E185231E30F738005A54F0 /* AcFunSymbol-Bold1.ttf */; };
 		26E185261E30F738005A54F0 /* AcFunSymbol-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26E185241E30F738005A54F0 /* AcFunSymbol-Regular.ttf */; };
+		26E185281E31008A005A54F0 /* IndexNavBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26E185271E31008A005A54F0 /* IndexNavBar.xib */; };
+		26E1852A1E3100AF005A54F0 /* IndexNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E185291E3100AF005A54F0 /* IndexNavBar.swift */; };
 		26EAF7791E1E85D600C09C85 /* BaseRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EAF7781E1E85D600C09C85 /* BaseRegion.swift */; };
 		3776F22901639E951D1D3554 /* Pods_Acfun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DB9599AD0BFCE6042B8A5AA /* Pods_Acfun.framework */; };
 /* End PBXBuildFile section */
@@ -127,6 +129,8 @@
 		26E185201E30F49D005A54F0 /* Contants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
 		26E185231E30F738005A54F0 /* AcFunSymbol-Bold1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AcFunSymbol-Bold1.ttf"; sourceTree = "<group>"; };
 		26E185241E30F738005A54F0 /* AcFunSymbol-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AcFunSymbol-Regular.ttf"; sourceTree = "<group>"; };
+		26E185271E31008A005A54F0 /* IndexNavBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IndexNavBar.xib; sourceTree = "<group>"; };
+		26E185291E3100AF005A54F0 /* IndexNavBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexNavBar.swift; sourceTree = "<group>"; };
 		26EAF7781E1E85D600C09C85 /* BaseRegion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRegion.swift; sourceTree = "<group>"; };
 		2DB9599AD0BFCE6042B8A5AA /* Pods_Acfun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Acfun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58698AF5B7BC1AB039499F79 /* Pods-Acfun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Acfun.release.xcconfig"; path = "Pods/Target Support Files/Pods-Acfun/Pods-Acfun.release.xcconfig"; sourceTree = "<group>"; };
@@ -298,6 +302,8 @@
 			children = (
 				26D57B451E2FA9F600B65EEF /* IndexViewController.swift */,
 				26D57B461E2FA9F600B65EEF /* IndexViewController.xib */,
+				26E185271E31008A005A54F0 /* IndexNavBar.xib */,
+				26E185291E3100AF005A54F0 /* IndexNavBar.swift */,
 			);
 			name = index;
 			path = Services/index;
@@ -482,6 +488,7 @@
 				26C948401E2CDCD40040AC57 /* MJRefresh.bundle in Resources */,
 				26E12E971E1A33E400F39F1C /* Main.storyboard in Resources */,
 				26D57B4C1E2FAA1B00B65EEF /* MineViewController.xib in Resources */,
+				26E185281E31008A005A54F0 /* IndexNavBar.xib in Resources */,
 				26D57B541E2FAA6100B65EEF /* WatchViewController.xib in Resources */,
 				26D57B501E2FAA3F00B65EEF /* ChannelViewController.xib in Resources */,
 				26E185251E30F738005A54F0 /* AcFunSymbol-Bold1.ttf in Resources */,
@@ -563,6 +570,7 @@
 				26A912251E1BC635002F2F8D /* EndPoint.swift in Sources */,
 				26C948341E2CDCD40040AC57 /* MJRefreshComponent.m in Sources */,
 				26B446451E1A4CD400347154 /* YYWeb.md in Sources */,
+				26E1852A1E3100AF005A54F0 /* IndexNavBar.swift in Sources */,
 				26C948421E2CDCD40040AC57 /* NSBundle+MJRefresh.m in Sources */,
 				26D57B4F1E2FAA3F00B65EEF /* ChannelViewController.swift in Sources */,
 				26C9483E1E2CDCD40040AC57 /* MJRefreshNormalHeader.m in Sources */,
