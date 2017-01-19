@@ -16,7 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        window?.rootViewController = initMainTabController()
         
+        initConstants(application)
+        
+        return true
+    }
+    
+    func initMainTabController() -> UITabBarController{
         let indexVC = IndexViewController(nibName: "IndexViewController", bundle: nil)
         let channelVC = IndexViewController(nibName: "ChannelViewController", bundle: nil)
         let watchVC = IndexViewController(nibName: "WatchViewController", bundle: nil)
@@ -27,22 +34,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         watchVC.title = "关注"
         mineVC.title = "我的"
         
-        indexVC.tabBarItem = UITabBarItem(title: "首页", image: #imageLiteral(resourceName: "tab_bar_icon_one_normal"), selectedImage: #imageLiteral(resourceName: "tab_bar_icon_one_selected"))
+        let indexNavVC = UINavigationController(rootViewController: indexVC)
+        indexNavVC.tabBarItem = UITabBarItem(title: "首页", image: #imageLiteral(resourceName: "tab_bar_icon_one_normal"), selectedImage: #imageLiteral(resourceName: "tab_bar_icon_one_selected"))
         
-        channelVC.tabBarItem = UITabBarItem(title: "频道", image: #imageLiteral(resourceName: "tab_bar_icon_two_normal"), selectedImage: #imageLiteral(resourceName: "tab_bar_icon_two_selected"))
+        indexNavVC.navigationBar.barTintColor = Constants.PRIMARY_COLOR
+        Constants.NAVIGATIONBAR_FRAME = indexNavVC.navigationBar.frame
         
-        watchVC.tabBarItem = UITabBarItem(title: "关注", image: #imageLiteral(resourceName: "tab_bar_icon_three_normal"), selectedImage: #imageLiteral(resourceName: "tab_bar_icon_three_selected"))
+        let channeNavlVc = UINavigationController(rootViewController: channelVC)
+        channeNavlVc.tabBarItem = UITabBarItem(title: "频道", image: #imageLiteral(resourceName: "tab_bar_icon_two_normal"), selectedImage: #imageLiteral(resourceName: "tab_bar_icon_two_selected"))
         
-        mineVC.tabBarItem = UITabBarItem(title: "我的", image: #imageLiteral(resourceName: "tab_bar_icon_four_normal"), selectedImage: #imageLiteral(resourceName: "tab_bar_icon_four_selected"))
+        let watchNavVC = UINavigationController(rootViewController: watchVC)
+        
+        watchNavVC.tabBarItem = UITabBarItem(title: "关注", image: #imageLiteral(resourceName: "tab_bar_icon_three_normal"), selectedImage: #imageLiteral(resourceName: "tab_bar_icon_three_selected"))
+        
+        let mineNavVC = UINavigationController(rootViewController: mineVC)
+        
+        
+        mineNavVC.tabBarItem = UITabBarItem(title: "我的", image: #imageLiteral(resourceName: "tab_bar_icon_four_normal"), selectedImage: #imageLiteral(resourceName: "tab_bar_icon_four_selected"))
         
         let mainTabBar = UITabBarController()
         
-        mainTabBar.tabBar.tintColor = UIColor(colorLiteralRed: 193/255, green: 60/255, blue: 73/255, alpha: 1)
+        mainTabBar.tabBar.tintColor = Constants.PRIMARY_COLOR
         
-        mainTabBar.viewControllers = [indexVC,channelVC,watchVC,mineVC]
-        window?.rootViewController = mainTabBar
-        
-        return true
+        mainTabBar.viewControllers = [indexNavVC,channeNavlVc,watchNavVC,mineNavVC]
+        return mainTabBar
+    }
+    
+    
+    func initConstants(_ application: UIApplication){
+        Constants.STATUSBAR_FRAME = application.statusBarFrame 
+        Constants.SCREEN_FRAME = UIScreen.main.bounds
+//        Constants.SCREEN_FRAME_WITHOUT_STATUSBAR = UIScreen.main.applicationFrame //(0.0, 20.0, 414.0, 716.0)
+
+    
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
