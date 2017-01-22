@@ -10,7 +10,7 @@ import Foundation
 
 struct Constants {
     
-    static let PRIMARY_COLOR =  UIColor(colorLiteralRed: 193/255, green: 60/255, blue: 73/255, alpha: 1)
+    static let PRIMARY_COLOR =  UIColor(colorLiteralRed: 253/255, green: 76/255, blue: 91/255, alpha: 1)
     
 //    static var SCREEN_FRAME_WITHOUT_STATUSBAR:CGRect!
     

@@ -45,6 +45,7 @@
 		26D57B501E2FAA3F00B65EEF /* ChannelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26D57B4E1E2FAA3F00B65EEF /* ChannelViewController.xib */; };
 		26D57B531E2FAA6100B65EEF /* WatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D57B511E2FAA6100B65EEF /* WatchViewController.swift */; };
 		26D57B541E2FAA6100B65EEF /* WatchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26D57B521E2FAA6100B65EEF /* WatchViewController.xib */; };
+		26DE9AD01E34DF49006DB0B3 /* UIButtonExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DE9ACF1E34DF49006DB0B3 /* UIButtonExt.swift */; };
 		26E12E921E1A33E400F39F1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E12E911E1A33E400F39F1C /* AppDelegate.swift */; };
 		26E12E941E1A33E400F39F1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E12E931E1A33E400F39F1C /* ViewController.swift */; };
 		26E12E971E1A33E400F39F1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26E12E951E1A33E400F39F1C /* Main.storyboard */; };
@@ -119,6 +120,7 @@
 		26D57B4E1E2FAA3F00B65EEF /* ChannelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChannelViewController.xib; sourceTree = "<group>"; };
 		26D57B511E2FAA6100B65EEF /* WatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchViewController.swift; sourceTree = "<group>"; };
 		26D57B521E2FAA6100B65EEF /* WatchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WatchViewController.xib; sourceTree = "<group>"; };
+		26DE9ACF1E34DF49006DB0B3 /* UIButtonExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExt.swift; sourceTree = "<group>"; };
 		26E12E8E1E1A33E400F39F1C /* Acfun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Acfun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26E12E911E1A33E400F39F1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26E12E931E1A33E400F39F1C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -357,6 +359,13 @@
 			path = watch;
 			sourceTree = "<group>";
 		};
+		26DE9ACE1E34DF25006DB0B3 /* exts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = exts;
+			sourceTree = "<group>";
+		};
 		26E12E851E1A33E400F39F1C = {
 			isa = PBXGroup;
 			children = (
@@ -382,6 +391,7 @@
 		26E12E901E1A33E400F39F1C /* Acfun */ = {
 			isa = PBXGroup;
 			children = (
+				26DE9ACE1E34DF25006DB0B3 /* exts */,
 				26E185221E30F738005A54F0 /* Resources */,
 				26D57B3D1E2FA7D100B65EEF /* channel */,
 				26D57B3E1E2FA7D100B65EEF /* index */,
@@ -397,6 +407,7 @@
 				26E12E9D1E1A33E400F39F1C /* Info.plist */,
 				26C948481E2CE1A20040AC57 /* Acfun-bridging-header.h */,
 				26E185201E30F49D005A54F0 /* Contants.swift */,
+				26DE9ACF1E34DF49006DB0B3 /* UIButtonExt.swift */,
 			);
 			path = Acfun;
 			sourceTree = "<group>";
@@ -569,6 +580,7 @@
 				26C948351E2CDCD40040AC57 /* MJRefreshFooter.m in Sources */,
 				26A912251E1BC635002F2F8D /* EndPoint.swift in Sources */,
 				26C948341E2CDCD40040AC57 /* MJRefreshComponent.m in Sources */,
+				26DE9AD01E34DF49006DB0B3 /* UIButtonExt.swift in Sources */,
 				26B446451E1A4CD400347154 /* YYWeb.md in Sources */,
 				26E1852A1E3100AF005A54F0 /* IndexNavBar.swift in Sources */,
 				26C948421E2CDCD40040AC57 /* NSBundle+MJRefresh.m in Sources */,
