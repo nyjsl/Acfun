@@ -26,7 +26,6 @@ class IndexNavBar: UIView {
     @IBOutlet weak var navSearchBtn: UIButton!
     
     
-    
       override func awakeFromNib() {
         super.awakeFromNib()
         customInit()
@@ -56,11 +55,47 @@ class IndexNavBar: UIView {
         self.backgroundImg.image = #imageLiteral(resourceName: "ac_navigationbar")
     }
     
+    var indexNavBarButtonDeleget: IndexNavBarButtonsDelegate?{
+        didSet{
+             setButtuonActionDelegate()
+        }
+    }
+    
     private func setNavItemButtons(){
         self.navSearchBtn.changeButtonImageWithTintColor(image: #imageLiteral(resourceName: "icon_3dtouch_search"))
         self.navHistoryBtn.changeButtonImageWithTintColor(image: #imageLiteral(resourceName: "nav_history"))
         self.navDownloadBtn.changeButtonImageWithTintColor(image: #imageLiteral(resourceName: "nav_download"))
         self.navGameCenterBtn.changeButtonImageWithTintColor(image:#imageLiteral(resourceName: "ac_ipad_nav_bar_game"))
         self.acfunLogBtn.changeButtonImageWithTintColor(image: #imageLiteral(resourceName: "image_logo"))
+        setButtuonActionDelegate()
     }
+    
+    private func setButtuonActionDelegate(){
+        if let deleget = indexNavBarButtonDeleget{
+            //由于协议设置的是可选方法,所以这里判断方法被实现后才设置到selector中
+            if let _ = deleget.downloadAction{
+                self.navDownloadBtn.addTarget(deleget, action:#selector(deleget.downloadAction), for: .touchUpInside)
+            }
+            if let _ = deleget.gameCenterAction{
+                self.navGameCenterBtn.addTarget(deleget, action: #selector(deleget.gameCenterAction), for: .touchUpInside)
+            }
+            
+            if let _ = deleget.historyAction{
+                self.navHistoryBtn.addTarget(deleget, action: #selector(deleget.historyAction), for: .touchUpInside)
+            }
+            
+            if let _ =  deleget.searchAction{
+                self.navSearchBtn.addTarget(deleget, action: #selector(deleget.searchAction), for: .touchUpInside)
+            }
+            
+        }
+    }
+    
+}
+
+@objc protocol IndexNavBarButtonsDelegate {
+    @objc optional func gameCenterAction()
+    @objc optional func historyAction()
+    @objc optional func downloadAction()
+    @objc optional func searchAction()
 }

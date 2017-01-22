@@ -40,12 +40,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         Constants.NAVIGATIONBAR_FRAME = indexNavVC.navigationBar.frame
-        indexNavVC.setNavigationBarHidden(true, animated: false)
-        
-        if let indexNavBar =  IndexNavBar.generate(){
-            indexNavVC.view.addSubview(indexNavBar)
-        }
-        
         
         let channeNavlVc = UINavigationController(rootViewController: channelVC)
         channeNavlVc.tabBarItem = UITabBarItem(title: "频道", image: #imageLiteral(resourceName: "tab_bar_icon_two_normal"), selectedImage: #imageLiteral(resourceName: "tab_bar_icon_two_selected"))
