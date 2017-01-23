@@ -10,12 +10,16 @@ import UIKit
 //首页
 class IndexViewController: UIViewController {
 
+    
+    @IBOutlet weak var indexCollectionView: UICollectionView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
         initIndexNavbar()
         
+        initCollectionView()
 
     }
     //设置Index页的NavigationBar
@@ -28,6 +32,17 @@ class IndexViewController: UIViewController {
             }
         }
     }
+    
+    private func initCollectionView(){
+        let nib = UINib(nibName:  Constants.CellIdentifier.IndexCollectionViewCellArticleIndentifier, bundle: nil)
+        indexCollectionView.register(nib, forCellWithReuseIdentifier: Constants.CellIdentifier.IndexCollectionViewCellArticleIndentifier)
+        indexCollectionView.delegate = self
+        indexCollectionView.dataSource = self
+        
+        indexCollectionView.mj_header = MJRefreshNormalHeader(refreshingBlock: { 
+            print("refreshingBlock")
+        })
+    }
 
 
     override var preferredStatusBarStyle: UIStatusBarStyle{
@@ -36,6 +51,29 @@ class IndexViewController: UIViewController {
 
 
 }
+
+extension IndexViewController: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.CellIdentifier.IndexCollectionViewCellArticleIndentifier, for: indexPath)
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: Constants.SCREEN_FRAME.width, height: 100)
+    }
+    
+}
+
+
 
 extension IndexViewController:IndexNavBarButtonsDelegate{
     func gameCenterAction() {

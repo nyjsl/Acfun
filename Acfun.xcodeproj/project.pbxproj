@@ -57,6 +57,8 @@
 		26E185281E31008A005A54F0 /* IndexNavBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26E185271E31008A005A54F0 /* IndexNavBar.xib */; };
 		26E1852A1E3100AF005A54F0 /* IndexNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E185291E3100AF005A54F0 /* IndexNavBar.swift */; };
 		26EAF7791E1E85D600C09C85 /* BaseRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EAF7781E1E85D600C09C85 /* BaseRegion.swift */; };
+		26EBFE8E1E362CF50016F701 /* IndexCollectionViewCellArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EBFE8C1E362CF50016F701 /* IndexCollectionViewCellArticle.swift */; };
+		26EBFE8F1E362CF50016F701 /* IndexCollectionViewCellArticle.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26EBFE8D1E362CF50016F701 /* IndexCollectionViewCellArticle.xib */; };
 		3776F22901639E951D1D3554 /* Pods_Acfun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DB9599AD0BFCE6042B8A5AA /* Pods_Acfun.framework */; };
 /* End PBXBuildFile section */
 
@@ -134,6 +136,8 @@
 		26E185271E31008A005A54F0 /* IndexNavBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IndexNavBar.xib; sourceTree = "<group>"; };
 		26E185291E3100AF005A54F0 /* IndexNavBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexNavBar.swift; sourceTree = "<group>"; };
 		26EAF7781E1E85D600C09C85 /* BaseRegion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRegion.swift; sourceTree = "<group>"; };
+		26EBFE8C1E362CF50016F701 /* IndexCollectionViewCellArticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexCollectionViewCellArticle.swift; sourceTree = "<group>"; };
+		26EBFE8D1E362CF50016F701 /* IndexCollectionViewCellArticle.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IndexCollectionViewCellArticle.xib; sourceTree = "<group>"; };
 		2DB9599AD0BFCE6042B8A5AA /* Pods_Acfun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Acfun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58698AF5B7BC1AB039499F79 /* Pods-Acfun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Acfun.release.xcconfig"; path = "Pods/Target Support Files/Pods-Acfun/Pods-Acfun.release.xcconfig"; sourceTree = "<group>"; };
 		B5584CB2499978D8B2FD2DD8 /* Pods-Acfun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Acfun.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Acfun/Pods-Acfun.debug.xcconfig"; sourceTree = "<group>"; };
@@ -306,6 +310,8 @@
 				26D57B461E2FA9F600B65EEF /* IndexViewController.xib */,
 				26E185271E31008A005A54F0 /* IndexNavBar.xib */,
 				26E185291E3100AF005A54F0 /* IndexNavBar.swift */,
+				26EBFE8C1E362CF50016F701 /* IndexCollectionViewCellArticle.swift */,
+				26EBFE8D1E362CF50016F701 /* IndexCollectionViewCellArticle.xib */,
 			);
 			name = index;
 			path = Services/index;
@@ -502,6 +508,7 @@
 				26E185281E31008A005A54F0 /* IndexNavBar.xib in Resources */,
 				26D57B541E2FAA6100B65EEF /* WatchViewController.xib in Resources */,
 				26D57B501E2FAA3F00B65EEF /* ChannelViewController.xib in Resources */,
+				26EBFE8F1E362CF50016F701 /* IndexCollectionViewCellArticle.xib in Resources */,
 				26E185251E30F738005A54F0 /* AcFunSymbol-Bold1.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -571,6 +578,7 @@
 				26C9483A1E2CDCD40040AC57 /* MJRefreshBackGifFooter.m in Sources */,
 				26C948451E2CDCD40040AC57 /* UIView+MJExtension.m in Sources */,
 				26C948331E2CDCD40040AC57 /* MJRefreshBackFooter.m in Sources */,
+				26EBFE8E1E362CF50016F701 /* IndexCollectionViewCellArticle.swift in Sources */,
 				26C948371E2CDCD40040AC57 /* MJRefreshAutoGifFooter.m in Sources */,
 				26D57B531E2FAA6100B65EEF /* WatchViewController.swift in Sources */,
 				26C9483D1E2CDCD40040AC57 /* MJRefreshGifHeader.m in Sources */,
