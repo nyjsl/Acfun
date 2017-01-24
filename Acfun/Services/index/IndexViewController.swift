@@ -42,9 +42,15 @@ class IndexViewController: UIViewController {
         indexCollectionView.mj_header = MJRefreshNormalHeader(refreshingBlock: { 
             print("refreshingBlock")
         })
+        
+        let diyHeader = IndexDIYHeader(refreshingBlock: {
+            print("refreshingBlock")
+        })
+        indexCollectionView.mj_header = diyHeader
+        
     }
-
-
+    
+        
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return .lightContent
     }

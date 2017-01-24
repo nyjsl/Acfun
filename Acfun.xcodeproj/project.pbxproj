@@ -59,6 +59,7 @@
 		26EAF7791E1E85D600C09C85 /* BaseRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EAF7781E1E85D600C09C85 /* BaseRegion.swift */; };
 		26EBFE8E1E362CF50016F701 /* IndexCollectionViewCellArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EBFE8C1E362CF50016F701 /* IndexCollectionViewCellArticle.swift */; };
 		26EBFE8F1E362CF50016F701 /* IndexCollectionViewCellArticle.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26EBFE8D1E362CF50016F701 /* IndexCollectionViewCellArticle.xib */; };
+		26FAADB01E378A1000096BC5 /* IndexDIYHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FAADAF1E378A1000096BC5 /* IndexDIYHeader.swift */; };
 		3776F22901639E951D1D3554 /* Pods_Acfun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DB9599AD0BFCE6042B8A5AA /* Pods_Acfun.framework */; };
 /* End PBXBuildFile section */
 
@@ -122,7 +123,7 @@
 		26D57B4E1E2FAA3F00B65EEF /* ChannelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChannelViewController.xib; sourceTree = "<group>"; };
 		26D57B511E2FAA6100B65EEF /* WatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchViewController.swift; sourceTree = "<group>"; };
 		26D57B521E2FAA6100B65EEF /* WatchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WatchViewController.xib; sourceTree = "<group>"; };
-		26DE9ACF1E34DF49006DB0B3 /* UIButtonExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExt.swift; sourceTree = "<group>"; };
+		26DE9ACF1E34DF49006DB0B3 /* UIButtonExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIButtonExt.swift; path = ../UIButtonExt.swift; sourceTree = "<group>"; };
 		26E12E8E1E1A33E400F39F1C /* Acfun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Acfun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26E12E911E1A33E400F39F1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26E12E931E1A33E400F39F1C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +139,7 @@
 		26EAF7781E1E85D600C09C85 /* BaseRegion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRegion.swift; sourceTree = "<group>"; };
 		26EBFE8C1E362CF50016F701 /* IndexCollectionViewCellArticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexCollectionViewCellArticle.swift; sourceTree = "<group>"; };
 		26EBFE8D1E362CF50016F701 /* IndexCollectionViewCellArticle.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IndexCollectionViewCellArticle.xib; sourceTree = "<group>"; };
+		26FAADAF1E378A1000096BC5 /* IndexDIYHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexDIYHeader.swift; sourceTree = "<group>"; };
 		2DB9599AD0BFCE6042B8A5AA /* Pods_Acfun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Acfun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58698AF5B7BC1AB039499F79 /* Pods-Acfun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Acfun.release.xcconfig"; path = "Pods/Target Support Files/Pods-Acfun/Pods-Acfun.release.xcconfig"; sourceTree = "<group>"; };
 		B5584CB2499978D8B2FD2DD8 /* Pods-Acfun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Acfun.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Acfun/Pods-Acfun.debug.xcconfig"; sourceTree = "<group>"; };
@@ -307,6 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				26D57B451E2FA9F600B65EEF /* IndexViewController.swift */,
+				26FAADAF1E378A1000096BC5 /* IndexDIYHeader.swift */,
 				26D57B461E2FA9F600B65EEF /* IndexViewController.xib */,
 				26E185271E31008A005A54F0 /* IndexNavBar.xib */,
 				26E185291E3100AF005A54F0 /* IndexNavBar.swift */,
@@ -368,6 +371,7 @@
 		26DE9ACE1E34DF25006DB0B3 /* exts */ = {
 			isa = PBXGroup;
 			children = (
+				26DE9ACF1E34DF49006DB0B3 /* UIButtonExt.swift */,
 			);
 			path = exts;
 			sourceTree = "<group>";
@@ -413,7 +417,6 @@
 				26E12E9D1E1A33E400F39F1C /* Info.plist */,
 				26C948481E2CE1A20040AC57 /* Acfun-bridging-header.h */,
 				26E185201E30F49D005A54F0 /* Contants.swift */,
-				26DE9ACF1E34DF49006DB0B3 /* UIButtonExt.swift */,
 			);
 			path = Acfun;
 			sourceTree = "<group>";
@@ -606,6 +609,7 @@
 				26D57B4B1E2FAA1B00B65EEF /* MineViewController.swift in Sources */,
 				26C948411E2CDCD40040AC57 /* MJRefreshConst.m in Sources */,
 				26E12E921E1A33E400F39F1C /* AppDelegate.swift in Sources */,
+				26FAADB01E378A1000096BC5 /* IndexDIYHeader.swift in Sources */,
 				26EAF7791E1E85D600C09C85 /* BaseRegion.swift in Sources */,
 				26B446411E1A4C6F00347154 /* Alamofire.md in Sources */,
 			);
