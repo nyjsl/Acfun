@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		262A54401E379A420035C9CD /* IndexPageHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262A543E1E379A420035C9CD /* IndexPageHeader.swift */; };
+		262A54411E379A420035C9CD /* IndexPageHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 262A543F1E379A420035C9CD /* IndexPageHeader.xib */; };
 		263C2B241E1D1CFE00885B47 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263C2B231E1D1CFE00885B47 /* BaseModel.swift */; };
 		263C2B281E1D1FCB00885B47 /* BaseChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263C2B271E1D1FCB00885B47 /* BaseChannel.swift */; };
 		26A912211E1BC4FD002F2F8D /* APIAcfun.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A912201E1BC4FD002F2F8D /* APIAcfun.swift */; };
@@ -64,6 +66,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		262A543E1E379A420035C9CD /* IndexPageHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexPageHeader.swift; sourceTree = "<group>"; };
+		262A543F1E379A420035C9CD /* IndexPageHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IndexPageHeader.xib; sourceTree = "<group>"; };
 		263C2B231E1D1CFE00885B47 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		263C2B271E1D1FCB00885B47 /* BaseChannel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseChannel.swift; sourceTree = "<group>"; };
 		26A912201E1BC4FD002F2F8D /* APIAcfun.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIAcfun.swift; sourceTree = "<group>"; };
@@ -315,6 +319,8 @@
 				26E185291E3100AF005A54F0 /* IndexNavBar.swift */,
 				26EBFE8C1E362CF50016F701 /* IndexCollectionViewCellArticle.swift */,
 				26EBFE8D1E362CF50016F701 /* IndexCollectionViewCellArticle.xib */,
+				262A543E1E379A420035C9CD /* IndexPageHeader.swift */,
+				262A543F1E379A420035C9CD /* IndexPageHeader.xib */,
 			);
 			name = index;
 			path = Services/index;
@@ -512,6 +518,7 @@
 				26D57B541E2FAA6100B65EEF /* WatchViewController.xib in Resources */,
 				26D57B501E2FAA3F00B65EEF /* ChannelViewController.xib in Resources */,
 				26EBFE8F1E362CF50016F701 /* IndexCollectionViewCellArticle.xib in Resources */,
+				262A54411E379A420035C9CD /* IndexPageHeader.xib in Resources */,
 				26E185251E30F738005A54F0 /* AcFunSymbol-Bold1.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -607,6 +614,7 @@
 				26C948431E2CDCD40040AC57 /* UIScrollView+MJExtension.m in Sources */,
 				26C9483C1E2CDCD40040AC57 /* MJRefreshBackStateFooter.m in Sources */,
 				26D57B4B1E2FAA1B00B65EEF /* MineViewController.swift in Sources */,
+				262A54401E379A420035C9CD /* IndexPageHeader.swift in Sources */,
 				26C948411E2CDCD40040AC57 /* MJRefreshConst.m in Sources */,
 				26E12E921E1A33E400F39F1C /* AppDelegate.swift in Sources */,
 				26FAADB01E378A1000096BC5 /* IndexDIYHeader.swift in Sources */,
