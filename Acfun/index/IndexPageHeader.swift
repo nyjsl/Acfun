@@ -41,7 +41,6 @@ class IndexPageHeader: UICollectionReusableView {
     private func preparePageControl(){
         pageControl.setValue(#imageLiteral(resourceName: "page_contrl_point"), forKey: "pageImage")
         pageControl.setValue(#imageLiteral(resourceName: "page_contrl_current_point"), forKey: "currentPageImage")
-        pageControl
         pageControl.currentPage = 0
         updatePageControl()
     }
