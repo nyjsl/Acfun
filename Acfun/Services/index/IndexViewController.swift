@@ -7,21 +7,49 @@
 //
 
 import UIKit
+import RxSwift
 //首页
 class IndexViewController: UIViewController {
 
     
     @IBOutlet weak var indexCollectionView: UICollectionView!
     
+    /*
+     获取到的首页数据
+     */
+    var datas:[Region] = []{
+        didSet{
+            updateCollectionView()
+        }
+    }
+    
+    var diyHeader: IndexDIYHeader?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         initIndexNavbar()
-        
         initCollectionView()
-
+        getDatas()
     }
+    
+    /*
+     获取首页数据
+     */
+    private func getDatas(){
+        
+        let observable:Observable<DataResponse<BaseRegion>> = RxProvider<APIAcfun>.requestObject(target: .regions)
+        let _ = observable.subscribe(onNext: { (dataResponse) in
+            if let datas = dataResponse.result.value?.data{
+                self.datas = datas
+                //TOOD
+            }
+        }, onError: nil ,onCompleted: {
+            self.diyHeader?.endRefreshing()
+        }, onDisposed: nil)        //test channels
+    }
+    
+    
     //设置Index页的NavigationBar
     private func initIndexNavbar(){
         if let indexNavVC = self.navigationController{
@@ -39,19 +67,20 @@ class IndexViewController: UIViewController {
         indexCollectionView.delegate = self
         indexCollectionView.dataSource = self
         
-        indexCollectionView.mj_header = MJRefreshNormalHeader(refreshingBlock: { 
-            print("refreshingBlock")
-        })
-        
-        let diyHeader = IndexDIYHeader(refreshingBlock: {
-            print("refreshingBlock")
+       
+        diyHeader = IndexDIYHeader(refreshingBlock: {
+             self.getDatas()
         })
         indexCollectionView.mj_header = diyHeader
         
         let nibPageControlHeader = UINib(nibName: Constants.HeaderIndentifier.IndexPageHeaderIndentifier, bundle: nil)
         indexCollectionView.register(nibPageControlHeader, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: Constants.HeaderIndentifier.IndexPageHeaderIndentifier)
+
         
-        
+    }
+    
+    private func updateCollectionView(){
+        indexCollectionView.reloadData()
     }
     
         
@@ -65,15 +94,34 @@ class IndexViewController: UIViewController {
 extension IndexViewController: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        
+        let region = datas[section]
+        
+        switch region.type!.id! {
+        case Constants.IndexCellType.carousels.rawValue: //轮播
+            return 0
+        default:
+            return region.contentCount!
+        }
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+        return datas.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.CellIdentifier.IndexCollectionViewCellArticleIndentifier, for: indexPath)
+        
+        var cell: UICollectionViewCell
+        let region = datas[indexPath.row]
+        
+        switch region.type!.id! {
+        case Constants.IndexCellType.carousels.rawValue:
+           cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.CellIdentifier.IndexCollectionViewCellArticleIndentifier, for: indexPath)
+            
+        default:
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.CellIdentifier.IndexCollectionViewCellArticleIndentifier, for: indexPath)
+        }
+        
         return cell
     }
     
@@ -83,20 +131,41 @@ extension IndexViewController: UICollectionViewDelegate,UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
-        let resuableView: UICollectionReusableView
+        
+        var resuableView: UICollectionReusableView
         
         switch kind {
         case UICollectionElementKindSectionHeader:
-            resuableView =  collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: Constants.HeaderIndentifier.IndexPageHeaderIndentifier, for: indexPath)
+            
+            let region = datas[indexPath.row]
+            switch region.type!.id! {
+            case Constants.IndexCellType.carousels.rawValue:
+                resuableView =  collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: Constants.HeaderIndentifier.IndexPageHeaderIndentifier, for: indexPath)
+                let header = resuableView as! IndexPageHeader
+                
+                header.contents = region.contents
+            default:
+               resuableView = UICollectionReusableView()
+            }
+
         default:
-            resuableView =  collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: Constants.HeaderIndentifier.IndexPageHeaderIndentifier, for: indexPath)
+            resuableView = UICollectionReusableView()
         }
         return resuableView
     }
    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return  CGSize(width: Constants.SCREEN_FRAME.width, height: 110)
+        
+        let region = datas[section]
+        
+        switch region.type!.id! {
+        case Constants.IndexCellType.carousels.rawValue: //轮播
+            return  CGSize(width: Constants.SCREEN_FRAME.width, height: Constants.IndexPageScrollHeight)
+        default:
+            return  CGSize(width: 0,height: 0)
+        }
+
     }
     
 }

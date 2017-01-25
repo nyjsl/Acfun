@@ -8,7 +8,7 @@
 
 import Foundation
 import ObjectMapper
-class BaseModel<T>:Mappable {
+class BaseModel<T:Mappable>:Mappable {
     
     required init?(map: Map) {
         //DO NOTHING

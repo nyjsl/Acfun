@@ -21,7 +21,7 @@ struct Region: Mappable{
     
     var belong: Int?
     var channelId: Int?
-    var children: Int?
+    var children: [ChildChannel]? //TODO 这里的children对象不知道是什么
     var contentCount: Int?
     var contents: [Content]?
     var deviceType: Int?
@@ -80,9 +80,7 @@ struct Region: Mappable{
         var intro: String?
         var regionId: Int?
         var releaseAt: String?
-        var releaseDate: String?
         var shareTagShow:Int?
-        var status: Int?
         var subTitle: String?
         var title: String?
         var updateAt: String?
@@ -103,9 +101,7 @@ struct Region: Mappable{
             intro <- map["intro"]
             regionId <- map["regionId"]
             releaseAt <- map["releaseAt"]
-            releaseDate <- map["releaseDate"]
             shareTagShow <- map["shareTagShow"]
-            status <- map["status"]
             subTitle <- map["subTitle"]
             title <- map["title"]
             updateAt <- map["updateAt"]
