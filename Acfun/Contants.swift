@@ -23,6 +23,14 @@ struct Constants {
     
     struct CellIdentifier {
         static let IndexCollectionViewCellArticleIndentifier = "IndexCollectionViewCellArticle"
+        
+       
     }
+    
+    struct HeaderIndentifier {
+         static let IndexPageHeaderIndentifier = "IndexPageHeader"
+    }
+    
+    static let IndexPageScrollHeight:CGFloat = 110
 
 }
