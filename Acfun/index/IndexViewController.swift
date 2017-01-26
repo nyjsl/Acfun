@@ -66,7 +66,6 @@ class IndexViewController: UIViewController {
         indexCollectionView.delegate = self
         indexCollectionView.dataSource = self
         
-       
         diyHeader = IndexDIYHeader(refreshingBlock: {
              self.getDatas()
         })

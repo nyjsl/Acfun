@@ -19,19 +19,19 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gVQ-Zi-Huu">
-                        <rect key="frame" x="15" y="10" width="290" height="65"/>
+                        <rect key="frame" x="15" y="10" width="290" height="70"/>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fcb-Zb-X00">
-                        <rect key="frame" x="0.0" y="90" width="320" height="10"/>
-                        <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <rect key="frame" x="0.0" y="92" width="320" height="8"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="10" id="gyx-Jw-BDh"/>
+                            <constraint firstAttribute="height" constant="8" id="gyx-Jw-BDh"/>
                         </constraints>
                     </view>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="gVQ-Zi-Huu" secondAttribute="bottom" constant="25" id="0Ql-zJ-OYv"/>
+                <constraint firstAttribute="bottom" secondItem="gVQ-Zi-Huu" secondAttribute="bottom" constant="20" id="0Ql-zJ-OYv"/>
                 <constraint firstAttribute="trailing" secondItem="Fcb-Zb-X00" secondAttribute="trailing" id="DhN-WE-avA"/>
                 <constraint firstItem="gVQ-Zi-Huu" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="GJw-fR-WNf"/>
                 <constraint firstItem="gVQ-Zi-Huu" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="ZO9-fj-hOk"/>

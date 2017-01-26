@@ -27,13 +27,15 @@ struct Constants {
     }
     
     struct HeaderIndentifier {
-         static let IndexPageHeaderIndentifier = "IndexPageHeader"
+        static let IndexPageHeaderIndentifier = "IndexPageHeader"
+        static let IndexSectionHeaderIndentifier = "IndexSectionHeader"
     }
     
     struct CollectionItemHeight {
         static let IndexPageScrollHeight:CGFloat = 150
         static let IndexCellArticleHeight:CGFloat = 100
         static let IndexCellBannerHeight:CGFloat = 100
+        static let IndexSectionHeaderHeight: CGFloat = 35
     }
     
     

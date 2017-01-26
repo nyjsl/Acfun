@@ -34,6 +34,8 @@
 		26B446431E1A4CA700347154 /* Rx.md in Sources */ = {isa = PBXBuildFile; fileRef = 26B446421E1A4CA700347154 /* Rx.md */; };
 		26B446451E1A4CD400347154 /* YYWeb.md in Sources */ = {isa = PBXBuildFile; fileRef = 26B446441E1A4CD400347154 /* YYWeb.md */; };
 		26B46D141E1BE024008F8EC8 /* RxProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B46D131E1BE024008F8EC8 /* RxProvider.swift */; };
+		26C6D5A61E39AB6C002F7314 /* IndexSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6D5A41E39AB6C002F7314 /* IndexSectionHeader.swift */; };
+		26C6D5A71E39AB6C002F7314 /* IndexSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26C6D5A51E39AB6C002F7314 /* IndexSectionHeader.xib */; };
 		26C948321E2CDCD40040AC57 /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C948061E2CDCD40040AC57 /* MJRefreshAutoFooter.m */; };
 		26C948331E2CDCD40040AC57 /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C948081E2CDCD40040AC57 /* MJRefreshBackFooter.m */; };
 		26C948341E2CDCD40040AC57 /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C9480A1E2CDCD40040AC57 /* MJRefreshComponent.m */; };
@@ -95,6 +97,8 @@
 		26B446421E1A4CA700347154 /* Rx.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Rx.md; sourceTree = "<group>"; };
 		26B446441E1A4CD400347154 /* YYWeb.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = YYWeb.md; sourceTree = "<group>"; };
 		26B46D131E1BE024008F8EC8 /* RxProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxProvider.swift; sourceTree = "<group>"; };
+		26C6D5A41E39AB6C002F7314 /* IndexSectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexSectionHeader.swift; sourceTree = "<group>"; };
+		26C6D5A51E39AB6C002F7314 /* IndexSectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IndexSectionHeader.xib; sourceTree = "<group>"; };
 		26C948051E2CDCD40040AC57 /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoFooter.h; sourceTree = "<group>"; };
 		26C948061E2CDCD40040AC57 /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshAutoFooter.m; sourceTree = "<group>"; };
 		26C948071E2CDCD40040AC57 /* MJRefreshBackFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackFooter.h; sourceTree = "<group>"; };
@@ -197,6 +201,8 @@
 				263D1C571E38FF7600EF4D1F /* IndexViewController.xib */,
 				263D1C6D1E39987A00EF4D1F /* IndexCollectionCellBanner.swift */,
 				263D1C6E1E39987A00EF4D1F /* IndexCollectionCellBanner.xib */,
+				26C6D5A41E39AB6C002F7314 /* IndexSectionHeader.swift */,
+				26C6D5A51E39AB6C002F7314 /* IndexSectionHeader.xib */,
 			);
 			path = index;
 			sourceTree = "<group>";
@@ -520,6 +526,7 @@
 				26E185251E30F738005A54F0 /* AcFunSymbol-Bold1.ttf in Resources */,
 				263D1C681E38FF7600EF4D1F /* IndexViewController.xib in Resources */,
 				263D1C6C1E38FF7600EF4D1F /* WatchViewController.xib in Resources */,
+				26C6D5A71E39AB6C002F7314 /* IndexSectionHeader.xib in Resources */,
 				263D1C611E38FF7600EF4D1F /* IndexCollectionViewCellArticle.xib in Resources */,
 				263D1C5F1E38FF7600EF4D1F /* ChannelViewController.xib in Resources */,
 				263D1C6A1E38FF7600EF4D1F /* MineViewController.xib in Resources */,
@@ -622,6 +629,7 @@
 				26C9483C1E2CDCD40040AC57 /* MJRefreshBackStateFooter.m in Sources */,
 				26C948411E2CDCD40040AC57 /* MJRefreshConst.m in Sources */,
 				26E12E921E1A33E400F39F1C /* AppDelegate.swift in Sources */,
+				26C6D5A61E39AB6C002F7314 /* IndexSectionHeader.swift in Sources */,
 				26EAF7791E1E85D600C09C85 /* BaseRegion.swift in Sources */,
 				26B446411E1A4C6F00347154 /* Alamofire.md in Sources */,
 			);
