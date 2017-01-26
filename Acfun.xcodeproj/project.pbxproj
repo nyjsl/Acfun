@@ -24,6 +24,8 @@
 		263D1C6A1E38FF7600EF4D1F /* MineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 263D1C5A1E38FF7600EF4D1F /* MineViewController.xib */; };
 		263D1C6B1E38FF7600EF4D1F /* WatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263D1C5C1E38FF7600EF4D1F /* WatchViewController.swift */; };
 		263D1C6C1E38FF7600EF4D1F /* WatchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 263D1C5D1E38FF7600EF4D1F /* WatchViewController.xib */; };
+		263D1C6F1E39987A00EF4D1F /* IndexCollectionCellBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263D1C6D1E39987A00EF4D1F /* IndexCollectionCellBanner.swift */; };
+		263D1C701E39987A00EF4D1F /* IndexCollectionCellBanner.xib in Resources */ = {isa = PBXBuildFile; fileRef = 263D1C6E1E39987A00EF4D1F /* IndexCollectionCellBanner.xib */; };
 		26A912211E1BC4FD002F2F8D /* APIAcfun.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A912201E1BC4FD002F2F8D /* APIAcfun.swift */; };
 		26A912231E1BC535002F2F8D /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A912221E1BC535002F2F8D /* TargetType.swift */; };
 		26A912251E1BC635002F2F8D /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A912241E1BC635002F2F8D /* EndPoint.swift */; };
@@ -83,6 +85,8 @@
 		263D1C5A1E38FF7600EF4D1F /* MineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineViewController.xib; sourceTree = "<group>"; };
 		263D1C5C1E38FF7600EF4D1F /* WatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchViewController.swift; sourceTree = "<group>"; };
 		263D1C5D1E38FF7600EF4D1F /* WatchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WatchViewController.xib; sourceTree = "<group>"; };
+		263D1C6D1E39987A00EF4D1F /* IndexCollectionCellBanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexCollectionCellBanner.swift; sourceTree = "<group>"; };
+		263D1C6E1E39987A00EF4D1F /* IndexCollectionCellBanner.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IndexCollectionCellBanner.xib; sourceTree = "<group>"; };
 		26A912201E1BC4FD002F2F8D /* APIAcfun.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIAcfun.swift; sourceTree = "<group>"; };
 		26A912221E1BC535002F2F8D /* TargetType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TargetType.swift; path = ../TargetType.swift; sourceTree = "<group>"; };
 		26A912241E1BC635002F2F8D /* EndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
@@ -191,6 +195,8 @@
 				263D1C551E38FF7600EF4D1F /* IndexPageHeader.xib */,
 				263D1C561E38FF7600EF4D1F /* IndexViewController.swift */,
 				263D1C571E38FF7600EF4D1F /* IndexViewController.xib */,
+				263D1C6D1E39987A00EF4D1F /* IndexCollectionCellBanner.swift */,
+				263D1C6E1E39987A00EF4D1F /* IndexCollectionCellBanner.xib */,
 			);
 			path = index;
 			sourceTree = "<group>";
@@ -503,6 +509,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				263D1C701E39987A00EF4D1F /* IndexCollectionCellBanner.xib in Resources */,
 				26E12E9C1E1A33E400F39F1C /* LaunchScreen.storyboard in Resources */,
 				26E12E991E1A33E400F39F1C /* Assets.xcassets in Resources */,
 				26E185261E30F738005A54F0 /* AcFunSymbol-Regular.ttf in Resources */,
@@ -594,6 +601,7 @@
 				26C948351E2CDCD40040AC57 /* MJRefreshFooter.m in Sources */,
 				26A912251E1BC635002F2F8D /* EndPoint.swift in Sources */,
 				263D1C671E38FF7600EF4D1F /* IndexViewController.swift in Sources */,
+				263D1C6F1E39987A00EF4D1F /* IndexCollectionCellBanner.swift in Sources */,
 				26C948341E2CDCD40040AC57 /* MJRefreshComponent.m in Sources */,
 				263D1C691E38FF7600EF4D1F /* MineViewController.swift in Sources */,
 				26DE9AD01E34DF49006DB0B3 /* UIButtonExt.swift in Sources */,

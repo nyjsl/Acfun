@@ -61,14 +61,15 @@ class IndexPageHeader: UICollectionReusableView {
     
     private func updateScrollView(){
         let contentWidth = Constants.SCREEN_FRAME.size.width * CGFloat(integerLiteral: pageNumber)
-        pageScrollView.contentSize = CGSize(width:contentWidth, height:Constants.IndexPageScrollHeight)
+        pageScrollView.contentSize = CGSize(width:contentWidth, height:Constants.CollectionItemHeight.IndexPageScrollHeight)
         updateScrollViewContents()
     }
     
     private func updateScrollViewContents(){
+        imageViewArray.removeAll()
         for index in 0..<pageNumber{
             let originX = Constants.SCREEN_FRAME.size.width.multiplied(by: CGFloat(integerLiteral: index))
-            let frame = CGRect(x: originX, y:0 , width: Constants.SCREEN_FRAME.size.width, height: Constants.IndexPageScrollHeight)
+            let frame = CGRect(x: originX, y:0 , width: Constants.SCREEN_FRAME.size.width, height: Constants.CollectionItemHeight.IndexPageScrollHeight)
             let imageView = UIImageView(frame: frame)
             imageViewArray.append(imageView)
             pageScrollView.addSubview(imageView)

@@ -62,8 +62,7 @@ class IndexViewController: UIViewController {
     }
     
     private func initCollectionView(){
-        let nib = UINib(nibName:  Constants.CellIdentifier.IndexCollectionViewCellArticleIndentifier, bundle: nil)
-        indexCollectionView.register(nib, forCellWithReuseIdentifier: Constants.CellIdentifier.IndexCollectionViewCellArticleIndentifier)
+        
         indexCollectionView.delegate = self
         indexCollectionView.dataSource = self
         
@@ -72,11 +71,18 @@ class IndexViewController: UIViewController {
              self.getDatas()
         })
         indexCollectionView.mj_header = diyHeader
-        
+        registerHeaderAndCells()
+    }
+    //注册各种Cell 和 Header
+    private func registerHeaderAndCells(){
+        let nibCellArticle = UINib(nibName:  Constants.CellIdentifier.IndexCollectionViewCellArticleIndentifier,
+                        bundle: nil)
+        indexCollectionView.register(nibCellArticle, forCellWithReuseIdentifier: Constants.CellIdentifier.IndexCollectionViewCellArticleIndentifier)
         let nibPageControlHeader = UINib(nibName: Constants.HeaderIndentifier.IndexPageHeaderIndentifier, bundle: nil)
         indexCollectionView.register(nibPageControlHeader, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: Constants.HeaderIndentifier.IndexPageHeaderIndentifier)
-
         
+        let nibCellBanner = UINib(nibName: Constants.CellIdentifier.IndexCollectionCellBannerIndentifier, bundle: nil)
+        indexCollectionView.register(nibCellBanner, forCellWithReuseIdentifier: Constants.CellIdentifier.IndexCollectionCellBannerIndentifier)
     }
     
     private func updateCollectionView(){
@@ -101,6 +107,7 @@ extension IndexViewController: UICollectionViewDelegate,UICollectionViewDataSour
         case Constants.IndexCellType.carousels.rawValue: //轮播
             return 0
         default:
+            print(region.contentCount!)
             return region.contentCount!
         }
     }
@@ -110,24 +117,48 @@ extension IndexViewController: UICollectionViewDelegate,UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
+        print("row:\(indexPath.row) count:\(indexPath.count) section\(indexPath.section)")
+        let region = datas[indexPath.section]
         var cell: UICollectionViewCell
-        let region = datas[indexPath.row]
+        cell = getInitCellsByType(region, indexPath)
+        return cell
+    }
+    //生成各种Cell
+    private func getInitCellsByType(_ region: Region,_ indexPath: IndexPath) -> UICollectionViewCell{
+        var cell: UICollectionViewCell
+       
         
         switch region.type!.id! {
         case Constants.IndexCellType.carousels.rawValue:
-           cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.CellIdentifier.IndexCollectionViewCellArticleIndentifier, for: indexPath)
-            
+            cell = self.indexCollectionView.dequeueReusableCell(withReuseIdentifier: Constants.CellIdentifier.IndexCollectionViewCellArticleIndentifier, for: indexPath)
+        case Constants.IndexCellType.banners.rawValue:
+            cell = self.indexCollectionView.dequeueReusableCell(withReuseIdentifier: Constants.CellIdentifier.IndexCollectionCellBannerIndentifier, for: indexPath)
+            let bannerCell = cell as! IndexCollectionCellBanner
+            bannerCell.bannerRegion = region
         default:
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.CellIdentifier.IndexCollectionViewCellArticleIndentifier, for: indexPath)
+            cell = self.indexCollectionView.dequeueReusableCell(withReuseIdentifier: Constants.CellIdentifier.IndexCollectionViewCellArticleIndentifier, for: indexPath)
         }
-        
         return cell
     }
     
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: Constants.SCREEN_FRAME.width, height: 100)
+        let region = datas[indexPath.section]
+        return getCellSizeByType(region, indexPath)
+        
     }
+    
+    private func getCellSizeByType(_ region: Region,_ indexPath: IndexPath) -> CGSize{
+        switch region.type!.id! {
+        
+        case Constants.IndexCellType.banners.rawValue:
+           return CGSize(width: Constants.SCREEN_FRAME.width, height: Constants.CollectionItemHeight.IndexCellBannerHeight)
+        default:
+            return CGSize(width: Constants.SCREEN_FRAME.width, height: Constants.CollectionItemHeight.IndexCellBannerHeight)
+        }
+    }
+    
+    
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
@@ -161,7 +192,7 @@ extension IndexViewController: UICollectionViewDelegate,UICollectionViewDataSour
         
         switch region.type!.id! {
         case Constants.IndexCellType.carousels.rawValue: //轮播
-            return  CGSize(width: Constants.SCREEN_FRAME.width, height: Constants.IndexPageScrollHeight)
+            return  CGSize(width: Constants.SCREEN_FRAME.width, height: Constants.CollectionItemHeight.IndexPageScrollHeight)
         default:
             return  CGSize(width: 0,height: 0)
         }

@@ -22,14 +22,21 @@ struct Constants {
     
     
     struct CellIdentifier {
-        static let IndexCollectionViewCellArticleIndentifier = "IndexCollectionViewCellArticle"       
+        static let IndexCollectionViewCellArticleIndentifier = "IndexCollectionViewCellArticle"
+        static let IndexCollectionCellBannerIndentifier = "IndexCollectionCellBanner"
     }
     
     struct HeaderIndentifier {
          static let IndexPageHeaderIndentifier = "IndexPageHeader"
     }
     
-    static let IndexPageScrollHeight:CGFloat = 150
+    struct CollectionItemHeight {
+        static let IndexPageScrollHeight:CGFloat = 150
+        static let IndexCellArticleHeight:CGFloat = 100
+        static let IndexCellBannerHeight:CGFloat = 100
+    }
+    
+    
     
     enum IndexCellType: Int {
         case carousels = 5 //轮播

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+//文章Cell
 class IndexCollectionViewCellArticle: UICollectionViewCell {
 
     
