@@ -9,9 +9,16 @@
 import Foundation
 import ObjectMapper
 
-class BaseRegion: BaseModel<Region>{
+class BaseRegions: BaseDatasModel<Region>{
     
     
+    override func mapping(map: Map) {
+        super.mapping(map: map)
+    }
+}
+
+
+class BaseRegion: BaseDataModel<Region>{
     override func mapping(map: Map) {
         super.mapping(map: map)
     }

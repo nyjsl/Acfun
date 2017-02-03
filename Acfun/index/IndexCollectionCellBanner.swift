@@ -8,6 +8,7 @@
 
 import UIKit
 import YYWebImage
+import RxSwift
 
 //横幅Cell
 class IndexCollectionCellBanner: UICollectionViewCell {
@@ -26,23 +27,36 @@ class IndexCollectionCellBanner: UICollectionViewCell {
     }
     
     private func loadImage(){
-        bannerImage.yy_setImage(with: getImagUrl(), placeholder: #imageLiteral(resourceName: "image_view_default"))
+        if let imageUrl = getImagUrl(){
+            bannerImage.yy_setImage(with: imageUrl, placeholder: #imageLiteral(resourceName: "image_view_default"))
+        }else{
+            requestImageUrlByIdAndLoad()
+        }
     }
     
     
     private func getImagUrl() -> URL?{
-        if let str = bannerRegion?.image {
-            if !str.isEmpty{
-                return URL(string: str)
-            }
-        }
+
         if let contents = bannerRegion?.contents{
             if contents.count>0{
                 return URL(string: contents[0].image!)
             }
         }
         return nil
-        
+    }
+    
+    private func requestImageUrlByIdAndLoad(){
+        let observable: Observable<DataResponse<BaseRegion>>= RxProvider<APIAcfun>.requestObject(target: APIAcfun.regions(id: bannerRegion?.id))
+        let _ = observable.subscribe( onNext: {[unowned self] (dataResponse)  in
+            if let data = dataResponse.result.value?.data{
+                if let contents = data.contents{
+                    if contents.count>0{
+                        let url =  URL(string: contents[0].image!)
+                        self.bannerImage.yy_setImage(with: url, placeholder: #imageLiteral(resourceName: "image_view_default"))
+                    }
+                }
+            }
+        }, onError: nil, onCompleted: nil, onDisposed: nil)
     }
     
 

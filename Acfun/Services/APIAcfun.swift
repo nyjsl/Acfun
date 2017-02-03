@@ -9,7 +9,7 @@ import Foundation
 
 enum APIAcfun{
     case channels
-    case regions
+    case regions(id: Int?)
 }
 
 extension APIAcfun:TargetType{
@@ -21,8 +21,13 @@ extension APIAcfun:TargetType{
         switch self {
         case .channels:
             return "/channels/allChannels"
-        case .regions:
-            return "/regions"
+        case .regions(let id):
+            if let id = id{
+                return "/regions/\(id)"
+            }else{
+                return "/regions"
+ 
+            }
         }
     }
     

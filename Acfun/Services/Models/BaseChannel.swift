@@ -8,7 +8,7 @@
 
 import Foundation
 import ObjectMapper
-class BaseChannel:BaseModel<ChildChannel> {
+class BaseChannel:BaseDatasModel<ChildChannel> {
     
     
 }

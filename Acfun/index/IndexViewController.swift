@@ -38,7 +38,7 @@ class IndexViewController: UIViewController {
      */
     private func getDatas(){
         
-        let observable:Observable<DataResponse<BaseRegion>> = RxProvider<APIAcfun>.requestObject(target: .regions)
+        let observable:Observable<DataResponse<BaseRegions>> = RxProvider<APIAcfun>.requestObject(target: .regions(id: nil))
         let _ = observable.subscribe(onNext: { (dataResponse) in
             if let datas = dataResponse.result.value?.data{
                 self.datas = datas
@@ -82,6 +82,9 @@ class IndexViewController: UIViewController {
         
         let nibCellBanner = UINib(nibName: Constants.CellIdentifier.IndexCollectionCellBannerIndentifier, bundle: nil)
         indexCollectionView.register(nibCellBanner, forCellWithReuseIdentifier: Constants.CellIdentifier.IndexCollectionCellBannerIndentifier)
+        
+        let nibCellMonkeyMountainHeadLine = UINib(nibName: Constants.CellIdentifier.IndexCollectionCellMonkeyMountainHeadLineIndentifier, bundle: nil)
+        indexCollectionView.register(nibCellMonkeyMountainHeadLine, forCellWithReuseIdentifier: Constants.CellIdentifier.IndexCollectionCellMonkeyMountainHeadLineIndentifier)
     }
     
     private func updateCollectionView(){
@@ -152,6 +155,8 @@ extension IndexViewController: UICollectionViewDelegate,UICollectionViewDataSour
         
         case Constants.IndexCellType.banners.rawValue:
            return CGSize(width: Constants.SCREEN_FRAME.width, height: Constants.CollectionItemHeight.IndexCellBannerHeight)
+        case Constants.IndexCellType.videos.rawValue:
+            return CGSize(width: Constants.SCREEN_FRAME.width.advanced(by: -20).divided(by: 2), height: Constants.CollectionItemHeight.IndexCollectionCellMonkeyMountainHeadLineHeight)
         default:
             return CGSize(width: Constants.SCREEN_FRAME.width, height: Constants.CollectionItemHeight.IndexCellBannerHeight)
         }

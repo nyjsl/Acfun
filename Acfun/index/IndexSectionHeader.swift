@@ -23,7 +23,7 @@ class IndexSectionHeader: UICollectionReusableView {
     
     var iconImageUrl: String?{
         didSet{
-            icomImg.yy_setImage(with: URL(string:iconImageUrl), placeholder: nil)
+            icomImg.yy_setImage(with: URL(string:iconImageUrl!), placeholder: nil)
         }
     }
     

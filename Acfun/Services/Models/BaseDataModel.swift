@@ -1,14 +1,14 @@
 //
-//  BaseModel.swift
+//  BaseDataModel.swift
 //  Acfun
 //
-//  Created by 魏星 on 2017/1/4.
+//  Created by 魏星 on 2017/2/3.
 //  Copyright © 2017年 wx. All rights reserved.
 //
 
 import Foundation
 import ObjectMapper
-class BaseModel<T:Mappable>:Mappable {
+class BaseDataModel<T:Mappable>:Mappable {
     
     required init?(map: Map) {
         //DO NOTHING
@@ -17,8 +17,8 @@ class BaseModel<T:Mappable>:Mappable {
     
     var code: Int?
     
-    var data :[T]?
-        
+    var data :T?
+    
     var message: String?
     
     func mapping(map: Map) {
@@ -27,3 +27,4 @@ class BaseModel<T:Mappable>:Mappable {
         message <- map["message"]
     }
 }
+

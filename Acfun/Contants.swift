@@ -24,6 +24,8 @@ struct Constants {
     struct CellIdentifier {
         static let IndexCollectionViewCellArticleIndentifier = "IndexCollectionViewCellArticle"
         static let IndexCollectionCellBannerIndentifier = "IndexCollectionCellBanner"
+        
+        static let IndexCollectionCellMonkeyMountainHeadLineIndentifier = "IndexCollectionCellMonkeyMountainHeadLine"
     }
     
     struct HeaderIndentifier {
@@ -36,10 +38,16 @@ struct Constants {
         static let IndexCellArticleHeight:CGFloat = 100
         static let IndexCellBannerHeight:CGFloat = 100
         static let IndexSectionHeaderHeight: CGFloat = 35
+        static let IndexCollectionCellMonkeyMountainHeadLineHeight:CGFloat = 140
     }
     
-    
-    
+    //轮播图片
+    //猴山头条(video n*2) + 全站排行榜(banner)
+    //香蕉排行榜(video n*1) + 香蕉排行榜(banner)
+    //番剧(video n*3) + 更多
+    // TODO
+    //
+    //
     enum IndexCellType: Int {
         case carousels = 5 //轮播
         case videos = 1//视频 1
