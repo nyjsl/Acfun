@@ -26,6 +26,8 @@
 		263D1C6C1E38FF7600EF4D1F /* WatchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 263D1C5D1E38FF7600EF4D1F /* WatchViewController.xib */; };
 		263D1C6F1E39987A00EF4D1F /* IndexCollectionCellBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263D1C6D1E39987A00EF4D1F /* IndexCollectionCellBanner.swift */; };
 		263D1C701E39987A00EF4D1F /* IndexCollectionCellBanner.xib in Resources */ = {isa = PBXBuildFile; fileRef = 263D1C6E1E39987A00EF4D1F /* IndexCollectionCellBanner.xib */; };
+		2680D7B91E459A4400004D85 /* IndexCollectionCellMonkeyMountainHeadLineRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2680D7B71E459A4400004D85 /* IndexCollectionCellMonkeyMountainHeadLineRight.swift */; };
+		2680D7BA1E459A4400004D85 /* IndexCollectionCellMonkeyMountainHeadLineRight.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2680D7B81E459A4400004D85 /* IndexCollectionCellMonkeyMountainHeadLineRight.xib */; };
 		26A912211E1BC4FD002F2F8D /* APIAcfun.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A912201E1BC4FD002F2F8D /* APIAcfun.swift */; };
 		26A912231E1BC535002F2F8D /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A912221E1BC535002F2F8D /* TargetType.swift */; };
 		26A912251E1BC635002F2F8D /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A912241E1BC635002F2F8D /* EndPoint.swift */; };
@@ -92,6 +94,8 @@
 		263D1C5D1E38FF7600EF4D1F /* WatchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WatchViewController.xib; sourceTree = "<group>"; };
 		263D1C6D1E39987A00EF4D1F /* IndexCollectionCellBanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexCollectionCellBanner.swift; sourceTree = "<group>"; };
 		263D1C6E1E39987A00EF4D1F /* IndexCollectionCellBanner.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IndexCollectionCellBanner.xib; sourceTree = "<group>"; };
+		2680D7B71E459A4400004D85 /* IndexCollectionCellMonkeyMountainHeadLineRight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexCollectionCellMonkeyMountainHeadLineRight.swift; sourceTree = "<group>"; };
+		2680D7B81E459A4400004D85 /* IndexCollectionCellMonkeyMountainHeadLineRight.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IndexCollectionCellMonkeyMountainHeadLineRight.xib; sourceTree = "<group>"; };
 		26A912201E1BC4FD002F2F8D /* APIAcfun.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIAcfun.swift; sourceTree = "<group>"; };
 		26A912221E1BC535002F2F8D /* TargetType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TargetType.swift; path = ../TargetType.swift; sourceTree = "<group>"; };
 		26A912241E1BC635002F2F8D /* EndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
@@ -210,6 +214,8 @@
 				26C6D5A41E39AB6C002F7314 /* IndexSectionHeader.swift */,
 				26C6D5A51E39AB6C002F7314 /* IndexSectionHeader.xib */,
 				26AAC4C81E44B82B008BF6A2 /* IndexCollectionCellMonkeyMountainHeadLine.swift */,
+				2680D7B71E459A4400004D85 /* IndexCollectionCellMonkeyMountainHeadLineRight.swift */,
+				2680D7B81E459A4400004D85 /* IndexCollectionCellMonkeyMountainHeadLineRight.xib */,
 				26AAC4C91E44B82B008BF6A2 /* IndexCollectionCellMonkeyMountainHeadLine.xib */,
 			);
 			path = index;
@@ -527,6 +533,7 @@
 				263D1C701E39987A00EF4D1F /* IndexCollectionCellBanner.xib in Resources */,
 				26E12E9C1E1A33E400F39F1C /* LaunchScreen.storyboard in Resources */,
 				26E12E991E1A33E400F39F1C /* Assets.xcassets in Resources */,
+				2680D7BA1E459A4400004D85 /* IndexCollectionCellMonkeyMountainHeadLineRight.xib in Resources */,
 				26E185261E30F738005A54F0 /* AcFunSymbol-Regular.ttf in Resources */,
 				263D1C641E38FF7600EF4D1F /* IndexNavBar.xib in Resources */,
 				263D1C661E38FF7600EF4D1F /* IndexPageHeader.xib in Resources */,
@@ -599,6 +606,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26E185211E30F49D005A54F0 /* Contants.swift in Sources */,
+				2680D7B91E459A4400004D85 /* IndexCollectionCellMonkeyMountainHeadLineRight.swift in Sources */,
 				263C2B281E1D1FCB00885B47 /* BaseChannel.swift in Sources */,
 				26C948381E2CDCD40040AC57 /* MJRefreshAutoNormalFooter.m in Sources */,
 				263D1C651E38FF7600EF4D1F /* IndexPageHeader.swift in Sources */,

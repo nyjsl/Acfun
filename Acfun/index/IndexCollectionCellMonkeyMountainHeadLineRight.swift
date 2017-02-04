@@ -1,37 +1,27 @@
 //
-//  IndexCollectionCellMonkeyMountainHeadLine.swift
+//  IndexCollectionViewCellMonkeyMountainHeadLineRightCollectionViewCell.swift
 //  Acfun
 //
-//  Created by 魏星 on 2017/2/3.
+//  Created by 魏星 on 2017/2/4.
 //  Copyright © 2017年 wx. All rights reserved.
 //
 
 import UIKit
-import YYWebImage
 
-class IndexCollectionCellMonkeyMountainHeadLine: UICollectionViewCell {
+class IndexCollectionCellMonkeyMountainHeadLineRight: UICollectionViewCell {
 
-    @IBOutlet weak var viewsBtn: UIButton!
-    
-    @IBOutlet weak var commentsBtn: UIButton!
-    @IBOutlet weak var bgImageView: UIImageView!
-    
-    @IBOutlet weak var thumbnailImg: UIImageView!
-    
-    @IBOutlet weak var viewsLabel: UILabel!
-    
-    
-    @IBOutlet weak var titleLabel: UILabel!
-    
-    
     @IBOutlet weak var commentsLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var viewsLabel: UILabel!
+    @IBOutlet weak var commentsBtn: UIButton!
+    @IBOutlet weak var viewsBtn: UIButton!
+    @IBOutlet weak var thumbnailImg: UIImageView!
     
     var monkeyMountainHeadlinContent: Region.Content?{
         didSet{
             //圆角
             thumbnailImg.layer.cornerRadius = 5
             thumbnailImg.layer.masksToBounds = true
-
             viewsBtn.changeButtonImageWithTintColor(image: #imageLiteral(resourceName: "icon_grey_play"))
             commentsBtn.changeButtonImageWithTintColor(image: #imageLiteral(resourceName: "icon_grey_barrage"))
             if let content = monkeyMountainHeadlinContent{
@@ -43,7 +33,7 @@ class IndexCollectionCellMonkeyMountainHeadLine: UICollectionViewCell {
             }
         }
     }
-    
+
     
     override func awakeFromNib() {
         super.awakeFromNib()

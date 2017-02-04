@@ -77,14 +77,22 @@ class IndexViewController: UIViewController {
         let nibCellArticle = UINib(nibName:  Constants.CellIdentifier.IndexCollectionViewCellArticleIndentifier,
                         bundle: nil)
         indexCollectionView.register(nibCellArticle, forCellWithReuseIdentifier: Constants.CellIdentifier.IndexCollectionViewCellArticleIndentifier)
+        
         let nibPageControlHeader = UINib(nibName: Constants.HeaderIndentifier.IndexPageHeaderIndentifier, bundle: nil)
         indexCollectionView.register(nibPageControlHeader, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: Constants.HeaderIndentifier.IndexPageHeaderIndentifier)
+        
+        let nibIndexSectionHeader = UINib(nibName: Constants.HeaderIndentifier.IndexSectionHeaderIndentifier, bundle: nil)
+        indexCollectionView.register(nibIndexSectionHeader, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: Constants.HeaderIndentifier.IndexSectionHeaderIndentifier)
+        
         
         let nibCellBanner = UINib(nibName: Constants.CellIdentifier.IndexCollectionCellBannerIndentifier, bundle: nil)
         indexCollectionView.register(nibCellBanner, forCellWithReuseIdentifier: Constants.CellIdentifier.IndexCollectionCellBannerIndentifier)
         
         let nibCellMonkeyMountainHeadLine = UINib(nibName: Constants.CellIdentifier.IndexCollectionCellMonkeyMountainHeadLineIndentifier, bundle: nil)
         indexCollectionView.register(nibCellMonkeyMountainHeadLine, forCellWithReuseIdentifier: Constants.CellIdentifier.IndexCollectionCellMonkeyMountainHeadLineIndentifier)
+        
+        let nibCellMonkeyMountainHeadLineRight = UINib(nibName: Constants.CellIdentifier.IndexCollectionCellMonkeyMountainHeadLineRightIndentifier, bundle: nil)
+        indexCollectionView.register(nibCellMonkeyMountainHeadLineRight, forCellWithReuseIdentifier: Constants.CellIdentifier.IndexCollectionCellMonkeyMountainHeadLineRightIndentifier)
     }
     
     private func updateCollectionView(){
@@ -100,6 +108,7 @@ class IndexViewController: UIViewController {
 }
 
 extension IndexViewController: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
@@ -137,6 +146,18 @@ extension IndexViewController: UICollectionViewDelegate,UICollectionViewDataSour
             cell = self.indexCollectionView.dequeueReusableCell(withReuseIdentifier: Constants.CellIdentifier.IndexCollectionCellBannerIndentifier, for: indexPath)
             let bannerCell = cell as! IndexCollectionCellBanner
             bannerCell.bannerRegion = region
+        case Constants.IndexCellType.videos.rawValue:
+            
+            
+            if indexPath.row % 2 == 0 {
+                cell = self.indexCollectionView.dequeueReusableCell(withReuseIdentifier: Constants.CellIdentifier.IndexCollectionCellMonkeyMountainHeadLineIndentifier, for: indexPath)
+                let monkeyMountainHeadLlineCell = cell as! IndexCollectionCellMonkeyMountainHeadLine
+                monkeyMountainHeadLlineCell.monkeyMountainHeadlinContent = region.contents?[indexPath.row]
+            }else{
+                cell = self.indexCollectionView.dequeueReusableCell(withReuseIdentifier: Constants.CellIdentifier.IndexCollectionCellMonkeyMountainHeadLineRightIndentifier, for: indexPath)
+                let monkeyMountainHeadLlineCell = cell as! IndexCollectionCellMonkeyMountainHeadLineRight
+                monkeyMountainHeadLlineCell.monkeyMountainHeadlinContent = region.contents?[indexPath.row]
+            }
         default:
             cell = self.indexCollectionView.dequeueReusableCell(withReuseIdentifier: Constants.CellIdentifier.IndexCollectionViewCellArticleIndentifier, for: indexPath)
         }
@@ -156,7 +177,7 @@ extension IndexViewController: UICollectionViewDelegate,UICollectionViewDataSour
         case Constants.IndexCellType.banners.rawValue:
            return CGSize(width: Constants.SCREEN_FRAME.width, height: Constants.CollectionItemHeight.IndexCellBannerHeight)
         case Constants.IndexCellType.videos.rawValue:
-            return CGSize(width: Constants.SCREEN_FRAME.width.advanced(by: -20).divided(by: 2), height: Constants.CollectionItemHeight.IndexCollectionCellMonkeyMountainHeadLineHeight)
+            return CGSize(width: Constants.SCREEN_FRAME.width.advanced(by: -10).divided(by: 2), height: Constants.CollectionItemHeight.IndexCollectionCellMonkeyMountainHeadLineHeight)
         default:
             return CGSize(width: Constants.SCREEN_FRAME.width, height: Constants.CollectionItemHeight.IndexCellBannerHeight)
         }
@@ -172,15 +193,20 @@ extension IndexViewController: UICollectionViewDelegate,UICollectionViewDataSour
         switch kind {
         case UICollectionElementKindSectionHeader:
             
-            let region = datas[indexPath.row]
+            let region = datas[indexPath.section]
             switch region.type!.id! {
             case Constants.IndexCellType.carousels.rawValue:
                 resuableView =  collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: Constants.HeaderIndentifier.IndexPageHeaderIndentifier, for: indexPath)
                 let header = resuableView as! IndexPageHeader
                 
                 header.contents = region.contents
+            case Constants.IndexCellType.banners.rawValue:
+                resuableView = UICollectionReusableView()
             default:
-               resuableView = UICollectionReusableView()
+               resuableView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: Constants.HeaderIndentifier.IndexSectionHeaderIndentifier, for: indexPath)
+                let header = resuableView as! IndexSectionHeader
+                header.iconImageUrl = region.image
+                header.titleText = region.name
             }
 
         default:
@@ -197,8 +223,10 @@ extension IndexViewController: UICollectionViewDelegate,UICollectionViewDataSour
         switch region.type!.id! {
         case Constants.IndexCellType.carousels.rawValue: //轮播
             return  CGSize(width: Constants.SCREEN_FRAME.width, height: Constants.CollectionItemHeight.IndexPageScrollHeight)
+        case Constants.IndexCellType.banners.rawValue:
+            return CGSize(width: 0, height: 0)
         default:
-            return  CGSize(width: 0,height: 0)
+            return CGSize(width: Constants.SCREEN_FRAME.width, height: Constants.CollectionItemHeight.IndexSectionHeaderHeight)
         }
 
     }
