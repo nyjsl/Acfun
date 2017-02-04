@@ -28,6 +28,8 @@
 		263D1C701E39987A00EF4D1F /* IndexCollectionCellBanner.xib in Resources */ = {isa = PBXBuildFile; fileRef = 263D1C6E1E39987A00EF4D1F /* IndexCollectionCellBanner.xib */; };
 		2680D7B91E459A4400004D85 /* IndexCollectionCellMonkeyMountainHeadLineRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2680D7B71E459A4400004D85 /* IndexCollectionCellMonkeyMountainHeadLineRight.swift */; };
 		2680D7BA1E459A4400004D85 /* IndexCollectionCellMonkeyMountainHeadLineRight.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2680D7B81E459A4400004D85 /* IndexCollectionCellMonkeyMountainHeadLineRight.xib */; };
+		2680D7BD1E460B8E00004D85 /* IndexSectionMoreFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2680D7BB1E460B8E00004D85 /* IndexSectionMoreFooter.swift */; };
+		2680D7BE1E460B8E00004D85 /* IndexSectionMoreFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2680D7BC1E460B8E00004D85 /* IndexSectionMoreFooter.xib */; };
 		26A912211E1BC4FD002F2F8D /* APIAcfun.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A912201E1BC4FD002F2F8D /* APIAcfun.swift */; };
 		26A912231E1BC535002F2F8D /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A912221E1BC535002F2F8D /* TargetType.swift */; };
 		26A912251E1BC635002F2F8D /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A912241E1BC635002F2F8D /* EndPoint.swift */; };
@@ -96,6 +98,8 @@
 		263D1C6E1E39987A00EF4D1F /* IndexCollectionCellBanner.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IndexCollectionCellBanner.xib; sourceTree = "<group>"; };
 		2680D7B71E459A4400004D85 /* IndexCollectionCellMonkeyMountainHeadLineRight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexCollectionCellMonkeyMountainHeadLineRight.swift; sourceTree = "<group>"; };
 		2680D7B81E459A4400004D85 /* IndexCollectionCellMonkeyMountainHeadLineRight.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IndexCollectionCellMonkeyMountainHeadLineRight.xib; sourceTree = "<group>"; };
+		2680D7BB1E460B8E00004D85 /* IndexSectionMoreFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexSectionMoreFooter.swift; sourceTree = "<group>"; };
+		2680D7BC1E460B8E00004D85 /* IndexSectionMoreFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IndexSectionMoreFooter.xib; sourceTree = "<group>"; };
 		26A912201E1BC4FD002F2F8D /* APIAcfun.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIAcfun.swift; sourceTree = "<group>"; };
 		26A912221E1BC535002F2F8D /* TargetType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TargetType.swift; path = ../TargetType.swift; sourceTree = "<group>"; };
 		26A912241E1BC635002F2F8D /* EndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
@@ -217,6 +221,8 @@
 				2680D7B71E459A4400004D85 /* IndexCollectionCellMonkeyMountainHeadLineRight.swift */,
 				2680D7B81E459A4400004D85 /* IndexCollectionCellMonkeyMountainHeadLineRight.xib */,
 				26AAC4C91E44B82B008BF6A2 /* IndexCollectionCellMonkeyMountainHeadLine.xib */,
+				2680D7BB1E460B8E00004D85 /* IndexSectionMoreFooter.swift */,
+				2680D7BC1E460B8E00004D85 /* IndexSectionMoreFooter.xib */,
 			);
 			path = index;
 			sourceTree = "<group>";
@@ -532,6 +538,7 @@
 			files = (
 				263D1C701E39987A00EF4D1F /* IndexCollectionCellBanner.xib in Resources */,
 				26E12E9C1E1A33E400F39F1C /* LaunchScreen.storyboard in Resources */,
+				2680D7BE1E460B8E00004D85 /* IndexSectionMoreFooter.xib in Resources */,
 				26E12E991E1A33E400F39F1C /* Assets.xcassets in Resources */,
 				2680D7BA1E459A4400004D85 /* IndexCollectionCellMonkeyMountainHeadLineRight.xib in Resources */,
 				26E185261E30F738005A54F0 /* AcFunSymbol-Regular.ttf in Resources */,
@@ -611,6 +618,7 @@
 				26C948381E2CDCD40040AC57 /* MJRefreshAutoNormalFooter.m in Sources */,
 				263D1C651E38FF7600EF4D1F /* IndexPageHeader.swift in Sources */,
 				26C948391E2CDCD40040AC57 /* MJRefreshAutoStateFooter.m in Sources */,
+				2680D7BD1E460B8E00004D85 /* IndexSectionMoreFooter.swift in Sources */,
 				26C948441E2CDCD40040AC57 /* UIScrollView+MJRefresh.m in Sources */,
 				26B46D141E1BE024008F8EC8 /* RxProvider.swift in Sources */,
 				263D1C601E38FF7600EF4D1F /* IndexCollectionViewCellArticle.swift in Sources */,

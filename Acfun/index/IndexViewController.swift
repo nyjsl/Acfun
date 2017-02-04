@@ -93,6 +93,10 @@ class IndexViewController: UIViewController {
         
         let nibCellMonkeyMountainHeadLineRight = UINib(nibName: Constants.CellIdentifier.IndexCollectionCellMonkeyMountainHeadLineRightIndentifier, bundle: nil)
         indexCollectionView.register(nibCellMonkeyMountainHeadLineRight, forCellWithReuseIdentifier: Constants.CellIdentifier.IndexCollectionCellMonkeyMountainHeadLineRightIndentifier)
+        
+        let nibIndexSectionFooter = UINib(nibName: Constants.FooterIndentifer.IndexSectionMoreFooterIndentifier, bundle: nil)
+        
+        indexCollectionView.register(nibIndexSectionFooter, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: Constants.FooterIndentifer.IndexSectionMoreFooterIndentifier)
     }
     
     private func updateCollectionView(){
