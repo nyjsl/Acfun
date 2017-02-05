@@ -10,7 +10,19 @@ import UIKit
 
 class IndexSectionMoreFooter: UICollectionReusableView {
 
+    @IBOutlet weak var lineView: UIView!
     
+    var title: String?{
+        didSet{
+            if let t = title{
+                moreLabel.text = "更多\(t)内容"
+            }
+        }
+    }
+    
+    func setLineViewIsHidden(isHidden: Bool){
+        lineView.isHidden = isHidden
+    }
     
     @IBOutlet weak var moreView: UIView!
     

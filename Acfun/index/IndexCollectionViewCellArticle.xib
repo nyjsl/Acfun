@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,7 +20,7 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/来自" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5mu-Sr-ZU3">
-                        <rect key="frame" x="20" y="10" width="335" height="20"/>
+                        <rect key="frame" x="10" y="10" width="355" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="6C9-9q-qle"/>
                         </constraints>
@@ -29,7 +29,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gDb-pq-kxD">
-                        <rect key="frame" x="20" y="30" width="335" height="70"/>
+                        <rect key="frame" x="10" y="30" width="355" height="70"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="111" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FvN-va-5Hy">
                                 <rect key="frame" x="0.0" y="10" width="30" height="20"/>
@@ -42,7 +42,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我是文章的标题我是文章的标题我是文章的标题我是文章的标题我是文章的标题我是文章的标题" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wtE-wH-fp6">
-                                <rect key="frame" x="40" y="10" width="295" height="36"/>
+                                <rect key="frame" x="40" y="10" width="315" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -58,25 +58,25 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TNS-Cd-C7Q">
-                                <rect key="frame" x="40" y="52" width="295" height="18"/>
+                                <rect key="frame" x="40" y="52" width="315" height="18"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UP:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bfm-tU-VcN">
-                                        <rect key="frame" x="0.0" y="0.0" width="148" height="18"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="158" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.3万" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iRi-fg-3NT">
-                                        <rect key="frame" x="260" y="0.0" width="35" height="18"/>
+                                        <rect key="frame" x="280" y="0.0" width="35" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dOf-vT-2AC">
-                                        <rect key="frame" x="156" y="0.0" width="96" height="20"/>
+                                        <rect key="frame" x="156" y="0.0" width="116" height="20"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GEo-Og-BRP">
-                                                <rect key="frame" x="76" y="0.0" width="20" height="20"/>
+                                                <rect key="frame" x="96" y="0.0" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="20" id="bkW-d6-SqX"/>
                                                     <constraint firstAttribute="height" constant="20" id="rcG-K3-QTj"/>
@@ -124,7 +124,7 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6I0-VS-doI">
-                        <rect key="frame" x="20" y="0.0" width="355" height="0.5"/>
+                        <rect key="frame" x="10" y="0.0" width="365" height="0.5"/>
                         <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="0.25" id="Pz5-qI-MO1"/>
@@ -133,16 +133,16 @@
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="6I0-VS-doI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="CFt-2q-S7q"/>
-                <constraint firstItem="gDb-pq-kxD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="PRz-hy-mrK"/>
+                <constraint firstItem="6I0-VS-doI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="CFt-2q-S7q"/>
+                <constraint firstItem="gDb-pq-kxD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="PRz-hy-mrK"/>
                 <constraint firstAttribute="bottom" secondItem="gDb-pq-kxD" secondAttribute="bottom" id="TtP-vv-VEP"/>
                 <constraint firstItem="5mu-Sr-ZU3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="U54-5E-C2z"/>
-                <constraint firstAttribute="trailing" secondItem="gDb-pq-kxD" secondAttribute="trailing" constant="20" id="U7B-lM-hQH"/>
+                <constraint firstAttribute="trailing" secondItem="gDb-pq-kxD" secondAttribute="trailing" constant="10" id="U7B-lM-hQH"/>
                 <constraint firstItem="gDb-pq-kxD" firstAttribute="top" secondItem="5mu-Sr-ZU3" secondAttribute="bottom" id="Voo-IX-NRK"/>
                 <constraint firstAttribute="trailing" secondItem="6I0-VS-doI" secondAttribute="trailing" id="du2-B8-Ine"/>
                 <constraint firstItem="6I0-VS-doI" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="vTn-0N-PBm"/>
-                <constraint firstItem="5mu-Sr-ZU3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="vYT-0r-suc"/>
-                <constraint firstAttribute="trailing" secondItem="5mu-Sr-ZU3" secondAttribute="trailing" constant="20" id="ytB-wj-Tg1"/>
+                <constraint firstItem="5mu-Sr-ZU3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="vYT-0r-suc"/>
+                <constraint firstAttribute="trailing" secondItem="5mu-Sr-ZU3" secondAttribute="trailing" constant="10" id="ytB-wj-Tg1"/>
             </constraints>
             <size key="customSize" width="154" height="50"/>
             <connections>

@@ -9,8 +9,11 @@
 import Foundation
 
 struct Constants {
-    
+    //红色
     static let PRIMARY_COLOR =  UIColor(colorLiteralRed: 253/255, green: 76/255, blue: 91/255, alpha: 1)
+    //黄色
+    static let PRIMARY_COLOR_BLUE = UIColor(colorLiteralRed: 254/255, green: 223/255, blue: 50/255, alpha: 1)
+
     
 //    static var SCREEN_FRAME_WITHOUT_STATUSBAR:CGRect!
     
@@ -28,6 +31,8 @@ struct Constants {
         static let IndexCollectionCellMonkeyMountainHeadLineIndentifier = "IndexCollectionCellMonkeyMountainHeadLine"
         
         static let IndexCollectionCellMonkeyMountainHeadLineRightIndentifier = "IndexCollectionCellMonkeyMountainHeadLineRight"
+        
+        static let IndexCollectionCellBananaRankIndentifier = "IndexCollectionCellBananaRank"
     }
     
     struct HeaderIndentifier {
@@ -46,6 +51,7 @@ struct Constants {
         static let IndexSectionHeaderHeight: CGFloat = 40
         static let IndexCollectionCellMonkeyMountainHeadLineHeight:CGFloat = 150
         static let IndexSectionFooterHeight:CGFloat = 46
+        static let IndexCellBananaRank:CGFloat = 100
     }
     
     //轮播图片

@@ -64,6 +64,8 @@
 		26C948441E2CDCD40040AC57 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C9482F1E2CDCD40040AC57 /* UIScrollView+MJRefresh.m */; };
 		26C948451E2CDCD40040AC57 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C948311E2CDCD40040AC57 /* UIView+MJExtension.m */; };
 		26DE9AD01E34DF49006DB0B3 /* UIButtonExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DE9ACF1E34DF49006DB0B3 /* UIButtonExt.swift */; };
+		26DEC8D51E474D58003B493D /* IndexCollectionCellBananaRank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DEC8D31E474D58003B493D /* IndexCollectionCellBananaRank.swift */; };
+		26DEC8D61E474D58003B493D /* IndexCollectionCellBananaRank.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26DEC8D41E474D58003B493D /* IndexCollectionCellBananaRank.xib */; };
 		26E12E921E1A33E400F39F1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E12E911E1A33E400F39F1C /* AppDelegate.swift */; };
 		26E12E941E1A33E400F39F1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E12E931E1A33E400F39F1C /* ViewController.swift */; };
 		26E12E971E1A33E400F39F1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26E12E951E1A33E400F39F1C /* Main.storyboard */; };
@@ -155,6 +157,8 @@
 		26C948311E2CDCD40040AC57 /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
 		26C948481E2CE1A20040AC57 /* Acfun-bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Acfun-bridging-header.h"; sourceTree = "<group>"; };
 		26DE9ACF1E34DF49006DB0B3 /* UIButtonExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIButtonExt.swift; path = ../UIButtonExt.swift; sourceTree = "<group>"; };
+		26DEC8D31E474D58003B493D /* IndexCollectionCellBananaRank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexCollectionCellBananaRank.swift; sourceTree = "<group>"; };
+		26DEC8D41E474D58003B493D /* IndexCollectionCellBananaRank.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IndexCollectionCellBananaRank.xib; sourceTree = "<group>"; };
 		26E12E8E1E1A33E400F39F1C /* Acfun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Acfun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26E12E911E1A33E400F39F1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26E12E931E1A33E400F39F1C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -223,6 +227,8 @@
 				26AAC4C91E44B82B008BF6A2 /* IndexCollectionCellMonkeyMountainHeadLine.xib */,
 				2680D7BB1E460B8E00004D85 /* IndexSectionMoreFooter.swift */,
 				2680D7BC1E460B8E00004D85 /* IndexSectionMoreFooter.xib */,
+				26DEC8D31E474D58003B493D /* IndexCollectionCellBananaRank.swift */,
+				26DEC8D41E474D58003B493D /* IndexCollectionCellBananaRank.xib */,
 			);
 			path = index;
 			sourceTree = "<group>";
@@ -549,6 +555,7 @@
 				26E185251E30F738005A54F0 /* AcFunSymbol-Bold1.ttf in Resources */,
 				263D1C681E38FF7600EF4D1F /* IndexViewController.xib in Resources */,
 				26AAC4CB1E44B82B008BF6A2 /* IndexCollectionCellMonkeyMountainHeadLine.xib in Resources */,
+				26DEC8D61E474D58003B493D /* IndexCollectionCellBananaRank.xib in Resources */,
 				263D1C6C1E38FF7600EF4D1F /* WatchViewController.xib in Resources */,
 				26C6D5A71E39AB6C002F7314 /* IndexSectionHeader.xib in Resources */,
 				263D1C611E38FF7600EF4D1F /* IndexCollectionViewCellArticle.xib in Resources */,
@@ -625,6 +632,7 @@
 				26E12E941E1A33E400F39F1C /* ViewController.swift in Sources */,
 				26C9483A1E2CDCD40040AC57 /* MJRefreshBackGifFooter.m in Sources */,
 				26C948451E2CDCD40040AC57 /* UIView+MJExtension.m in Sources */,
+				26DEC8D51E474D58003B493D /* IndexCollectionCellBananaRank.swift in Sources */,
 				26C948331E2CDCD40040AC57 /* MJRefreshBackFooter.m in Sources */,
 				26C948371E2CDCD40040AC57 /* MJRefreshAutoGifFooter.m in Sources */,
 				26C9483D1E2CDCD40040AC57 /* MJRefreshGifHeader.m in Sources */,

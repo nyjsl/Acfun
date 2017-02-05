@@ -85,6 +85,7 @@ struct Region: Mappable{
         var id: Int?
         var image: String?
         var intro: String?
+        var owner: Owner?
         var regionId: Int?
         var releaseAt: String?
         var shareTagShow:Int?
@@ -106,6 +107,7 @@ struct Region: Mappable{
             id <- map["id"]
             image <- map["image"]
             intro <- map["intro"]
+            owner <- map["owner"]
             regionId <- map["regionId"]
             releaseAt <- map["releaseAt"]
             shareTagShow <- map["shareTagShow"]
@@ -141,6 +143,25 @@ struct Region: Mappable{
                 views <- map["views"]
             }
         }
+    }
+    
+    struct Owner:Mappable {
+        var avatar: String?
+        var id: Int?
+        var name: String?
+        var verified: Int?
+        var verifiedText: String?
+        init?(map: Map) {
+            //DO NOTHING
+        }
+        mutating func mapping(map: Map) {
+            avatar <- map["avatar"]
+            name <- map["name"]
+            id <- map["id"]
+            verified <- map["verified"]
+            verifiedText <- map["verifiedText"]
+        }
+
     }
     
     struct CType:Mappable {

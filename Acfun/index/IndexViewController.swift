@@ -42,11 +42,10 @@ class IndexViewController: UIViewController {
         let _ = observable.subscribe(onNext: { (dataResponse) in
             if let datas = dataResponse.result.value?.data{
                 self.datas = datas
-                //TOOD
             }
         }, onError: nil ,onCompleted: {
             self.diyHeader?.endRefreshing()
-        }, onDisposed: nil)        //test channels
+        }, onDisposed: nil)
     }
     
     
@@ -72,7 +71,7 @@ class IndexViewController: UIViewController {
         indexCollectionView.mj_header = diyHeader
         registerHeaderAndCells()
     }
-    //注册各种Cell 和 Header
+    //注册各种Cell 和 Header ,Footer
     private func registerHeaderAndCells(){
         let nibCellArticle = UINib(nibName:  Constants.CellIdentifier.IndexCollectionViewCellArticleIndentifier,
                         bundle: nil)
@@ -97,6 +96,9 @@ class IndexViewController: UIViewController {
         let nibIndexSectionFooter = UINib(nibName: Constants.FooterIndentifer.IndexSectionMoreFooterIndentifier, bundle: nil)
         
         indexCollectionView.register(nibIndexSectionFooter, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: Constants.FooterIndentifer.IndexSectionMoreFooterIndentifier)
+        
+        let nibIndexBananaRankCell = UINib(nibName: Constants.CellIdentifier.IndexCollectionCellBananaRankIndentifier, bundle: nil)
+        indexCollectionView.register(nibIndexBananaRankCell, forCellWithReuseIdentifier: Constants.CellIdentifier.IndexCollectionCellBananaRankIndentifier)
     }
     
     private func updateCollectionView(){
@@ -122,7 +124,6 @@ extension IndexViewController: UICollectionViewDelegate,UICollectionViewDataSour
         case Constants.IndexCellType.carousels.rawValue: //轮播
             return 0
         default:
-            print(region.contentCount!)
             return region.contentCount!
         }
     }
@@ -132,13 +133,14 @@ extension IndexViewController: UICollectionViewDelegate,UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        print("row:\(indexPath.row) count:\(indexPath.count) section\(indexPath.section)")
         let region = datas[indexPath.section]
         var cell: UICollectionViewCell
         cell = getInitCellsByType(region, indexPath)
         return cell
     }
-    //生成各种Cell
+    /*
+     生成各种Cell
+     */
     private func getInitCellsByType(_ region: Region,_ indexPath: IndexPath) -> UICollectionViewCell{
         var cell: UICollectionViewCell
        
@@ -162,6 +164,17 @@ extension IndexViewController: UICollectionViewDelegate,UICollectionViewDataSour
                 let monkeyMountainHeadLlineCell = cell as! IndexCollectionCellMonkeyMountainHeadLineRight
                 monkeyMountainHeadLlineCell.monkeyMountainHeadlinContent = region.contents?[indexPath.row]
             }
+            
+        case Constants.IndexCellType.videos_banana_list.rawValue:
+            
+            
+            cell = self.indexCollectionView.dequeueReusableCell(withReuseIdentifier: Constants.CellIdentifier.IndexCollectionCellBananaRankIndentifier, for: indexPath)
+            
+            let bananaRankCell = cell as! IndexCollectionCellBananaRank
+            
+            bananaRankCell.content = region.contents?[indexPath.row]
+            bananaRankCell.rankNo = indexPath.row
+            
         default:
             cell = self.indexCollectionView.dequeueReusableCell(withReuseIdentifier: Constants.CellIdentifier.IndexCollectionViewCellArticleIndentifier, for: indexPath)
         }
@@ -175,6 +188,9 @@ extension IndexViewController: UICollectionViewDelegate,UICollectionViewDataSour
         
     }
     
+    /*
+     返回各cell的CGSize
+     */
     private func getCellSizeByType(_ region: Region,_ indexPath: IndexPath) -> CGSize{
         switch region.type!.id! {
         
@@ -182,6 +198,8 @@ extension IndexViewController: UICollectionViewDelegate,UICollectionViewDataSour
            return CGSize(width: Constants.SCREEN_FRAME.width, height: Constants.CollectionItemHeight.IndexCellBannerHeight)
         case Constants.IndexCellType.videos.rawValue:
             return CGSize(width: Constants.SCREEN_FRAME.width.advanced(by: -10).divided(by: 2), height: Constants.CollectionItemHeight.IndexCollectionCellMonkeyMountainHeadLineHeight)
+        case Constants.IndexCellType.videos_banana_list.rawValue:
+            return CGSize(width: Constants.SCREEN_FRAME.width, height: Constants.CollectionItemHeight.IndexCellBananaRank)
         default:
             return CGSize(width: Constants.SCREEN_FRAME.width, height: Constants.CollectionItemHeight.IndexCellBannerHeight)
         }
@@ -191,13 +209,12 @@ extension IndexViewController: UICollectionViewDelegate,UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
-        
         var resuableView: UICollectionReusableView
-        
+        let region = datas[indexPath.section]
+
         switch kind {
         case UICollectionElementKindSectionHeader:
             
-            let region = datas[indexPath.section]
             switch region.type!.id! {
             case Constants.IndexCellType.carousels.rawValue:
                 resuableView =  collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: Constants.HeaderIndentifier.IndexPageHeaderIndentifier, for: indexPath)
@@ -211,6 +228,16 @@ extension IndexViewController: UICollectionViewDelegate,UICollectionViewDataSour
                 let header = resuableView as! IndexSectionHeader
                 header.iconImageUrl = region.image
                 header.titleText = region.name
+            }
+        case UICollectionElementKindSectionFooter:
+            if region.showMore == 1{
+                resuableView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: Constants.FooterIndentifer.IndexSectionMoreFooterIndentifier, for: indexPath)
+                let footer = resuableView as! IndexSectionMoreFooter
+                footer.title = region.name
+                let isHidden = indexPath.section == datas.count-1
+                footer.setLineViewIsHidden(isHidden: isHidden)
+            }else{
+               resuableView = UICollectionReusableView()
             }
 
         default:
@@ -232,8 +259,18 @@ extension IndexViewController: UICollectionViewDelegate,UICollectionViewDataSour
         default:
             return CGSize(width: Constants.SCREEN_FRAME.width, height: Constants.CollectionItemHeight.IndexSectionHeaderHeight)
         }
-
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        let region = datas[section]
+        if region.showMore == 1{
+            return CGSize(width: Constants.SCREEN_FRAME.width, height: Constants.CollectionItemHeight.IndexSectionFooterHeight)
+        }else{
+            return CGSize(width: 0, height: 0)
+        }
+    }
+    
+    
     
 }
 
