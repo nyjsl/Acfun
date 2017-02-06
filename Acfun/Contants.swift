@@ -33,6 +33,8 @@ struct Constants {
         static let IndexCollectionCellMonkeyMountainHeadLineRightIndentifier = "IndexCollectionCellMonkeyMountainHeadLineRight"
         
         static let IndexCollectionCellBananaRankIndentifier = "IndexCollectionCellBananaRank"
+        
+        static let IndexCollectionCellBagiumsIdentifer = "IndexCollectionCellBagiums"
     }
     
     struct HeaderIndentifier {
@@ -52,6 +54,7 @@ struct Constants {
         static let IndexCollectionCellMonkeyMountainHeadLineHeight:CGFloat = 150
         static let IndexSectionFooterHeight:CGFloat = 46
         static let IndexCellBananaRank:CGFloat = 100
+        static let IndexCollectionCellBagiums:CGFloat = 220
     }
     
     //轮播图片

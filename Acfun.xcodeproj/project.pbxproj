@@ -75,6 +75,8 @@
 		26E185251E30F738005A54F0 /* AcFunSymbol-Bold1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26E185231E30F738005A54F0 /* AcFunSymbol-Bold1.ttf */; };
 		26E185261E30F738005A54F0 /* AcFunSymbol-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26E185241E30F738005A54F0 /* AcFunSymbol-Regular.ttf */; };
 		26EAF7791E1E85D600C09C85 /* BaseRegions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EAF7781E1E85D600C09C85 /* BaseRegions.swift */; };
+		26EE76B61E483B6A00160BC0 /* IndexCollectionCellBagiums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EE76B41E483B6A00160BC0 /* IndexCollectionCellBagiums.swift */; };
+		26EE76B71E483B6A00160BC0 /* IndexCollectionCellBagiums.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26EE76B51E483B6A00160BC0 /* IndexCollectionCellBagiums.xib */; };
 		3776F22901639E951D1D3554 /* Pods_Acfun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DB9599AD0BFCE6042B8A5AA /* Pods_Acfun.framework */; };
 /* End PBXBuildFile section */
 
@@ -170,6 +172,8 @@
 		26E185231E30F738005A54F0 /* AcFunSymbol-Bold1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AcFunSymbol-Bold1.ttf"; sourceTree = "<group>"; };
 		26E185241E30F738005A54F0 /* AcFunSymbol-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AcFunSymbol-Regular.ttf"; sourceTree = "<group>"; };
 		26EAF7781E1E85D600C09C85 /* BaseRegions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRegions.swift; sourceTree = "<group>"; };
+		26EE76B41E483B6A00160BC0 /* IndexCollectionCellBagiums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexCollectionCellBagiums.swift; sourceTree = "<group>"; };
+		26EE76B51E483B6A00160BC0 /* IndexCollectionCellBagiums.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IndexCollectionCellBagiums.xib; sourceTree = "<group>"; };
 		2DB9599AD0BFCE6042B8A5AA /* Pods_Acfun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Acfun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58698AF5B7BC1AB039499F79 /* Pods-Acfun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Acfun.release.xcconfig"; path = "Pods/Target Support Files/Pods-Acfun/Pods-Acfun.release.xcconfig"; sourceTree = "<group>"; };
 		B5584CB2499978D8B2FD2DD8 /* Pods-Acfun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Acfun.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Acfun/Pods-Acfun.debug.xcconfig"; sourceTree = "<group>"; };
@@ -229,6 +233,8 @@
 				2680D7BC1E460B8E00004D85 /* IndexSectionMoreFooter.xib */,
 				26DEC8D31E474D58003B493D /* IndexCollectionCellBananaRank.swift */,
 				26DEC8D41E474D58003B493D /* IndexCollectionCellBananaRank.xib */,
+				26EE76B41E483B6A00160BC0 /* IndexCollectionCellBagiums.swift */,
+				26EE76B51E483B6A00160BC0 /* IndexCollectionCellBagiums.xib */,
 			);
 			path = index;
 			sourceTree = "<group>";
@@ -545,6 +551,7 @@
 				263D1C701E39987A00EF4D1F /* IndexCollectionCellBanner.xib in Resources */,
 				26E12E9C1E1A33E400F39F1C /* LaunchScreen.storyboard in Resources */,
 				2680D7BE1E460B8E00004D85 /* IndexSectionMoreFooter.xib in Resources */,
+				26EE76B71E483B6A00160BC0 /* IndexCollectionCellBagiums.xib in Resources */,
 				26E12E991E1A33E400F39F1C /* Assets.xcassets in Resources */,
 				2680D7BA1E459A4400004D85 /* IndexCollectionCellMonkeyMountainHeadLineRight.xib in Resources */,
 				26E185261E30F738005A54F0 /* AcFunSymbol-Regular.ttf in Resources */,
@@ -663,6 +670,7 @@
 				26C948431E2CDCD40040AC57 /* UIScrollView+MJExtension.m in Sources */,
 				26C9483C1E2CDCD40040AC57 /* MJRefreshBackStateFooter.m in Sources */,
 				26C948411E2CDCD40040AC57 /* MJRefreshConst.m in Sources */,
+				26EE76B61E483B6A00160BC0 /* IndexCollectionCellBagiums.swift in Sources */,
 				26AAC4C71E44B04D008BF6A2 /* BaseDataModel.swift in Sources */,
 				26E12E921E1A33E400F39F1C /* AppDelegate.swift in Sources */,
 				26C6D5A61E39AB6C002F7314 /* IndexSectionHeader.swift in Sources */,
