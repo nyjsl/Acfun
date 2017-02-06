@@ -36,26 +36,27 @@ class IndexCollectionCellBananaRank: UICollectionViewCell {
             if let c = content{
                 
                 if let imgUrl = c.image{
-                    
-                    if imgUrl.hasSuffix(".gif"){
-                        thumbnailImg.isHidden = true
-                        thumbnailAnimatedImgView.isHidden = false
-                        let url = URL(string: imgUrl)
-                        thumbnailAnimatedImgView.yy_setImage(with: url, placeholder: #imageLiteral(resourceName: "image_view_default"))
-                    }else{
-                        let url = URL(string: imgUrl)
-                        thumbnailImg.yy_setImage(with: url, placeholder: #imageLiteral(resourceName: "image_view_default"))
-                        thumbnailImg.isHidden = false
-                        thumbnailAnimatedImgView.isHidden = true
-                    }
-                   
-
+                   loadGifOrNormalImg(imgUrl: imgUrl)
                 }
                 titleLabel.text = c.title!
                 bananaNumberLabel.text = "\(c.visit!.goldBanana!)"
-                upLabel.text = c.owner!.name!
+                upLabel.text = "UP: \(c.owner!.name!)"
             }
         }
+    }
+    
+    private func loadGifOrNormalImg(imgUrl: String){
+        let url = URL(string: imgUrl)
+        if imgUrl.hasSuffix(".gif"){
+            thumbnailImg.isHidden = true
+            thumbnailAnimatedImgView.isHidden = false
+            thumbnailAnimatedImgView.yy_setImage(with: url, placeholder: #imageLiteral(resourceName: "image_view_default"))
+        }else{
+            thumbnailImg.yy_setImage(with: url, placeholder: #imageLiteral(resourceName: "image_view_default"))
+            thumbnailImg.isHidden = false
+            thumbnailAnimatedImgView.isHidden = true
+        }
+
     }
     
     private func setViewToRoundCorner(){

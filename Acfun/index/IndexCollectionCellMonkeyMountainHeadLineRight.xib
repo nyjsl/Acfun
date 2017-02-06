@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -22,6 +22,10 @@
                         <rect key="frame" x="0.0" y="5" width="197" height="117"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5BG-eA-bFe">
+                                <rect key="frame" x="0.0" y="0.0" width="197" height="117"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kr8-l5-UmH" customClass="YYAnimatedImageView">
                                 <rect key="frame" x="0.0" y="0.0" width="197" height="117"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
@@ -82,9 +86,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="1R5-nQ-aU0" secondAttribute="bottom" constant="3" id="5Oq-oj-z2u"/>
+                            <constraint firstAttribute="trailing" secondItem="kr8-l5-UmH" secondAttribute="trailing" id="BoE-QD-4f9"/>
                             <constraint firstItem="5BG-eA-bFe" firstAttribute="top" secondItem="Mt9-lk-3KL" secondAttribute="top" id="Fxi-Rf-S1F"/>
                             <constraint firstAttribute="bottom" secondItem="5BG-eA-bFe" secondAttribute="bottom" id="R3j-4s-ZPp"/>
+                            <constraint firstItem="kr8-l5-UmH" firstAttribute="leading" secondItem="Mt9-lk-3KL" secondAttribute="leading" id="Yl3-zF-ecD"/>
                             <constraint firstItem="5BG-eA-bFe" firstAttribute="leading" secondItem="Mt9-lk-3KL" secondAttribute="leading" id="bxY-4a-vyi"/>
+                            <constraint firstAttribute="bottom" secondItem="kr8-l5-UmH" secondAttribute="bottom" id="hDv-kk-b5Q"/>
+                            <constraint firstItem="kr8-l5-UmH" firstAttribute="top" secondItem="Mt9-lk-3KL" secondAttribute="top" id="haR-Fv-zYD"/>
                             <constraint firstItem="1R5-nQ-aU0" firstAttribute="leading" secondItem="Mt9-lk-3KL" secondAttribute="leading" constant="3" id="lqh-P1-De8"/>
                             <constraint firstAttribute="trailing" secondItem="5BG-eA-bFe" secondAttribute="trailing" id="zpW-qb-I4u"/>
                         </constraints>
@@ -107,6 +115,7 @@
                 <constraint firstItem="Mt9-lk-3KL" firstAttribute="top" secondItem="OWv-Qn-nZh" secondAttribute="top" constant="5" id="nbO-FQ-7Gp"/>
             </constraints>
             <connections>
+                <outlet property="animatedThumbnailImg" destination="kr8-l5-UmH" id="J3o-1d-dae"/>
                 <outlet property="commentsBtn" destination="tHh-I8-XN4" id="uqj-pk-gyZ"/>
                 <outlet property="commentsLabel" destination="yz1-Rr-Clx" id="ZgS-88-sV6"/>
                 <outlet property="thumbnailImg" destination="5BG-eA-bFe" id="SLd-iQ-CNc"/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -22,6 +22,10 @@
                         <rect key="frame" x="10" y="5" width="197" height="117"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XFs-8f-mDe">
+                                <rect key="frame" x="0.0" y="0.0" width="197" height="117"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j7j-Cf-hu1" customClass="YYAnimatedImageView">
                                 <rect key="frame" x="0.0" y="0.0" width="197" height="117"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
@@ -81,10 +85,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="j7j-Cf-hu1" secondAttribute="bottom" id="2rc-1t-w58"/>
                             <constraint firstAttribute="bottom" secondItem="XFs-8f-mDe" secondAttribute="bottom" id="3wX-lK-If1"/>
                             <constraint firstItem="j6A-m2-sVg" firstAttribute="leading" secondItem="JyA-Yv-vqW" secondAttribute="leading" constant="3" id="CVk-f0-ZYy"/>
+                            <constraint firstAttribute="trailing" secondItem="j7j-Cf-hu1" secondAttribute="trailing" id="G83-qe-ddr"/>
                             <constraint firstAttribute="trailing" secondItem="XFs-8f-mDe" secondAttribute="trailing" id="P83-bH-rjv"/>
+                            <constraint firstItem="j7j-Cf-hu1" firstAttribute="top" secondItem="JyA-Yv-vqW" secondAttribute="top" id="Zb2-kk-q8I"/>
                             <constraint firstAttribute="bottom" secondItem="j6A-m2-sVg" secondAttribute="bottom" constant="3" id="jJ8-Ff-FmW"/>
+                            <constraint firstItem="j7j-Cf-hu1" firstAttribute="leading" secondItem="JyA-Yv-vqW" secondAttribute="leading" id="m8C-Tk-VGf"/>
                             <constraint firstItem="XFs-8f-mDe" firstAttribute="top" secondItem="JyA-Yv-vqW" secondAttribute="top" id="vVw-44-asx"/>
                             <constraint firstItem="XFs-8f-mDe" firstAttribute="leading" secondItem="JyA-Yv-vqW" secondAttribute="leading" id="zJs-SG-uS9"/>
                         </constraints>
@@ -107,6 +115,7 @@
                 <constraint firstItem="Ls8-42-DdM" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="wdq-Uc-RYo"/>
             </constraints>
             <connections>
+                <outlet property="AnimatedThumbnailImg" destination="j7j-Cf-hu1" id="Tv3-CO-MAq"/>
                 <outlet property="bgImageView" destination="hVM-PH-mGq" id="vVn-Ae-qVP"/>
                 <outlet property="commentsBtn" destination="CfB-jE-tKK" id="gWk-8Z-4iD"/>
                 <outlet property="commentsLabel" destination="nmm-x2-rSP" id="WOH-O6-F5E"/>

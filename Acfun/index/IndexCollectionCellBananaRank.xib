@@ -41,10 +41,10 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_ranking_1" translatesAutoresizingMaskIntoConstraints="NO" id="HVD-Bp-xeb">
-                                        <rect key="frame" x="8" y="8" width="45" height="25"/>
+                                        <rect key="frame" x="8" y="8" width="45" height="22"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="25" id="9P0-5V-Wby"/>
+                                            <constraint firstAttribute="height" constant="22" id="9P0-5V-Wby"/>
                                             <constraint firstAttribute="width" constant="45" id="i5X-DW-zQo"/>
                                         </constraints>
                                     </imageView>

@@ -7,9 +7,10 @@
 //
 
 import UIKit
-
+import YYWebImage
 class IndexCollectionCellMonkeyMountainHeadLineRight: UICollectionViewCell {
 
+    @IBOutlet weak var animatedThumbnailImg: YYAnimatedImageView!
     @IBOutlet weak var commentsLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var viewsLabel: UILabel!
@@ -28,10 +29,25 @@ class IndexCollectionCellMonkeyMountainHeadLineRight: UICollectionViewCell {
                 titleLabel.text = content.title!
                 viewsLabel.text = "\(content.visit!.views!)"
                 commentsLabel.text = "\(content.visit!.comments!)"
-                let url = URL(string: content.image!)
-                thumbnailImg.yy_setImage(with: url, placeholder: #imageLiteral(resourceName: "image_view_default"))
+                if let imgUrl = content.image{
+                    loadGifOrNormalImg(imgUrl: imgUrl)
+                }
             }
         }
+    }
+    
+    private func loadGifOrNormalImg(imgUrl:String){
+        let url = URL(string: imgUrl)
+        if imgUrl.hasSuffix(".gif"){
+            thumbnailImg.isHidden = true
+            animatedThumbnailImg.isHidden = false
+            animatedThumbnailImg.yy_setImage(with: url, placeholder: #imageLiteral(resourceName: "image_view_default"))
+        }else{
+            thumbnailImg.isHidden = false
+            animatedThumbnailImg.isHidden = true
+            thumbnailImg.yy_setImage(with: url, placeholder: #imageLiteral(resourceName: "image_view_default"))
+        }
+
     }
 
     
