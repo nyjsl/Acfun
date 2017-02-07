@@ -63,6 +63,7 @@
 		26C948431E2CDCD40040AC57 /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C9482D1E2CDCD40040AC57 /* UIScrollView+MJExtension.m */; };
 		26C948441E2CDCD40040AC57 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C9482F1E2CDCD40040AC57 /* UIScrollView+MJRefresh.m */; };
 		26C948451E2CDCD40040AC57 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C948311E2CDCD40040AC57 /* UIView+MJExtension.m */; };
+		26CF5D891E4987BF004C0AAB /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CF5D881E4987BF004C0AAB /* UIViewExt.swift */; };
 		26DE9AD01E34DF49006DB0B3 /* UIButtonExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DE9ACF1E34DF49006DB0B3 /* UIButtonExt.swift */; };
 		26DEC8D51E474D58003B493D /* IndexCollectionCellBananaRank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DEC8D31E474D58003B493D /* IndexCollectionCellBananaRank.swift */; };
 		26DEC8D61E474D58003B493D /* IndexCollectionCellBananaRank.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26DEC8D41E474D58003B493D /* IndexCollectionCellBananaRank.xib */; };
@@ -158,6 +159,7 @@
 		26C948301E2CDCD40040AC57 /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		26C948311E2CDCD40040AC57 /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
 		26C948481E2CE1A20040AC57 /* Acfun-bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Acfun-bridging-header.h"; sourceTree = "<group>"; };
+		26CF5D881E4987BF004C0AAB /* UIViewExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
 		26DE9ACF1E34DF49006DB0B3 /* UIButtonExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIButtonExt.swift; path = ../UIButtonExt.swift; sourceTree = "<group>"; };
 		26DEC8D31E474D58003B493D /* IndexCollectionCellBananaRank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexCollectionCellBananaRank.swift; sourceTree = "<group>"; };
 		26DEC8D41E474D58003B493D /* IndexCollectionCellBananaRank.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IndexCollectionCellBananaRank.xib; sourceTree = "<group>"; };
@@ -419,6 +421,7 @@
 			isa = PBXGroup;
 			children = (
 				26DE9ACF1E34DF49006DB0B3 /* UIButtonExt.swift */,
+				26CF5D881E4987BF004C0AAB /* UIViewExt.swift */,
 			);
 			path = exts;
 			sourceTree = "<group>";
@@ -656,6 +659,7 @@
 				26AAC4CA1E44B82B008BF6A2 /* IndexCollectionCellMonkeyMountainHeadLine.swift in Sources */,
 				263D1C631E38FF7600EF4D1F /* IndexNavBar.swift in Sources */,
 				263D1C5E1E38FF7600EF4D1F /* ChannelViewController.swift in Sources */,
+				26CF5D891E4987BF004C0AAB /* UIViewExt.swift in Sources */,
 				26B446451E1A4CD400347154 /* YYWeb.md in Sources */,
 				26C948421E2CDCD40040AC57 /* NSBundle+MJRefresh.m in Sources */,
 				26C9483E1E2CDCD40040AC57 /* MJRefreshNormalHeader.m in Sources */,

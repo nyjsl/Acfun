@@ -13,16 +13,16 @@ class IndexCollectionCellBananaRank: UICollectionViewCell {
 
    
     @IBOutlet weak var lineView: UIView!
-    
-    @IBOutlet weak var thumbnailAnimatedImgView: YYAnimatedImageView! //gif 图片
-    @IBOutlet weak var thumbnailView: UIView! //普通图片
+    //gif 图片
+    @IBOutlet weak var thumbnailAnimatedImgView: YYAnimatedImageView!
+    @IBOutlet weak var thumbnailView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var rankImgView: UIImageView!
-    
     @IBOutlet weak var bananaNumberLabel: UILabel!
+    //普通图片
     @IBOutlet weak var thumbnailImg: UIImageView!
-    
     @IBOutlet weak var upLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -31,18 +31,21 @@ class IndexCollectionCellBananaRank: UICollectionViewCell {
     var content: (Region.Content)?{
         didSet{
             
-            setViewToRoundCorner()
-            
+            thumbnailView.borderWithRoundCorner()
+
             if let c = content{
-                
-                if let imgUrl = c.image{
-                   loadGifOrNormalImg(imgUrl: imgUrl)
-                }
-                titleLabel.text = c.title!
-                bananaNumberLabel.text = "\(c.visit!.goldBanana!)"
-                upLabel.text = "UP: \(c.owner!.name!)"
+                bindContentData(c: c)
             }
         }
+    }
+    
+    private func bindContentData(c: Region.Content){
+        if let imgUrl = c.image{
+            loadGifOrNormalImg(imgUrl: imgUrl)
+        }
+        titleLabel.text = c.title!
+        bananaNumberLabel.text = "\(c.visit!.goldBanana!)"
+        upLabel.text = "UP: \(c.owner!.name!)"
     }
     
     private func loadGifOrNormalImg(imgUrl: String){
@@ -57,16 +60,6 @@ class IndexCollectionCellBananaRank: UICollectionViewCell {
             thumbnailAnimatedImgView.isHidden = true
         }
 
-    }
-    
-    private func setViewToRoundCorner(){
-        thumbnailView.layer.masksToBounds = true
-        thumbnailView.layer.cornerRadius = 5 //圆角
-        
-        thumbnailView.layer.borderWidth = 0.5
-        thumbnailView.layer.borderColor = UIColor.gray.cgColor //边框
-        
-//        YYAnimatedImageView
     }
     
     var rankNo:Int = 0{

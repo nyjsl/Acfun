@@ -23,9 +23,25 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fUH-5C-5GT">
                                 <rect key="frame" x="0.0" y="0.0" width="130" height="150"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gRS-cm-R5e">
+                                        <rect key="frame" x="0.0" y="0.0" width="130" height="150"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KXb-tQ-84d" customClass="YYAnimatedImageView">
+                                        <rect key="frame" x="0.0" y="0.0" width="130" height="150"/>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="gRS-cm-R5e" secondAttribute="bottom" id="Fpg-6D-ytR"/>
+                                    <constraint firstAttribute="trailing" secondItem="gRS-cm-R5e" secondAttribute="trailing" id="HOf-Ju-jk0"/>
                                     <constraint firstAttribute="height" constant="150" id="JF2-UG-uut"/>
+                                    <constraint firstAttribute="trailing" secondItem="KXb-tQ-84d" secondAttribute="trailing" id="OQS-jG-hzd"/>
+                                    <constraint firstItem="KXb-tQ-84d" firstAttribute="top" secondItem="fUH-5C-5GT" secondAttribute="top" id="T5G-Jg-fmh"/>
+                                    <constraint firstItem="KXb-tQ-84d" firstAttribute="leading" secondItem="fUH-5C-5GT" secondAttribute="leading" id="c6R-aR-CJT"/>
+                                    <constraint firstItem="gRS-cm-R5e" firstAttribute="leading" secondItem="fUH-5C-5GT" secondAttribute="leading" id="gZf-Ig-ujL"/>
+                                    <constraint firstAttribute="bottom" secondItem="KXb-tQ-84d" secondAttribute="bottom" id="h10-il-iou"/>
+                                    <constraint firstItem="gRS-cm-R5e" firstAttribute="top" secondItem="fUH-5C-5GT" secondAttribute="top" id="m53-Qg-Jnn"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqC-ts-wFC">
@@ -63,6 +79,13 @@
                 <constraint firstAttribute="bottom" secondItem="QJa-Nr-mSm" secondAttribute="bottom" constant="5" id="fx2-3r-fIY"/>
             </constraints>
             <size key="customSize" width="140" height="215"/>
+            <connections>
+                <outlet property="animatedThumbnailImg" destination="KXb-tQ-84d" id="fla-Cj-fAZ"/>
+                <outlet property="descLabel" destination="v3V-5U-KJ2" id="UYn-PI-4U3"/>
+                <outlet property="thumbnailImg" destination="gRS-cm-R5e" id="Sw7-g6-OBC"/>
+                <outlet property="thumbnailView" destination="fUH-5C-5GT" id="bXb-nd-cjB"/>
+                <outlet property="titleLabel" destination="eqC-ts-wFC" id="g6o-k2-fEI"/>
+            </connections>
             <point key="canvasLocation" x="104" y="133"/>
         </collectionViewCell>
     </objects>
