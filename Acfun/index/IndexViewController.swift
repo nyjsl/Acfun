@@ -39,15 +39,21 @@ class IndexViewController: UIViewController {
     private func getDatas(){
         
         let observable:Observable<DataResponse<BaseRegions>> = RxProvider<APIAcfun>.requestObject(target: .regions(id: nil))
-        let _ = observable.subscribe(onNext: { (dataResponse) in
+        let _ = observable.subscribe(onNext: {[unowned self] (dataResponse) in
             if let datas = dataResponse.result.value?.data{
                 self.datas = datas
+                self.checkAndRequestForSingleRegion()
             }
         }, onError: nil ,onCompleted: {
             self.diyHeader?.endRefreshing()
         }, onDisposed: nil)
     }
-    
+    /*
+     如果contentContent大于 实际的Content对象个数,则请求单个Region请求重新给Region列表中的 Region赋值
+     */
+    private func checkAndRequestForSingleRegion(){
+        //TODO
+    }
     
     //设置Index页的NavigationBar
     private func initIndexNavbar(){
@@ -99,6 +105,9 @@ class IndexViewController: UIViewController {
         
         let nibIndexBananaRankCell = UINib(nibName: Constants.CellIdentifier.IndexCollectionCellBananaRankIndentifier, bundle: nil)
         indexCollectionView.register(nibIndexBananaRankCell, forCellWithReuseIdentifier: Constants.CellIdentifier.IndexCollectionCellBananaRankIndentifier)
+        
+        let nibCellBangiums = UINib(nibName: Constants.CellIdentifier.IndexCollectionCellBagiumsIdentifer, bundle: nil)
+        indexCollectionView.register(nibCellBangiums, forCellWithReuseIdentifier: Constants.CellIdentifier.IndexCollectionCellBagiumsIdentifer)
     }
     
     private func updateCollectionView(){
@@ -174,6 +183,11 @@ extension IndexViewController: UICollectionViewDelegate,UICollectionViewDataSour
             
             bananaRankCell.content = region.contents?[indexPath.row]
             bananaRankCell.rankNo = indexPath.row
+        
+        case Constants.IndexCellType.bangumis.rawValue:
+            
+            cell = self.indexCollectionView.dequeueReusableCell(withReuseIdentifier: Constants.CellIdentifier.IndexCollectionCellBagiumsIdentifer, for: indexPath)
+            
             
         default:
             cell = self.indexCollectionView.dequeueReusableCell(withReuseIdentifier: Constants.CellIdentifier.IndexCollectionViewCellArticleIndentifier, for: indexPath)
@@ -200,6 +214,8 @@ extension IndexViewController: UICollectionViewDelegate,UICollectionViewDataSour
             return CGSize(width: Constants.SCREEN_FRAME.width.advanced(by: -10).divided(by: 2), height: Constants.CollectionItemHeight.IndexCollectionCellMonkeyMountainHeadLineHeight)
         case Constants.IndexCellType.videos_banana_list.rawValue:
             return CGSize(width: Constants.SCREEN_FRAME.width, height: Constants.CollectionItemHeight.IndexCellBananaRank)
+        case Constants.IndexCellType.bangumis.rawValue:
+            return CGSize(width: Constants.SCREEN_FRAME.width.advanced(by: -40).divided(by: 3), height: Constants.CollectionItemHeight.IndexCollectionCellBagiums)
         default:
             return CGSize(width: Constants.SCREEN_FRAME.width, height: Constants.CollectionItemHeight.IndexCellBannerHeight)
         }
