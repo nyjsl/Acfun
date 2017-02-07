@@ -23,8 +23,25 @@ class IndexCollectionViewCellArticle: UICollectionViewCell {
     
     @IBOutlet weak var articleViewCountButton: UIButton!
     
-        @IBOutlet weak var articleViewCountLabel: UILabel!
+    @IBOutlet weak var articleViewCountLabel: UILabel!
     
+    var content: (Region.Content)?{
+        didSet{
+            if let c = content{
+                articleTypeLabel.text = "/来自 综合"
+                articleCommentCountLabel.text = "\(c.visit!.comments!)"
+                articleTitleLabel.text = "\(c.title!)"
+                articleUpMasterLabel.text = "UP: \(c.owner!.name!)"
+                articleViewCountLabel.text = "\(c.visit!.views!)"
+            }
+        }
+    }
+    
+    var row: Int = 0{
+        didSet{
+           articleDividerLine.isHidden = row == 0
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

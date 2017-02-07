@@ -32,9 +32,9 @@
                         <rect key="frame" x="10" y="30" width="355" height="70"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="111" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FvN-va-5Hy">
-                                <rect key="frame" x="0.0" y="10" width="30" height="20"/>
+                                <rect key="frame" x="0.0" y="10" width="45" height="20"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="b6Y-0F-Pd1"/>
+                                    <constraint firstAttribute="width" constant="45" id="b6Y-0F-Pd1"/>
                                     <constraint firstAttribute="height" constant="20" id="fAB-W8-sz2"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -42,41 +42,41 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我是文章的标题我是文章的标题我是文章的标题我是文章的标题我是文章的标题我是文章的标题" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wtE-wH-fp6">
-                                <rect key="frame" x="40" y="10" width="315" height="36"/>
+                                <rect key="frame" x="55" y="10" width="300" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="评论" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WIA-im-jeA">
-                                <rect key="frame" x="0.0" y="50" width="30" height="20"/>
+                                <rect key="frame" x="0.0" y="50" width="45" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="02A-JY-Ms3"/>
-                                    <constraint firstAttribute="width" constant="30" id="r21-te-AqZ"/>
+                                    <constraint firstAttribute="width" constant="45" id="r21-te-AqZ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TNS-Cd-C7Q">
-                                <rect key="frame" x="40" y="52" width="315" height="18"/>
+                                <rect key="frame" x="55" y="52" width="300" height="18"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UP:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bfm-tU-VcN">
-                                        <rect key="frame" x="0.0" y="0.0" width="158" height="18"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="150.5" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.3万" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iRi-fg-3NT">
-                                        <rect key="frame" x="280" y="0.0" width="35" height="18"/>
+                                        <rect key="frame" x="265" y="0.0" width="35" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dOf-vT-2AC">
-                                        <rect key="frame" x="156" y="0.0" width="116" height="20"/>
+                                        <rect key="frame" x="156" y="0.0" width="101" height="20"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GEo-Og-BRP">
-                                                <rect key="frame" x="96" y="0.0" width="20" height="20"/>
+                                                <rect key="frame" x="81" y="0.0" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="20" id="bkW-d6-SqX"/>
                                                     <constraint firstAttribute="height" constant="20" id="rcG-K3-QTj"/>

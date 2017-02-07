@@ -13,6 +13,7 @@ class IndexCollectionCellMonkeyMountainHeadLine: UICollectionViewCell {
 
     @IBOutlet weak var viewsBtn: UIButton!
     
+    @IBOutlet weak var thumbnailView: UIView!
     @IBOutlet weak var commentsBtn: UIButton!
     @IBOutlet weak var bgImageView: UIImageView!
     
@@ -30,9 +31,7 @@ class IndexCollectionCellMonkeyMountainHeadLine: UICollectionViewCell {
     var monkeyMountainHeadlinContent: Region.Content?{
         didSet{
             //圆角
-            thumbnailImg.layer.cornerRadius = 5
-            thumbnailImg.layer.masksToBounds = true
-
+            thumbnailView.borderWithRoundCorner()
             viewsBtn.changeButtonImageWithTintColor(image: #imageLiteral(resourceName: "icon_grey_play"))
             commentsBtn.changeButtonImageWithTintColor(image: #imageLiteral(resourceName: "icon_grey_barrage"))
             if let content = monkeyMountainHeadlinContent{

@@ -52,7 +52,26 @@ class IndexViewController: UIViewController {
      如果contentContent大于 实际的Content对象个数,则请求单个Region请求重新给Region列表中的 Region赋值
      */
     private func checkAndRequestForSingleRegion(){
-        //TODO
+        let len = self.datas.count
+        
+        for i in 0 ..< len{
+            let region = self.datas[i]
+            if needToRequestRegionById(region: region){
+                let observable:Observable<DataResponse<BaseRegion>> =  RxProvider<APIAcfun>.requestObject(target: APIAcfun.regions(id: region.id))
+                let _ = observable.subscribe(onNext: { (dataResponse) in
+                    if let data = dataResponse.result.value?.data{
+                        self.datas[i] = data
+                    }
+                }, onError: nil, onCompleted: nil, onDisposed: nil)
+            }
+        }
+        
+    }
+    /*
+     判断是否需要请求单独的Region
+     */
+    private func needToRequestRegionById(region: Region) -> Bool{
+        return  region.contentCount!>0 && (nil == region.children || region.children!.count<region.contentCount!)
     }
     
     //设置Index页的NavigationBar
@@ -188,6 +207,11 @@ extension IndexViewController: UICollectionViewDelegate,UICollectionViewDataSour
             
             cell = self.indexCollectionView.dequeueReusableCell(withReuseIdentifier: Constants.CellIdentifier.IndexCollectionCellBagiumsIdentifer, for: indexPath)
             
+        case Constants.IndexCellType.articles.rawValue:
+            cell = self.indexCollectionView.dequeueReusableCell(withReuseIdentifier: Constants.CellIdentifier.IndexCollectionViewCellArticleIndentifier, for: indexPath)
+            let articleCell = cell as! IndexCollectionViewCellArticle
+            articleCell.row = indexPath.row
+            articleCell.content = region.contents?[indexPath.row]
             
         default:
             cell = self.indexCollectionView.dequeueReusableCell(withReuseIdentifier: Constants.CellIdentifier.IndexCollectionViewCellArticleIndentifier, for: indexPath)

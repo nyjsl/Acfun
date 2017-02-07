@@ -10,6 +10,7 @@ import UIKit
 import YYWebImage
 class IndexCollectionCellMonkeyMountainHeadLineRight: UICollectionViewCell {
 
+    @IBOutlet weak var thumbnailView: UIView!
     @IBOutlet weak var animatedThumbnailImg: YYAnimatedImageView!
     @IBOutlet weak var commentsLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
@@ -21,8 +22,7 @@ class IndexCollectionCellMonkeyMountainHeadLineRight: UICollectionViewCell {
     var monkeyMountainHeadlinContent: Region.Content?{
         didSet{
             //圆角
-            thumbnailImg.layer.cornerRadius = 5
-            thumbnailImg.layer.masksToBounds = true
+            thumbnailView.borderWithRoundCorner()
             viewsBtn.changeButtonImageWithTintColor(image: #imageLiteral(resourceName: "icon_grey_play"))
             commentsBtn.changeButtonImageWithTintColor(image: #imageLiteral(resourceName: "icon_grey_barrage"))
             if let content = monkeyMountainHeadlinContent{
