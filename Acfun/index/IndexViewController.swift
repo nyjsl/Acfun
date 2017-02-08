@@ -209,6 +209,7 @@ extension IndexViewController: UICollectionViewDelegate,UICollectionViewDataSour
             
             let bangumiCell = cell as! IndexCollectionCellBagiums
             bangumiCell.content = region.contents?[indexPath.row]
+            bangumiCell.row = indexPath.row
             
         case Constants.IndexCellType.articles.rawValue:
             cell = self.indexCollectionView.dequeueReusableCell(withReuseIdentifier: Constants.CellIdentifier.IndexCollectionViewCellArticleIndentifier, for: indexPath)

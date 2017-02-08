@@ -71,6 +71,7 @@ class IndexPageHeader: UICollectionReusableView {
             let originX = Constants.SCREEN_FRAME.size.width.multiplied(by: CGFloat(integerLiteral: index))
             let frame = CGRect(x: originX, y:0 , width: Constants.SCREEN_FRAME.size.width, height: Constants.CollectionItemHeight.IndexPageScrollHeight)
             let imageView = UIImageView(frame: frame)
+            imageView.contentMode = .scaleAspectFill
             imageViewArray.append(imageView)
             pageScrollView.addSubview(imageView)
         }

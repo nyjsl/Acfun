@@ -8,15 +8,22 @@
 
 import UIKit
 import YYWebImage
-
+import SnapKit
 class IndexCollectionCellBagiums: UICollectionViewCell {
 
+   
     
+    @IBOutlet weak var followerBgView: UIView!
+    @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var trailingConstraint: NSLayoutConstraint!
   
     @IBOutlet weak var thumbnailImg: UIImageView!
     
     @IBOutlet weak var animatedThumbnailImg: YYAnimatedImageView!
     
+    @IBOutlet weak var followerNoLabel: UILabel!
+    @IBOutlet weak var topConstraint: NSLayoutConstraint!
     @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var descLabel: UILabel!
@@ -26,6 +33,28 @@ class IndexCollectionCellBagiums: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    var row:Int = 0 {
+        didSet{
+            if row % 3 == 0{
+                leadingConstraint.constant = 10
+                trailingConstraint.constant = 0
+            }else if row % 3 == 1{
+                leadingConstraint.constant = 0
+                trailingConstraint.constant = 0
+            }else if row % 3 == 2{
+                leadingConstraint.constant = 0
+                trailingConstraint.constant = 10
+            }
+            
+            if row>2{
+                topConstraint.constant = 0
+            }else{
+                topConstraint.constant = 5
+            }
+        }
+        
     }
     
     var content: (Region.Content)?{
@@ -47,9 +76,21 @@ class IndexCollectionCellBagiums: UICollectionViewCell {
                 
                 descLabel.attributedText = attrString
                 
-                
+                let flowerStr: NSString = "\(c.visit!.stows!)人追" as NSString
+                followerNoLabel.text = flowerStr as String
+                let _ = flowerStr.sizeWithFont(font:                 followerNoLabel.font, maxSize: CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude))
+                addBgImgToFollowerView()
+               
             }
         }
+    }
+    
+    private func addBgImgToFollowerView(){
+        let bgImage = #imageLiteral(resourceName: "barrage_bg")
+        let bgUIImageView = UIImageView(frame: followerBgView.bounds)
+        bgUIImageView.image = bgImage
+        bgUIImageView.autoresizingMask = .flexibleWidth
+        followerBgView.insertSubview(bgUIImageView, at: 0)
     }
     
     private func loadGifOrNormalImg(imgUrl: String){
