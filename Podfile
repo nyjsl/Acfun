@@ -7,4 +7,5 @@ target 'Acfun' do
     pod 'RxCocoa', '~> 3.0'
     pod 'Alamofire', '~> 4.0'
     pod 'AlamofireObjectMapper', '~> 4.0'
+    pod 'SnapKit', '~> 3.1.2'
 end
