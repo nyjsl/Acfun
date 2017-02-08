@@ -85,6 +85,7 @@ struct Region: Mappable{
         var id: Int?
         var image: String?
         var intro: String?
+        var latestBangumiVideo: LatestBangumiVideo?
         var owner: Owner?
         var regionId: Int?
         var releaseAt: String?
@@ -107,6 +108,7 @@ struct Region: Mappable{
             id <- map["id"]
             image <- map["image"]
             intro <- map["intro"]
+            latestBangumiVideo <- map["latestBangumiVideo"]
             owner <- map["owner"]
             regionId <- map["regionId"]
             releaseAt <- map["releaseAt"]
@@ -177,6 +179,26 @@ struct Region: Mappable{
             id <- map["id"]
             name <- map["name"]
             value <- map["value"]
+        }
+    }
+    
+    struct LatestBangumiVideo: Mappable {
+        var bangumiId: Int?
+        var sort: Int?
+        var title: String?
+        var updateTime: String?
+        var videoId: String?
+        
+        init?(map: Map) {
+            //DO NOTHING
+        }
+        
+        mutating func mapping(map: Map) {
+            bangumiId <- map["bangumiId"]
+            sort <- map["sort"]
+            title <- map["title"]
+            updateTime <- map["updateTime"]
+            videoId <- map["videoId"]
         }
     }
 }

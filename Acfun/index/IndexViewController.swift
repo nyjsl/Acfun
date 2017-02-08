@@ -207,6 +207,9 @@ extension IndexViewController: UICollectionViewDelegate,UICollectionViewDataSour
             
             cell = self.indexCollectionView.dequeueReusableCell(withReuseIdentifier: Constants.CellIdentifier.IndexCollectionCellBagiumsIdentifer, for: indexPath)
             
+            let bangumiCell = cell as! IndexCollectionCellBagiums
+            bangumiCell.content = region.contents?[indexPath.row]
+            
         case Constants.IndexCellType.articles.rawValue:
             cell = self.indexCollectionView.dequeueReusableCell(withReuseIdentifier: Constants.CellIdentifier.IndexCollectionViewCellArticleIndentifier, for: indexPath)
             let articleCell = cell as! IndexCollectionViewCellArticle
@@ -239,7 +242,7 @@ extension IndexViewController: UICollectionViewDelegate,UICollectionViewDataSour
         case Constants.IndexCellType.videos_banana_list.rawValue:
             return CGSize(width: Constants.SCREEN_FRAME.width, height: Constants.CollectionItemHeight.IndexCellBananaRank)
         case Constants.IndexCellType.bangumis.rawValue:
-            return CGSize(width: Constants.SCREEN_FRAME.width.advanced(by: -40).divided(by: 3), height: Constants.CollectionItemHeight.IndexCollectionCellBagiums)
+            return CGSize(width: Constants.SCREEN_FRAME.width.advanced(by: -20).divided(by: 3), height: Constants.CollectionItemHeight.IndexCollectionCellBagiums)
         default:
             return CGSize(width: Constants.SCREEN_FRAME.width, height: Constants.CollectionItemHeight.IndexCellBannerHeight)
         }
