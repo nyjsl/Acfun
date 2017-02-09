@@ -26,9 +26,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func initMainTabController() -> UITabBarController{
         let indexVC = IndexViewController(nibName: "IndexViewController", bundle: nil)
-        let channelVC = IndexViewController(nibName: "ChannelViewController", bundle: nil)
-        let watchVC = IndexViewController(nibName: "WatchViewController", bundle: nil)
-        let mineVC = IndexViewController(nibName: "MineViewController", bundle: nil)
+        let channelVC = ChannelViewController(nibName: "ChannelViewController", bundle: nil)
+        let watchVC = WatchViewController(nibName: "WatchViewController", bundle: nil)
+        let mineVC = MineViewController(nibName: "MineViewController", bundle: nil)
         
         indexVC.title = "首页"
         channelVC.title = "频道"
