@@ -8,4 +8,5 @@ target 'Acfun' do
     pod 'Alamofire', '~> 4.0'
     pod 'AlamofireObjectMapper', '~> 4.0'
     pod 'SnapKit', '~> 3.1.2'
+    pod 'MyLayout', '~> 1.3.2'
 end
