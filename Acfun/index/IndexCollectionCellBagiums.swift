@@ -76,7 +76,11 @@ class IndexCollectionCellBagiums: UICollectionViewCell {
                 
                 descLabel.attributedText = attrString
                 
-                let flowerStr: NSString = "\(c.visit!.stows!)人追" as NSString
+                var stowNo = 0
+                if let stoNo = c.visit?.stows{
+                    stowNo = stoNo
+                }
+                let flowerStr: NSString = "\(stowNo)人追" as NSString
                 followerNoLabel.text = flowerStr as String
                 let _ = flowerStr.sizeWithFont(font:                 followerNoLabel.font, maxSize: CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude))
                 addBgImgToFollowerView()

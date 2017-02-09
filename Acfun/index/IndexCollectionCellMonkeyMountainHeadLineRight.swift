@@ -26,9 +26,19 @@ class IndexCollectionCellMonkeyMountainHeadLineRight: UICollectionViewCell {
             viewsBtn.changeButtonImageWithTintColor(image: #imageLiteral(resourceName: "icon_grey_play"))
             commentsBtn.changeButtonImageWithTintColor(image: #imageLiteral(resourceName: "icon_grey_barrage"))
             if let content = monkeyMountainHeadlinContent{
-                titleLabel.text = content.title!
-                viewsLabel.text = "\(content.visit!.views!)"
-                commentsLabel.text = "\(content.visit!.comments!)"
+                if let title = content.title{
+                    titleLabel.text = title
+                }
+                if let views = content.visit?.views{
+                    viewsLabel.text = "\(views)"
+                }else{
+                    viewsLabel.text = "0"
+                }
+                if let comments = content.visit?.comments{
+                    commentsLabel.text = "\(comments)"
+                }else{
+                    commentsLabel.text = "0"
+                }
                 if let imgUrl = content.image{
                     loadGifOrNormalImg(imgUrl: imgUrl)
                 }

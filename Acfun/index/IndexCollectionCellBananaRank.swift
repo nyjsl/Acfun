@@ -44,8 +44,14 @@ class IndexCollectionCellBananaRank: UICollectionViewCell {
             loadGifOrNormalImg(imgUrl: imgUrl)
         }
         titleLabel.text = c.title!
-        bananaNumberLabel.text = "\(c.visit!.goldBanana!)"
-        upLabel.text = "UP: \(c.owner!.name!)"
+        if let goldBanana = c.visit?.goldBanana{
+            bananaNumberLabel.text = "\(goldBanana)"
+        }else{
+            bananaNumberLabel.text = "0"
+        }
+        if let upper = c.owner?.name{
+            upLabel.text = "UP: \(upper)"
+        }
     }
     
     private func loadGifOrNormalImg(imgUrl: String){
