@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2616DC1E1E4E1799004E6EC8 /* ChannelNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2616DC1D1E4E1799004E6EC8 /* ChannelNavBar.swift */; };
+		2616DC221E4E17E3004E6EC8 /* ChannelNavBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2616DC211E4E17E3004E6EC8 /* ChannelNavBar.xib */; };
 		263C2B241E1D1CFE00885B47 /* BaseDatasModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263C2B231E1D1CFE00885B47 /* BaseDatasModel.swift */; };
 		263C2B281E1D1FCB00885B47 /* BaseChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263C2B271E1D1FCB00885B47 /* BaseChannel.swift */; };
 		263D1C5E1E38FF7600EF4D1F /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263D1C4C1E38FF7600EF4D1F /* ChannelViewController.swift */; };
@@ -83,6 +85,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2616DC1D1E4E1799004E6EC8 /* ChannelNavBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelNavBar.swift; sourceTree = "<group>"; };
+		2616DC211E4E17E3004E6EC8 /* ChannelNavBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChannelNavBar.xib; sourceTree = "<group>"; };
 		263C2B231E1D1CFE00885B47 /* BaseDatasModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseDatasModel.swift; sourceTree = "<group>"; };
 		263C2B271E1D1FCB00885B47 /* BaseChannel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseChannel.swift; sourceTree = "<group>"; };
 		263D1C4C1E38FF7600EF4D1F /* ChannelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
@@ -209,6 +213,8 @@
 			children = (
 				263D1C4C1E38FF7600EF4D1F /* ChannelViewController.swift */,
 				263D1C4D1E38FF7600EF4D1F /* ChannelViewController.xib */,
+				2616DC1D1E4E1799004E6EC8 /* ChannelNavBar.swift */,
+				2616DC211E4E17E3004E6EC8 /* ChannelNavBar.xib */,
 			);
 			path = channel;
 			sourceTree = "<group>";
@@ -564,6 +570,7 @@
 				263D1C641E38FF7600EF4D1F /* IndexNavBar.xib in Resources */,
 				263D1C661E38FF7600EF4D1F /* IndexPageHeader.xib in Resources */,
 				26C948401E2CDCD40040AC57 /* MJRefresh.bundle in Resources */,
+				2616DC221E4E17E3004E6EC8 /* ChannelNavBar.xib in Resources */,
 				26E12E971E1A33E400F39F1C /* Main.storyboard in Resources */,
 				26E185251E30F738005A54F0 /* AcFunSymbol-Bold1.ttf in Resources */,
 				263D1C681E38FF7600EF4D1F /* IndexViewController.xib in Resources */,
@@ -670,6 +677,7 @@
 				26C9483B1E2CDCD40040AC57 /* MJRefreshBackNormalFooter.m in Sources */,
 				26C948321E2CDCD40040AC57 /* MJRefreshAutoFooter.m in Sources */,
 				26A912231E1BC535002F2F8D /* TargetType.swift in Sources */,
+				2616DC1E1E4E1799004E6EC8 /* ChannelNavBar.swift in Sources */,
 				263D1C621E38FF7600EF4D1F /* IndexDIYHeader.swift in Sources */,
 				26C948361E2CDCD40040AC57 /* MJRefreshHeader.m in Sources */,
 				26A912211E1BC4FD002F2F8D /* APIAcfun.swift in Sources */,

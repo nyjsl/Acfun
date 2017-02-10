@@ -7,13 +7,34 @@
 //
 
 import UIKit
-
+import RxSwift
 class ChannelViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavgitaionBar()
+    }
+    
+    private func setupNavgitaionBar(){
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        if let channelNavBar = ChannelNavBar.generate(){
+            self.navigationController?.view.addSubview(channelNavBar)
 
-        // Do any additional setup after loading the view.
+        }
+        
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .lightContent
+    }
+    
+    private func getChannels(){
+        let observable:Observable<DataResponse<BaseChannel>> = RxProvider<APIAcfun>.requestObject(target: .channels)
+        let _ = observable.subscribe(onNext: { (dataResponse) in
+            print(dataResponse.result.value?.message ?? "")
+            print("2\(Thread.current)")
+            
+        }, onError: nil ,onCompleted: nil, onDisposed: nil)        //test channels
     }
 
     override func didReceiveMemoryWarning() {

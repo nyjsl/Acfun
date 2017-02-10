@@ -15,12 +15,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         //test channels
-        let observable:Observable<DataResponse<BaseChannel>> = RxProvider<APIAcfun>.requestObject(target: .channels)
-        let _ = observable.subscribe(onNext: { (dataResponse) in
-            print(dataResponse.result.value?.message ?? "")
-            print("2\(Thread.current)")
-
-        }, onError: nil ,onCompleted: nil, onDisposed: nil)        //test channels
+       
     }
 
     override func didReceiveMemoryWarning() {
