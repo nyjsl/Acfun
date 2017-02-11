@@ -17,21 +17,68 @@
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ac_navigationbar" translatesAutoresizingMaskIntoConstraints="NO" id="7fS-HY-EoI">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AKg-SV-NU9">
+                    <rect key="frame" x="10" y="29" width="355" height="30"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="seo-lb-OON">
+                            <rect key="frame" x="107.5" y="0.0" width="140" height="30"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="输入关键词或AC号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j9Y-bL-VZA">
+                                    <rect key="frame" x="0.0" y="6.5" width="119" height="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_navi_graySearch_highlighted.png" translatesAutoresizingMaskIntoConstraints="NO" id="Z8C-JW-ACu">
+                                    <rect key="frame" x="124" y="7" width="16" height="16"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="16" id="W2o-Ct-H17"/>
+                                        <constraint firstAttribute="width" constant="16" id="jdj-9k-Yfq"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="Z8C-JW-ACu" secondAttribute="trailing" id="Jjy-rf-cQJ"/>
+                                <constraint firstItem="j9Y-bL-VZA" firstAttribute="leading" secondItem="seo-lb-OON" secondAttribute="leading" id="K6w-vH-abm"/>
+                                <constraint firstItem="Z8C-JW-ACu" firstAttribute="leading" secondItem="j9Y-bL-VZA" secondAttribute="trailing" constant="5" id="WGH-UU-bpx"/>
+                                <constraint firstItem="Z8C-JW-ACu" firstAttribute="centerY" secondItem="seo-lb-OON" secondAttribute="centerY" id="mMP-5p-NZK"/>
+                                <constraint firstItem="j9Y-bL-VZA" firstAttribute="centerY" secondItem="seo-lb-OON" secondAttribute="centerY" id="shY-Ym-azc"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="seo-lb-OON" firstAttribute="centerX" secondItem="AKg-SV-NU9" secondAttribute="centerX" id="US6-SX-Koq"/>
+                        <constraint firstAttribute="height" constant="30" id="gp5-CH-LLc"/>
+                        <constraint firstItem="seo-lb-OON" firstAttribute="top" secondItem="AKg-SV-NU9" secondAttribute="top" id="ulO-kq-z3r"/>
+                        <constraint firstAttribute="bottom" secondItem="seo-lb-OON" secondAttribute="bottom" id="xQ2-Ix-JSO"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="7fS-HY-EoI" secondAttribute="bottom" id="0qI-Wm-IrY"/>
                 <constraint firstAttribute="trailing" secondItem="7fS-HY-EoI" secondAttribute="trailing" id="Ns5-ST-VCv"/>
+                <constraint firstItem="AKg-SV-NU9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="d0O-Tr-2jq"/>
+                <constraint firstAttribute="bottom" secondItem="AKg-SV-NU9" secondAttribute="bottom" constant="5" id="fS6-yC-Akb"/>
                 <constraint firstItem="7fS-HY-EoI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="vqW-tH-xzl"/>
+                <constraint firstAttribute="trailing" secondItem="AKg-SV-NU9" secondAttribute="trailing" constant="10" id="wQb-Uj-z7B"/>
                 <constraint firstItem="7fS-HY-EoI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="wrt-SU-sIW"/>
             </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-137" y="119"/>
+            <connections>
+                <outlet property="searchView" destination="AKg-SV-NU9" id="evG-RE-dcE"/>
+            </connections>
+            <point key="canvasLocation" x="-137.5" y="119"/>
         </view>
     </objects>
     <resources>
         <image name="ac_navigationbar" width="375" height="64"/>
+        <image name="home_navi_graySearch_highlighted.png" width="16" height="16"/>
     </resources>
 </document>

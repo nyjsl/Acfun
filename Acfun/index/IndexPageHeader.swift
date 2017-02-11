@@ -89,7 +89,8 @@ class IndexPageHeader: UICollectionReusableView {
         }else{
             pageControl.currentPage = currentPage+1
         }
-        self.pageScrollView.setContentOffset(CGPoint(x: Constants.SCREEN_FRAME.size.width * CGFloat(integerLiteral: pageControl.currentPage+1), y: 0), animated: true)
+        let offSetX = Constants.SCREEN_FRAME.size.width.multiplied(by: CGFloat(pageControl.currentPage+1))
+        self.pageScrollView.setContentOffset(CGPoint(x:offSetX, y: 0), animated: true)
     }
     
     private func updatePageControl(){
@@ -97,7 +98,7 @@ class IndexPageHeader: UICollectionReusableView {
     }
     
     private func updateScrollView(){
-        let contentWidth = Constants.SCREEN_FRAME.size.width * CGFloat(integerLiteral: pageNumberForInfinite)
+        let contentWidth = Constants.SCREEN_FRAME.size.width.multiplied(by: CGFloat(pageNumberForInfinite))
         pageScrollView.contentSize = CGSize(width:contentWidth, height:Constants.CollectionItemHeight.IndexPageScrollHeight)
         updateScrollViewContents()
     }
@@ -105,7 +106,7 @@ class IndexPageHeader: UICollectionReusableView {
     private func updateScrollViewContents(){
         imageViewArray.removeAll()
         for index in 0..<pageNumberForInfinite{
-            let originX = Constants.SCREEN_FRAME.size.width.multiplied(by: CGFloat(integerLiteral: index))
+            let originX = Constants.SCREEN_FRAME.size.width.multiplied(by: CGFloat(index))
             let frame = CGRect(x: originX, y:0 , width: Constants.SCREEN_FRAME.size.width, height: Constants.CollectionItemHeight.IndexPageScrollHeight)
             let imageView = UIImageView(frame: frame)
             imageView.contentMode = .scaleAspectFill

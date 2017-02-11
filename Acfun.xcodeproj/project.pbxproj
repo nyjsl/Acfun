@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		2616DC1E1E4E1799004E6EC8 /* ChannelNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2616DC1D1E4E1799004E6EC8 /* ChannelNavBar.swift */; };
 		2616DC221E4E17E3004E6EC8 /* ChannelNavBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2616DC211E4E17E3004E6EC8 /* ChannelNavBar.xib */; };
+		262594DF1E4EE4A20003F484 /* ChannelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262594DD1E4EE4A20003F484 /* ChannelCollectionViewCell.swift */; };
+		262594E01E4EE4A20003F484 /* ChannelCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 262594DE1E4EE4A20003F484 /* ChannelCollectionViewCell.xib */; };
+		262594E31E4EEA280003F484 /* ChildChannelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262594E11E4EEA280003F484 /* ChildChannelCollectionViewCell.swift */; };
+		262594E41E4EEA280003F484 /* ChildChannelCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 262594E21E4EEA280003F484 /* ChildChannelCollectionViewCell.xib */; };
+		262594E71E4F22420003F484 /* ChannelCollectionFooterCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262594E51E4F22420003F484 /* ChannelCollectionFooterCollectionReusableView.swift */; };
+		262594E81E4F22420003F484 /* ChannelCollectionFooterCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 262594E61E4F22420003F484 /* ChannelCollectionFooterCollectionReusableView.xib */; };
 		263C2B241E1D1CFE00885B47 /* BaseDatasModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263C2B231E1D1CFE00885B47 /* BaseDatasModel.swift */; };
 		263C2B281E1D1FCB00885B47 /* BaseChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263C2B271E1D1FCB00885B47 /* BaseChannel.swift */; };
 		263D1C5E1E38FF7600EF4D1F /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263D1C4C1E38FF7600EF4D1F /* ChannelViewController.swift */; };
@@ -87,6 +93,12 @@
 /* Begin PBXFileReference section */
 		2616DC1D1E4E1799004E6EC8 /* ChannelNavBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelNavBar.swift; sourceTree = "<group>"; };
 		2616DC211E4E17E3004E6EC8 /* ChannelNavBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChannelNavBar.xib; sourceTree = "<group>"; };
+		262594DD1E4EE4A20003F484 /* ChannelCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelCollectionViewCell.swift; sourceTree = "<group>"; };
+		262594DE1E4EE4A20003F484 /* ChannelCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChannelCollectionViewCell.xib; sourceTree = "<group>"; };
+		262594E11E4EEA280003F484 /* ChildChannelCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildChannelCollectionViewCell.swift; sourceTree = "<group>"; };
+		262594E21E4EEA280003F484 /* ChildChannelCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChildChannelCollectionViewCell.xib; sourceTree = "<group>"; };
+		262594E51E4F22420003F484 /* ChannelCollectionFooterCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelCollectionFooterCollectionReusableView.swift; sourceTree = "<group>"; };
+		262594E61E4F22420003F484 /* ChannelCollectionFooterCollectionReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChannelCollectionFooterCollectionReusableView.xib; sourceTree = "<group>"; };
 		263C2B231E1D1CFE00885B47 /* BaseDatasModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseDatasModel.swift; sourceTree = "<group>"; };
 		263C2B271E1D1FCB00885B47 /* BaseChannel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseChannel.swift; sourceTree = "<group>"; };
 		263D1C4C1E38FF7600EF4D1F /* ChannelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
@@ -215,6 +227,12 @@
 				263D1C4D1E38FF7600EF4D1F /* ChannelViewController.xib */,
 				2616DC1D1E4E1799004E6EC8 /* ChannelNavBar.swift */,
 				2616DC211E4E17E3004E6EC8 /* ChannelNavBar.xib */,
+				262594DD1E4EE4A20003F484 /* ChannelCollectionViewCell.swift */,
+				262594DE1E4EE4A20003F484 /* ChannelCollectionViewCell.xib */,
+				262594E11E4EEA280003F484 /* ChildChannelCollectionViewCell.swift */,
+				262594E21E4EEA280003F484 /* ChildChannelCollectionViewCell.xib */,
+				262594E51E4F22420003F484 /* ChannelCollectionFooterCollectionReusableView.swift */,
+				262594E61E4F22420003F484 /* ChannelCollectionFooterCollectionReusableView.xib */,
 			);
 			path = channel;
 			sourceTree = "<group>";
@@ -576,11 +594,14 @@
 				263D1C681E38FF7600EF4D1F /* IndexViewController.xib in Resources */,
 				26AAC4CB1E44B82B008BF6A2 /* IndexCollectionCellMonkeyMountainHeadLine.xib in Resources */,
 				26DEC8D61E474D58003B493D /* IndexCollectionCellBananaRank.xib in Resources */,
+				262594E81E4F22420003F484 /* ChannelCollectionFooterCollectionReusableView.xib in Resources */,
+				262594E01E4EE4A20003F484 /* ChannelCollectionViewCell.xib in Resources */,
 				263D1C6C1E38FF7600EF4D1F /* WatchViewController.xib in Resources */,
 				26C6D5A71E39AB6C002F7314 /* IndexSectionHeader.xib in Resources */,
 				263D1C611E38FF7600EF4D1F /* IndexCollectionViewCellArticle.xib in Resources */,
 				263D1C5F1E38FF7600EF4D1F /* ChannelViewController.xib in Resources */,
 				263D1C6A1E38FF7600EF4D1F /* MineViewController.xib in Resources */,
+				262594E41E4EEA280003F484 /* ChildChannelCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -651,6 +672,7 @@
 				263D1C601E38FF7600EF4D1F /* IndexCollectionViewCellArticle.swift in Sources */,
 				26E12E941E1A33E400F39F1C /* ViewController.swift in Sources */,
 				26C9483A1E2CDCD40040AC57 /* MJRefreshBackGifFooter.m in Sources */,
+				262594DF1E4EE4A20003F484 /* ChannelCollectionViewCell.swift in Sources */,
 				26C948451E2CDCD40040AC57 /* UIView+MJExtension.m in Sources */,
 				26DEC8D51E474D58003B493D /* IndexCollectionCellBananaRank.swift in Sources */,
 				26C948331E2CDCD40040AC57 /* MJRefreshBackFooter.m in Sources */,
@@ -682,10 +704,12 @@
 				26C948361E2CDCD40040AC57 /* MJRefreshHeader.m in Sources */,
 				26A912211E1BC4FD002F2F8D /* APIAcfun.swift in Sources */,
 				263D1C6B1E38FF7600EF4D1F /* WatchViewController.swift in Sources */,
+				262594E71E4F22420003F484 /* ChannelCollectionFooterCollectionReusableView.swift in Sources */,
 				26C9483F1E2CDCD40040AC57 /* MJRefreshStateHeader.m in Sources */,
 				26C948431E2CDCD40040AC57 /* UIScrollView+MJExtension.m in Sources */,
 				26C9483C1E2CDCD40040AC57 /* MJRefreshBackStateFooter.m in Sources */,
 				26C948411E2CDCD40040AC57 /* MJRefreshConst.m in Sources */,
+				262594E31E4EEA280003F484 /* ChildChannelCollectionViewCell.swift in Sources */,
 				26EE76B61E483B6A00160BC0 /* IndexCollectionCellBagiums.swift in Sources */,
 				26AAC4C71E44B04D008BF6A2 /* BaseDataModel.swift in Sources */,
 				26E12E921E1A33E400F39F1C /* AppDelegate.swift in Sources */,

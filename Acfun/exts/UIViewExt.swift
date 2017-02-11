@@ -15,11 +15,9 @@ extension UIView{
         roundCorner(cornerRadius: cornerRadius)
         coloredBorder(borderWidth: borderWidth, borderColor: borderColor)
     }
-    
     func roundCorner(cornerRadius: CGFloat){
         self.layer.masksToBounds = true
         self.layer.cornerRadius = cornerRadius //圆角
-        
         
     }
     

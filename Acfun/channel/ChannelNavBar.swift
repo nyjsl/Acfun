@@ -11,6 +11,16 @@ import UIKit
 class ChannelNavBar: UIView {
 
    
+    @IBOutlet weak var searchView: UIView!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        searchView.roundCorner(cornerRadius: 5)
+        var frame = self.frame
+        frame.size.width = Constants.NAVIGATIONBAR_FRAME.size.width
+        self.frame = frame
+    }
+    
     class func generate() -> ChannelNavBar?{
         let result = Bundle.main.loadNibNamed("ChannelNavBar", owner: nil, options: nil)?.first as! ChannelNavBar?
         return result

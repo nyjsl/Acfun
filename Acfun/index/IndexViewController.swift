@@ -13,7 +13,7 @@ class IndexViewController: UIViewController {
 
     
     @IBOutlet weak var indexCollectionView: UICollectionView!
-    
+
     /*
      获取到的首页数据
      */
@@ -22,6 +22,8 @@ class IndexViewController: UIViewController {
             updateCollectionView()
         }
     }
+    
+    
     
     var diyHeader: IndexDIYHeader?
     

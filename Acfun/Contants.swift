@@ -35,6 +35,11 @@ struct Constants {
         static let IndexCollectionCellBananaRankIndentifier = "IndexCollectionCellBananaRank"
         
         static let IndexCollectionCellBagiumsIdentifer = "IndexCollectionCellBagiums"
+        
+        static let ChannelCollectionCellIndentifier = "ChannelCollectionViewCell"
+        
+        static let ChannelChildCollectionCellIndentifier = "ChildChannelCollectionViewCell"
+
     }
     
     struct HeaderIndentifier {
@@ -44,6 +49,7 @@ struct Constants {
     
     struct FooterIndentifer {
         static let IndexSectionMoreFooterIndentifier = "IndexSectionMoreFooter"
+        static let ChannelFooterIndentifier = "ChannelCollectionFooterCollectionReusableView"
     }
     
     struct CollectionItemHeight {
@@ -55,6 +61,11 @@ struct Constants {
         static let IndexSectionFooterHeight:CGFloat = 46
         static let IndexCellBananaRank:CGFloat = 100
         static let IndexCollectionCellBagiums:CGFloat = 220
+        //频道的子CollectionViewCell的高度，父CollectionViewCell通过子Cell的个数计算
+        static let ChannleChildellHeight: CGFloat = 35
+        static let ChannelChildTitleHeight: CGFloat = 40
+        static let ChannelFooterHeight: CGFloat = 50
+
     }
     
     //轮播图片
