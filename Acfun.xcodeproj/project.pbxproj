@@ -51,6 +51,8 @@
 		26B46D141E1BE024008F8EC8 /* RxProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B46D131E1BE024008F8EC8 /* RxProvider.swift */; };
 		26C6D5A61E39AB6C002F7314 /* IndexSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6D5A41E39AB6C002F7314 /* IndexSectionHeader.swift */; };
 		26C6D5A71E39AB6C002F7314 /* IndexSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26C6D5A51E39AB6C002F7314 /* IndexSectionHeader.xib */; };
+		26C7D54B1E502C3700EEFA50 /* WatchNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C7D54A1E502C3700EEFA50 /* WatchNavBar.swift */; };
+		26C7D54D1E502C4400EEFA50 /* WatchNavBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26C7D54C1E502C4400EEFA50 /* WatchNavBar.xib */; };
 		26C948321E2CDCD40040AC57 /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C948061E2CDCD40040AC57 /* MJRefreshAutoFooter.m */; };
 		26C948331E2CDCD40040AC57 /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C948081E2CDCD40040AC57 /* MJRefreshBackFooter.m */; };
 		26C948341E2CDCD40040AC57 /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C9480A1E2CDCD40040AC57 /* MJRefreshComponent.m */; };
@@ -135,6 +137,8 @@
 		26B46D131E1BE024008F8EC8 /* RxProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxProvider.swift; sourceTree = "<group>"; };
 		26C6D5A41E39AB6C002F7314 /* IndexSectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexSectionHeader.swift; sourceTree = "<group>"; };
 		26C6D5A51E39AB6C002F7314 /* IndexSectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IndexSectionHeader.xib; sourceTree = "<group>"; };
+		26C7D54A1E502C3700EEFA50 /* WatchNavBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchNavBar.swift; sourceTree = "<group>"; };
+		26C7D54C1E502C4400EEFA50 /* WatchNavBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WatchNavBar.xib; sourceTree = "<group>"; };
 		26C948051E2CDCD40040AC57 /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoFooter.h; sourceTree = "<group>"; };
 		26C948061E2CDCD40040AC57 /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshAutoFooter.m; sourceTree = "<group>"; };
 		26C948071E2CDCD40040AC57 /* MJRefreshBackFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackFooter.h; sourceTree = "<group>"; };
@@ -281,6 +285,8 @@
 			children = (
 				263D1C5C1E38FF7600EF4D1F /* WatchViewController.swift */,
 				263D1C5D1E38FF7600EF4D1F /* WatchViewController.xib */,
+				26C7D54A1E502C3700EEFA50 /* WatchNavBar.swift */,
+				26C7D54C1E502C4400EEFA50 /* WatchNavBar.xib */,
 			);
 			path = watch;
 			sourceTree = "<group>";
@@ -595,6 +601,7 @@
 				26AAC4CB1E44B82B008BF6A2 /* IndexCollectionCellMonkeyMountainHeadLine.xib in Resources */,
 				26DEC8D61E474D58003B493D /* IndexCollectionCellBananaRank.xib in Resources */,
 				262594E81E4F22420003F484 /* ChannelCollectionFooterCollectionReusableView.xib in Resources */,
+				26C7D54D1E502C4400EEFA50 /* WatchNavBar.xib in Resources */,
 				262594E01E4EE4A20003F484 /* ChannelCollectionViewCell.xib in Resources */,
 				263D1C6C1E38FF7600EF4D1F /* WatchViewController.xib in Resources */,
 				26C6D5A71E39AB6C002F7314 /* IndexSectionHeader.xib in Resources */,
@@ -690,6 +697,7 @@
 				263D1C691E38FF7600EF4D1F /* MineViewController.swift in Sources */,
 				26DE9AD01E34DF49006DB0B3 /* UIButtonExt.swift in Sources */,
 				26AAC4CA1E44B82B008BF6A2 /* IndexCollectionCellMonkeyMountainHeadLine.swift in Sources */,
+				26C7D54B1E502C3700EEFA50 /* WatchNavBar.swift in Sources */,
 				263D1C631E38FF7600EF4D1F /* IndexNavBar.swift in Sources */,
 				263D1C5E1E38FF7600EF4D1F /* ChannelViewController.swift in Sources */,
 				26CF5D891E4987BF004C0AAB /* UIViewExt.swift in Sources */,
