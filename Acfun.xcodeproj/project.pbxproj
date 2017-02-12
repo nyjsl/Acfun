@@ -53,6 +53,8 @@
 		26C6D5A71E39AB6C002F7314 /* IndexSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26C6D5A51E39AB6C002F7314 /* IndexSectionHeader.xib */; };
 		26C7D54B1E502C3700EEFA50 /* WatchNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C7D54A1E502C3700EEFA50 /* WatchNavBar.swift */; };
 		26C7D54D1E502C4400EEFA50 /* WatchNavBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26C7D54C1E502C4400EEFA50 /* WatchNavBar.xib */; };
+		26C7D54F1E504B9400EEFA50 /* BangumiLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C7D54E1E504B9400EEFA50 /* BangumiLoginView.swift */; };
+		26C7D5511E504BA500EEFA50 /* BangumiLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26C7D5501E504BA500EEFA50 /* BangumiLoginView.xib */; };
 		26C948321E2CDCD40040AC57 /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C948061E2CDCD40040AC57 /* MJRefreshAutoFooter.m */; };
 		26C948331E2CDCD40040AC57 /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C948081E2CDCD40040AC57 /* MJRefreshBackFooter.m */; };
 		26C948341E2CDCD40040AC57 /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C9480A1E2CDCD40040AC57 /* MJRefreshComponent.m */; };
@@ -75,6 +77,8 @@
 		26C948451E2CDCD40040AC57 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C948311E2CDCD40040AC57 /* UIView+MJExtension.m */; };
 		26CA5C9D1E4B54B400AC0AFE /* NSStringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CA5C9C1E4B54B400AC0AFE /* NSStringExt.swift */; };
 		26CF5D891E4987BF004C0AAB /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CF5D881E4987BF004C0AAB /* UIViewExt.swift */; };
+		26D7B1D51E5091CD006B89A7 /* UpperLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D7B1D41E5091CD006B89A7 /* UpperLoginView.swift */; };
+		26D7B1D71E5091DC006B89A7 /* UpperLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26D7B1D61E5091DC006B89A7 /* UpperLoginView.xib */; };
 		26DE9AD01E34DF49006DB0B3 /* UIButtonExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DE9ACF1E34DF49006DB0B3 /* UIButtonExt.swift */; };
 		26DEC8D51E474D58003B493D /* IndexCollectionCellBananaRank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DEC8D31E474D58003B493D /* IndexCollectionCellBananaRank.swift */; };
 		26DEC8D61E474D58003B493D /* IndexCollectionCellBananaRank.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26DEC8D41E474D58003B493D /* IndexCollectionCellBananaRank.xib */; };
@@ -139,6 +143,8 @@
 		26C6D5A51E39AB6C002F7314 /* IndexSectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IndexSectionHeader.xib; sourceTree = "<group>"; };
 		26C7D54A1E502C3700EEFA50 /* WatchNavBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchNavBar.swift; sourceTree = "<group>"; };
 		26C7D54C1E502C4400EEFA50 /* WatchNavBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WatchNavBar.xib; sourceTree = "<group>"; };
+		26C7D54E1E504B9400EEFA50 /* BangumiLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BangumiLoginView.swift; sourceTree = "<group>"; };
+		26C7D5501E504BA500EEFA50 /* BangumiLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BangumiLoginView.xib; sourceTree = "<group>"; };
 		26C948051E2CDCD40040AC57 /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoFooter.h; sourceTree = "<group>"; };
 		26C948061E2CDCD40040AC57 /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshAutoFooter.m; sourceTree = "<group>"; };
 		26C948071E2CDCD40040AC57 /* MJRefreshBackFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackFooter.h; sourceTree = "<group>"; };
@@ -182,6 +188,8 @@
 		26C948481E2CE1A20040AC57 /* Acfun-bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Acfun-bridging-header.h"; sourceTree = "<group>"; };
 		26CA5C9C1E4B54B400AC0AFE /* NSStringExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSStringExt.swift; sourceTree = "<group>"; };
 		26CF5D881E4987BF004C0AAB /* UIViewExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
+		26D7B1D41E5091CD006B89A7 /* UpperLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpperLoginView.swift; sourceTree = "<group>"; };
+		26D7B1D61E5091DC006B89A7 /* UpperLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpperLoginView.xib; sourceTree = "<group>"; };
 		26DE9ACF1E34DF49006DB0B3 /* UIButtonExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIButtonExt.swift; path = ../UIButtonExt.swift; sourceTree = "<group>"; };
 		26DEC8D31E474D58003B493D /* IndexCollectionCellBananaRank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexCollectionCellBananaRank.swift; sourceTree = "<group>"; };
 		26DEC8D41E474D58003B493D /* IndexCollectionCellBananaRank.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IndexCollectionCellBananaRank.xib; sourceTree = "<group>"; };
@@ -287,6 +295,10 @@
 				263D1C5D1E38FF7600EF4D1F /* WatchViewController.xib */,
 				26C7D54A1E502C3700EEFA50 /* WatchNavBar.swift */,
 				26C7D54C1E502C4400EEFA50 /* WatchNavBar.xib */,
+				26C7D54E1E504B9400EEFA50 /* BangumiLoginView.swift */,
+				26C7D5501E504BA500EEFA50 /* BangumiLoginView.xib */,
+				26D7B1D41E5091CD006B89A7 /* UpperLoginView.swift */,
+				26D7B1D61E5091DC006B89A7 /* UpperLoginView.xib */,
 			);
 			path = watch;
 			sourceTree = "<group>";
@@ -588,6 +600,7 @@
 				26E12E9C1E1A33E400F39F1C /* LaunchScreen.storyboard in Resources */,
 				2680D7BE1E460B8E00004D85 /* IndexSectionMoreFooter.xib in Resources */,
 				26EE76B71E483B6A00160BC0 /* IndexCollectionCellBagiums.xib in Resources */,
+				26D7B1D71E5091DC006B89A7 /* UpperLoginView.xib in Resources */,
 				26E12E991E1A33E400F39F1C /* Assets.xcassets in Resources */,
 				2680D7BA1E459A4400004D85 /* IndexCollectionCellMonkeyMountainHeadLineRight.xib in Resources */,
 				26E185261E30F738005A54F0 /* AcFunSymbol-Regular.ttf in Resources */,
@@ -604,6 +617,7 @@
 				26C7D54D1E502C4400EEFA50 /* WatchNavBar.xib in Resources */,
 				262594E01E4EE4A20003F484 /* ChannelCollectionViewCell.xib in Resources */,
 				263D1C6C1E38FF7600EF4D1F /* WatchViewController.xib in Resources */,
+				26C7D5511E504BA500EEFA50 /* BangumiLoginView.xib in Resources */,
 				26C6D5A71E39AB6C002F7314 /* IndexSectionHeader.xib in Resources */,
 				263D1C611E38FF7600EF4D1F /* IndexCollectionViewCellArticle.xib in Resources */,
 				263D1C5F1E38FF7600EF4D1F /* ChannelViewController.xib in Resources */,
@@ -685,6 +699,7 @@
 				26C948331E2CDCD40040AC57 /* MJRefreshBackFooter.m in Sources */,
 				26C948371E2CDCD40040AC57 /* MJRefreshAutoGifFooter.m in Sources */,
 				26C9483D1E2CDCD40040AC57 /* MJRefreshGifHeader.m in Sources */,
+				26C7D54F1E504B9400EEFA50 /* BangumiLoginView.swift in Sources */,
 				263C2B241E1D1CFE00885B47 /* BaseDatasModel.swift in Sources */,
 				26B4463F1E1A4BFC00347154 /* Mapper.md in Sources */,
 				26B446431E1A4CA700347154 /* Rx.md in Sources */,
@@ -723,6 +738,7 @@
 				26E12E921E1A33E400F39F1C /* AppDelegate.swift in Sources */,
 				26C6D5A61E39AB6C002F7314 /* IndexSectionHeader.swift in Sources */,
 				26EAF7791E1E85D600C09C85 /* BaseRegions.swift in Sources */,
+				26D7B1D51E5091CD006B89A7 /* UpperLoginView.swift in Sources */,
 				26B446411E1A4C6F00347154 /* Alamofire.md in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

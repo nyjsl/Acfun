@@ -99,6 +99,7 @@
             <connections>
                 <outlet property="bangumiBtn" destination="EXk-xN-4Ua" id="N3n-nh-wWG"/>
                 <outlet property="indicatorImg" destination="EWp-xx-Twj" id="pGG-Db-jfU"/>
+                <outlet property="searchImg" destination="RI6-cP-hzn" id="NGF-o2-fh9"/>
                 <outlet property="upperBtn" destination="dVT-M3-ixK" id="DLv-1p-8EU"/>
             </connections>
             <point key="canvasLocation" x="32.5" y="81"/>

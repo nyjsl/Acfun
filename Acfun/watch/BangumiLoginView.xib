@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BangumiLoginView" customModule="Acfun" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BangumiLoginView" customModule="Acfun" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fdn-2G-2Px">
+                    <rect key="frame" x="69.5" y="184.5" width="236" height="298"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ac_unlogin_bangumis" translatesAutoresizingMaskIntoConstraints="NO" id="g9F-KS-wVp">
+                            <rect key="frame" x="0.0" y="0.0" width="236" height="228"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="228" id="1DI-I9-waN"/>
+                                <constraint firstAttribute="width" constant="236" id="Z2T-mn-AkK"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ino-h2-EjZ">
+                            <rect key="frame" x="0.0" y="253" width="236" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="Egf-oc-EiC"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                            <state key="normal" title="登录吧，少年！" backgroundImage="bangumi_item_border_highlighted"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Ino-h2-EjZ" firstAttribute="centerX" secondItem="fdn-2G-2Px" secondAttribute="centerX" id="7TI-xQ-gc5"/>
+                        <constraint firstItem="g9F-KS-wVp" firstAttribute="top" secondItem="fdn-2G-2Px" secondAttribute="top" id="9sy-6M-S4b"/>
+                        <constraint firstItem="Ino-h2-EjZ" firstAttribute="top" secondItem="g9F-KS-wVp" secondAttribute="bottom" constant="25" id="Aar-a6-Ra2"/>
+                        <constraint firstItem="Ino-h2-EjZ" firstAttribute="width" secondItem="g9F-KS-wVp" secondAttribute="width" id="AyD-H9-sFP"/>
+                        <constraint firstItem="Ino-h2-EjZ" firstAttribute="leading" secondItem="fdn-2G-2Px" secondAttribute="leading" id="OJK-bx-1n6"/>
+                        <constraint firstAttribute="bottom" secondItem="Ino-h2-EjZ" secondAttribute="bottom" id="YBD-kH-Sqp"/>
+                        <constraint firstItem="g9F-KS-wVp" firstAttribute="centerX" secondItem="fdn-2G-2Px" secondAttribute="centerX" id="h59-Y7-zYu"/>
+                        <constraint firstAttribute="trailing" secondItem="Ino-h2-EjZ" secondAttribute="trailing" id="uih-J3-WNT"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fdn-2G-2Px" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="A9j-bG-hFb"/>
+                <constraint firstItem="fdn-2G-2Px" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="nLL-kH-r8K"/>
+            </constraints>
+            <point key="canvasLocation" x="32.5" y="66.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ac_unlogin_bangumis" width="235" height="227"/>
+        <image name="bangumi_item_border_highlighted" width="78" height="33"/>
+    </resources>
+</document>

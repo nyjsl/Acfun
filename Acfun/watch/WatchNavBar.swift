@@ -15,6 +15,11 @@ class WatchNavBar: UIView {
     
     @IBOutlet weak var upperBtn: UIButton!
     @IBOutlet weak var indicatorImg: UIImageView!
+    
+    
+    @IBOutlet weak var searchImg: UIImageView!
+    var delegate: WatchNavBarDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -22,19 +27,22 @@ class WatchNavBar: UIView {
         
         bangumiBtn.addTarget(self, action: #selector(swithcAction(sender:)), for: .touchUpInside)
         upperBtn.addTarget(self, action: #selector(swithcAction(sender:)), for: .touchUpInside)
-        
-           }
+        searchImg.isUserInteractionEnabled = true
+        searchImg.addGestureRecognizer(UITapGestureRecognizer(target:delegate, action: #selector(delegate?.searchAction)))
+   }
     
     
     @objc private func swithcAction(sender: UIButton){
         if sender === bangumiBtn{
             if !indicatorImg.transform.isIdentity{
                 transformBack()
+                delegate?.bangumiAction()
             }
         }else if sender === upperBtn{
             
             if indicatorImg.transform.isIdentity {
                 transfromTo()
+                delegate?.upperAction()
             }
 
         }
@@ -45,14 +53,14 @@ class WatchNavBar: UIView {
         let translationX = upperBtn.center.x - bangumiBtn.center.x
         let transFormUpper =  CGAffineTransform(translationX: translationX, y: 0)
 
-        UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut, animations: { [unowned self] in
+        UIView.animate(withDuration: 0.5, delay: 0, options: .curveLinear, animations: { [unowned self] in
             self.indicatorImg.transform = transFormUpper
         }, completion:nil)
 
     }
     
     private func transformBack(){
-       UIView.animate(withDuration: 1, delay: 0, options: .curveEaseInOut, animations: { [unowned self] in
+       UIView.animate(withDuration: 0.5, delay: 0, options: .curveLinear, animations: { [unowned self] in
              self.indicatorImg.transform = .identity
         }, completion:nil)
     }
@@ -69,4 +77,12 @@ class WatchNavBar: UIView {
     }
     */
 
+}
+
+
+@objc protocol WatchNavBarDelegate {
+    func bangumiAction()
+    func upperAction()
+    @objc func searchAction()
+    
 }

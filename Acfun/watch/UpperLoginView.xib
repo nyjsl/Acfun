@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UpperLoginView" customModule="Acfun" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="UpperLoginView" customModule="Acfun" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OMz-8j-OBY">
+                    <rect key="frame" x="86.5" y="172" width="202" height="323"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ac_unlogin_upuser" translatesAutoresizingMaskIntoConstraints="NO" id="a0B-43-ErP">
+                            <rect key="frame" x="0.0" y="0.0" width="202" height="253"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="202" id="Csm-9r-boP"/>
+                                <constraint firstAttribute="height" constant="253" id="Uky-xK-BR8"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4N-bU-g2q">
+                            <rect key="frame" x="0.0" y="278" width="202" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="09g-Yy-beG"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                            <state key="normal" title="登录吧，少年！" backgroundImage="bangumi_item_border_highlighted"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="a0B-43-ErP" firstAttribute="centerX" secondItem="OMz-8j-OBY" secondAttribute="centerX" id="DJp-Vi-D6L"/>
+                        <constraint firstItem="f4N-bU-g2q" firstAttribute="leading" secondItem="OMz-8j-OBY" secondAttribute="leading" id="EhP-0O-3gL"/>
+                        <constraint firstItem="f4N-bU-g2q" firstAttribute="width" secondItem="a0B-43-ErP" secondAttribute="width" id="FEJ-X2-OVg"/>
+                        <constraint firstAttribute="trailing" secondItem="f4N-bU-g2q" secondAttribute="trailing" id="bKB-za-9JZ"/>
+                        <constraint firstItem="f4N-bU-g2q" firstAttribute="top" secondItem="a0B-43-ErP" secondAttribute="bottom" constant="25" id="d7k-eR-U76"/>
+                        <constraint firstItem="a0B-43-ErP" firstAttribute="top" secondItem="OMz-8j-OBY" secondAttribute="top" id="jjS-hG-HjX"/>
+                        <constraint firstItem="f4N-bU-g2q" firstAttribute="centerX" secondItem="OMz-8j-OBY" secondAttribute="centerX" id="ka0-40-0iR"/>
+                        <constraint firstAttribute="bottom" secondItem="f4N-bU-g2q" secondAttribute="bottom" id="qRJ-45-OKg"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="OMz-8j-OBY" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="A8B-Uc-dBM"/>
+                <constraint firstItem="OMz-8j-OBY" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Xwh-pK-lkQ"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ac_unlogin_upuser" width="202" height="253"/>
+        <image name="bangumi_item_border_highlighted" width="78" height="33"/>
+    </resources>
+</document>
