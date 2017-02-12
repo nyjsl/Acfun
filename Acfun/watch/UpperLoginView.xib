@@ -56,6 +56,9 @@
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="loginBtn" destination="f4N-bU-g2q" id="txW-kf-Mwq"/>
+            </connections>
         </view>
     </objects>
     <resources>

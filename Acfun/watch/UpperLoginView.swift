@@ -10,6 +10,15 @@ import UIKit
 
 class UpperLoginView: UIView {
     
+    @IBOutlet weak var loginBtn: UIButton!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        loginBtn.setBackgroundImage(#imageLiteral(resourceName: "bangumi_item_border_highlighted"), for: .highlighted)
+        loginBtn.setTitleColor(UIColor.lightText, for: .highlighted)
+
+    }
+    
     class func generate() -> UpperLoginView?{
         
         return Bundle.main.loadNibNamed("UpperLoginView", owner: nil, options: nil)?.first as! UpperLoginView?
