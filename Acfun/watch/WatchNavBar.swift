@@ -18,7 +18,11 @@ class WatchNavBar: UIView {
     
     
     @IBOutlet weak var searchImg: UIImageView!
-    var delegate: WatchNavBarDelegate?
+    var delegate: WatchNavBarDelegate?{
+        didSet{
+             searchImg.addGestureRecognizer(UITapGestureRecognizer(target:delegate, action: #selector(delegate?.searchAction)))
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,7 +32,7 @@ class WatchNavBar: UIView {
         bangumiBtn.addTarget(self, action: #selector(swithcAction(sender:)), for: .touchUpInside)
         upperBtn.addTarget(self, action: #selector(swithcAction(sender:)), for: .touchUpInside)
         searchImg.isUserInteractionEnabled = true
-        searchImg.addGestureRecognizer(UITapGestureRecognizer(target:delegate, action: #selector(delegate?.searchAction)))
+       
    }
     
     
