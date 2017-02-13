@@ -77,6 +77,7 @@
 		26C948451E2CDCD40040AC57 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C948311E2CDCD40040AC57 /* UIView+MJExtension.m */; };
 		26CA5C9D1E4B54B400AC0AFE /* NSStringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CA5C9C1E4B54B400AC0AFE /* NSStringExt.swift */; };
 		26CF5D891E4987BF004C0AAB /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CF5D881E4987BF004C0AAB /* UIViewExt.swift */; };
+		26D1DABC1E51788900A994AA /* MineTableCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D1DABB1E51788900A994AA /* MineTableCellModel.swift */; };
 		26D7B1D51E5091CD006B89A7 /* UpperLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D7B1D41E5091CD006B89A7 /* UpperLoginView.swift */; };
 		26D7B1D71E5091DC006B89A7 /* UpperLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26D7B1D61E5091DC006B89A7 /* UpperLoginView.xib */; };
 		26DE9AD01E34DF49006DB0B3 /* UIButtonExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DE9ACF1E34DF49006DB0B3 /* UIButtonExt.swift */; };
@@ -188,6 +189,7 @@
 		26C948481E2CE1A20040AC57 /* Acfun-bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Acfun-bridging-header.h"; sourceTree = "<group>"; };
 		26CA5C9C1E4B54B400AC0AFE /* NSStringExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSStringExt.swift; sourceTree = "<group>"; };
 		26CF5D881E4987BF004C0AAB /* UIViewExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
+		26D1DABB1E51788900A994AA /* MineTableCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineTableCellModel.swift; sourceTree = "<group>"; };
 		26D7B1D41E5091CD006B89A7 /* UpperLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpperLoginView.swift; sourceTree = "<group>"; };
 		26D7B1D61E5091DC006B89A7 /* UpperLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpperLoginView.xib; sourceTree = "<group>"; };
 		26DE9ACF1E34DF49006DB0B3 /* UIButtonExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIButtonExt.swift; path = ../UIButtonExt.swift; sourceTree = "<group>"; };
@@ -284,6 +286,7 @@
 			children = (
 				263D1C591E38FF7600EF4D1F /* MineViewController.swift */,
 				263D1C5A1E38FF7600EF4D1F /* MineViewController.xib */,
+				26D1DABB1E51788900A994AA /* MineTableCellModel.swift */,
 			);
 			path = mine;
 			sourceTree = "<group>";
@@ -722,6 +725,7 @@
 				26C9483B1E2CDCD40040AC57 /* MJRefreshBackNormalFooter.m in Sources */,
 				26C948321E2CDCD40040AC57 /* MJRefreshAutoFooter.m in Sources */,
 				26A912231E1BC535002F2F8D /* TargetType.swift in Sources */,
+				26D1DABC1E51788900A994AA /* MineTableCellModel.swift in Sources */,
 				2616DC1E1E4E1799004E6EC8 /* ChannelNavBar.swift in Sources */,
 				263D1C621E38FF7600EF4D1F /* IndexDIYHeader.swift in Sources */,
 				26C948361E2CDCD40040AC57 /* MJRefreshHeader.m in Sources */,
