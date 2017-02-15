@@ -37,9 +37,12 @@ class MineViewController: UIViewController {
     private func setUpTableview(){
         self.mineTableView.delegate = self
         self.mineTableView.dataSource = self
-        self.mineTableView.backgroundView = nil
-        self.mineTableView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
-        self.mineTableView.isOpaque = false
+//        self.mineTableView.backgroundView = nil
+//        self.mineTableView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
+//        self.mineTableView.isOpaque = false
+        self.mineTableView.sectionFooterHeight = 0.0
+        
+        self.mineTableView.backgroundView = UIImageView(image: #imageLiteral(resourceName: "ac_mine_bg"))
         
     }
     
@@ -58,7 +61,28 @@ extension MineViewController: UITableViewDelegate,UITableViewDataSource{
             ,[MineTableCellModel(icon: #imageLiteral(resourceName: "my_game_center_color_gray"), title: "游戏中心", rightDesc:nil)]
         ]
     }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if section == 0 {
+            return Constants.SCREEN_FRAME.size.height.divided(by: 2)
+        }else{
+            return 4
+        }
+    }
     
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        if section == 0 {
+            let view = MineHeaderView.genereate()
+            var frame = view?.frame
+            frame?.size.height = Constants.SCREEN_FRAME.size.height.divided(by: 2)
+            view?.frame = frame!
+            return view
+        }else{
+            let view:UIView = UIView(frame: CGRect(x: 0, y: 0, width: self.mineTableView.bounds.size.width, height: 4.0))
+            view.backgroundColor = UIColor.groupTableViewBackground
+            return view
+        }
+        
+    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return cellDatas.count

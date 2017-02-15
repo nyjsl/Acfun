@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MineHeaderView" customModule="Acfun" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MineHeaderView" customModule="Acfun" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="krW-eq-FCe">
+                    <rect key="frame" x="141" y="613" width="92" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="注册新账号">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Z7-OV-W3J">
+                    <rect key="frame" x="20" y="543" width="335" height="50"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="5em-gf-HDE"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="登陆">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="未知的人类" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="naQ-75-Sq4">
+                    <rect key="frame" x="142" y="502" width="92" height="22"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ac_mine_default_avatar" translatesAutoresizingMaskIntoConstraints="NO" id="kV1-Zo-Hrs">
+                    <rect key="frame" x="148" y="402" width="80" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="Ah2-9d-8Uy"/>
+                        <constraint firstAttribute="width" constant="80" id="myO-aK-4sX"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="6Z7-OV-W3J" firstAttribute="top" secondItem="naQ-75-Sq4" secondAttribute="bottom" constant="19" id="7pM-Ja-riV"/>
+                <constraint firstItem="kV1-Zo-Hrs" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="EDk-L1-OKJ"/>
+                <constraint firstItem="6Z7-OV-W3J" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="JHX-0T-vHd"/>
+                <constraint firstItem="krW-eq-FCe" firstAttribute="top" secondItem="6Z7-OV-W3J" secondAttribute="bottom" constant="20" id="MpY-XV-KV5"/>
+                <constraint firstAttribute="bottom" secondItem="krW-eq-FCe" secondAttribute="bottom" constant="20" id="Pg7-AB-7xF"/>
+                <constraint firstItem="naQ-75-Sq4" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="eXB-Yc-yT0"/>
+                <constraint firstItem="krW-eq-FCe" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="fvc-iF-BmR"/>
+                <constraint firstAttribute="trailing" secondItem="6Z7-OV-W3J" secondAttribute="trailing" constant="20" id="gu3-ik-i7Z"/>
+                <constraint firstItem="naQ-75-Sq4" firstAttribute="top" secondItem="kV1-Zo-Hrs" secondAttribute="bottom" constant="20" id="yof-CE-erp"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="avaterLabel" destination="kV1-Zo-Hrs" id="UiC-QT-yC7"/>
+                <outlet property="loginBtn" destination="6Z7-OV-W3J" id="mlc-QB-o32"/>
+                <outlet property="registerBtn" destination="krW-eq-FCe" id="8b8-3q-xE0"/>
+                <outlet property="uNameLabel" destination="naQ-75-Sq4" id="b4g-rx-j69"/>
+            </connections>
+            <point key="canvasLocation" x="32.5" y="66.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ac_mine_default_avatar" width="80" height="80"/>
+    </resources>
+</document>

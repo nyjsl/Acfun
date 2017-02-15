@@ -20,24 +20,18 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ac_mine_bg" translatesAutoresizingMaskIntoConstraints="NO" id="axF-VM-Xkc">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                </imageView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="F6N-yk-U8O">
-                    <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <inset key="separatorInset" minX="35" minY="0.0" maxX="0.0" maxY="0.0"/>
                 </tableView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="axF-VM-Xkc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="14e-Tc-CBg"/>
-                <constraint firstItem="axF-VM-Xkc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="4lS-Zc-twH"/>
                 <constraint firstItem="F6N-yk-U8O" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5xx-7e-qyY"/>
                 <constraint firstAttribute="bottom" secondItem="F6N-yk-U8O" secondAttribute="bottom" id="OKf-ub-M2k"/>
-                <constraint firstAttribute="bottom" secondItem="axF-VM-Xkc" secondAttribute="bottom" id="bl6-5F-Xex"/>
-                <constraint firstItem="F6N-yk-U8O" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="44" id="drR-EO-5JA"/>
+                <constraint firstItem="F6N-yk-U8O" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="drR-EO-5JA"/>
                 <constraint firstAttribute="trailing" secondItem="F6N-yk-U8O" secondAttribute="trailing" id="s3p-6P-BP2"/>
-                <constraint firstAttribute="trailing" secondItem="axF-VM-Xkc" secondAttribute="trailing" id="wzE-uh-huX"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
@@ -45,7 +39,4 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>
-    <resources>
-        <image name="ac_mine_bg" width="750" height="1334"/>
-    </resources>
 </document>

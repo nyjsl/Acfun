@@ -49,6 +49,8 @@
 		26B446431E1A4CA700347154 /* Rx.md in Sources */ = {isa = PBXBuildFile; fileRef = 26B446421E1A4CA700347154 /* Rx.md */; };
 		26B446451E1A4CD400347154 /* YYWeb.md in Sources */ = {isa = PBXBuildFile; fileRef = 26B446441E1A4CD400347154 /* YYWeb.md */; };
 		26B46D141E1BE024008F8EC8 /* RxProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B46D131E1BE024008F8EC8 /* RxProvider.swift */; };
+		26B7B91C1E54875B0044DB6D /* MineHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B7B91B1E54875B0044DB6D /* MineHeaderView.swift */; };
+		26B7B91E1E5487670044DB6D /* MineHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26B7B91D1E5487670044DB6D /* MineHeaderView.xib */; };
 		26C6D5A61E39AB6C002F7314 /* IndexSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6D5A41E39AB6C002F7314 /* IndexSectionHeader.swift */; };
 		26C6D5A71E39AB6C002F7314 /* IndexSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26C6D5A51E39AB6C002F7314 /* IndexSectionHeader.xib */; };
 		26C7D54B1E502C3700EEFA50 /* WatchNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C7D54A1E502C3700EEFA50 /* WatchNavBar.swift */; };
@@ -140,6 +142,8 @@
 		26B446421E1A4CA700347154 /* Rx.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Rx.md; sourceTree = "<group>"; };
 		26B446441E1A4CD400347154 /* YYWeb.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = YYWeb.md; sourceTree = "<group>"; };
 		26B46D131E1BE024008F8EC8 /* RxProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxProvider.swift; sourceTree = "<group>"; };
+		26B7B91B1E54875B0044DB6D /* MineHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineHeaderView.swift; sourceTree = "<group>"; };
+		26B7B91D1E5487670044DB6D /* MineHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineHeaderView.xib; sourceTree = "<group>"; };
 		26C6D5A41E39AB6C002F7314 /* IndexSectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexSectionHeader.swift; sourceTree = "<group>"; };
 		26C6D5A51E39AB6C002F7314 /* IndexSectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IndexSectionHeader.xib; sourceTree = "<group>"; };
 		26C7D54A1E502C3700EEFA50 /* WatchNavBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchNavBar.swift; sourceTree = "<group>"; };
@@ -287,6 +291,8 @@
 				263D1C591E38FF7600EF4D1F /* MineViewController.swift */,
 				263D1C5A1E38FF7600EF4D1F /* MineViewController.xib */,
 				26D1DABB1E51788900A994AA /* MineTableCellModel.swift */,
+				26B7B91B1E54875B0044DB6D /* MineHeaderView.swift */,
+				26B7B91D1E5487670044DB6D /* MineHeaderView.xib */,
 			);
 			path = mine;
 			sourceTree = "<group>";
@@ -623,6 +629,7 @@
 				26C7D5511E504BA500EEFA50 /* BangumiLoginView.xib in Resources */,
 				26C6D5A71E39AB6C002F7314 /* IndexSectionHeader.xib in Resources */,
 				263D1C611E38FF7600EF4D1F /* IndexCollectionViewCellArticle.xib in Resources */,
+				26B7B91E1E5487670044DB6D /* MineHeaderView.xib in Resources */,
 				263D1C5F1E38FF7600EF4D1F /* ChannelViewController.xib in Resources */,
 				263D1C6A1E38FF7600EF4D1F /* MineViewController.xib in Resources */,
 				262594E41E4EEA280003F484 /* ChildChannelCollectionViewCell.xib in Resources */,
@@ -743,6 +750,7 @@
 				26C6D5A61E39AB6C002F7314 /* IndexSectionHeader.swift in Sources */,
 				26EAF7791E1E85D600C09C85 /* BaseRegions.swift in Sources */,
 				26D7B1D51E5091CD006B89A7 /* UpperLoginView.swift in Sources */,
+				26B7B91C1E54875B0044DB6D /* MineHeaderView.swift in Sources */,
 				26B446411E1A4C6F00347154 /* Alamofire.md in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
