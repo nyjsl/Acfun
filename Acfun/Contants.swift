@@ -23,6 +23,7 @@ struct Constants {
     
     static var NAVIGATIONBAR_FRAME:CGRect!  //(0.0, 0.0, 414.0, 44.0)
     
+    static var TAB_BAR_FRAM: CGRect! //(0.0, 687.0, 414.0, 49.0)
     
     struct CellIdentifier {
         static let IndexCollectionViewCellArticleIndentifier = "IndexCollectionViewCellArticle"

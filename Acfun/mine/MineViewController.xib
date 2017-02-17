@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MineViewController" customModule="Acfun" customModuleProvider="target">
             <connections>
+                <outlet property="bgView" destination="w4I-o6-NdX" id="Ynk-cW-JWo"/>
+                <outlet property="bgViewHeightConstraint" destination="qQR-zb-IDZ" id="IvC-A1-00J"/>
                 <outlet property="mineTableView" destination="F6N-yk-U8O" id="oyC-FO-s5s"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -25,11 +27,21 @@
                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     <inset key="separatorInset" minX="35" minY="0.0" maxX="0.0" maxY="0.0"/>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w4I-o6-NdX">
+                    <rect key="frame" x="0.0" y="618" width="375" height="0.0"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" id="qQR-zb-IDZ"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="F6N-yk-U8O" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5xx-7e-qyY"/>
+                <constraint firstAttribute="bottom" secondItem="w4I-o6-NdX" secondAttribute="bottom" constant="49" id="71C-ul-q4Y"/>
+                <constraint firstAttribute="trailing" secondItem="w4I-o6-NdX" secondAttribute="trailing" id="LYA-2C-V9M"/>
                 <constraint firstAttribute="bottom" secondItem="F6N-yk-U8O" secondAttribute="bottom" id="OKf-ub-M2k"/>
+                <constraint firstItem="w4I-o6-NdX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Pse-Hn-chk"/>
                 <constraint firstItem="F6N-yk-U8O" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="drR-EO-5JA"/>
                 <constraint firstAttribute="trailing" secondItem="F6N-yk-U8O" secondAttribute="trailing" id="s3p-6P-BP2"/>
             </constraints>

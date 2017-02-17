@@ -246,8 +246,19 @@ extension IndexViewController: UICollectionViewDelegate,UICollectionViewDataSour
             return CGSize(width: Constants.SCREEN_FRAME.width, height: Constants.CollectionItemHeight.IndexCellBananaRank)
         case Constants.IndexCellType.bangumis.rawValue:
             return CGSize(width: Constants.SCREEN_FRAME.width.advanced(by: -20).divided(by: 3), height: Constants.CollectionItemHeight.IndexCollectionCellBagiums)
+        case Constants.IndexCellType.articles.rawValue:
+            
+            if let content = region.contents?[indexPath.row]{
+                let string = content.title! as NSString
+                let font = UIFont.systemFont(ofSize: 15)
+                let maxSize = CGSize(width: Constants.SCREEN_FRAME.size.width - 65, height: CGFloat.greatestFiniteMagnitude)
+                let articleHeight = 68+string.sizeWithFont(font:font, maxSize:maxSize).height
+                return CGSize(width: Constants.SCREEN_FRAME.width, height: articleHeight)
+
+            }
+            return CGSize(width: Constants.SCREEN_FRAME.size.width, height: Constants.CollectionItemHeight.IndexCellArticleHeight)
         default:
-            return CGSize(width: Constants.SCREEN_FRAME.width, height: Constants.CollectionItemHeight.IndexCellBannerHeight)
+            return CGSize(width: Constants.SCREEN_FRAME.size.width, height: Constants.CollectionItemHeight.IndexCellArticleHeight)
         }
     }
     

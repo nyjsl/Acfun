@@ -56,8 +56,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let mainTabBar = UITabBarController()
         
         mainTabBar.tabBar.tintColor = Constants.PRIMARY_COLOR
-        
         mainTabBar.viewControllers = [indexNavVC,channeNavlVc,watchNavVC,mineNavVC]
+        
+        Constants.TAB_BAR_FRAM = mainTabBar.tabBar.frame
+        print(Constants.TAB_BAR_FRAM)
         return mainTabBar
     }
     

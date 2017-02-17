@@ -61,7 +61,7 @@
                                 <rect key="frame" x="55" y="52" width="300" height="18"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UP:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bfm-tU-VcN">
-                                        <rect key="frame" x="0.0" y="0.0" width="150.5" height="18"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -124,7 +124,7 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6I0-VS-doI">
-                        <rect key="frame" x="10" y="0.0" width="365" height="0.5"/>
+                        <rect key="frame" x="10" y="0.0" width="365" height="1"/>
                         <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="0.25" id="Pz5-qI-MO1"/>

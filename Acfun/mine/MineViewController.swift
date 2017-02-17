@@ -40,15 +40,44 @@ class MineViewController: UIViewController {
 //        self.mineTableView.backgroundView = nil
 //        self.mineTableView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
 //        self.mineTableView.isOpaque = false
-        self.mineTableView.sectionFooterHeight = 0.0
         
         self.mineTableView.backgroundView = UIImageView(image: #imageLiteral(resourceName: "ac_mine_bg"))
-        
+        self.mineTableView.sectionFooterHeight = 0.0
+        self.mineTableView.showsVerticalScrollIndicator = false
+        self.mineTableView.showsHorizontalScrollIndicator = false
+        contentOffSet = self.mineTableView.contentOffset
     }
+    
+    var contentOffSet:CGPoint?
+    
+    @IBOutlet weak var bgViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var bgView: UIView!
+    
+    var cellHeight:CGFloat = 0.0{
+        didSet{
+            if oldValue != cellHeight{
+                self.mineTableView.reloadData()
+                contentOffSet = self.mineTableView.contentOffset
+ 
+            }
+        }
+    }
+    
     
 }
 
 extension MineViewController: UITableViewDelegate,UITableViewDataSource{
+    
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+       
+        if contentOffSet?.y == -20{
+            let offSet = scrollView.contentOffset.y - (contentOffSet?.y)!
+            bgViewHeightConstraint.constant = offSet
+            
+        }
+        
+    }
     
     
     var cellDatas:[[MineTableCellModel]] {
@@ -63,9 +92,29 @@ extension MineViewController: UITableViewDelegate,UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if section == 0 {
-            return Constants.SCREEN_FRAME.size.height.divided(by: 2)
+            if cellHeight != 0 {
+                var tableCellsHeight:CGFloat = 0.0
+                for i in 0 ..< cellDatas.count{
+                    tableCellsHeight += 4
+                    for _ in 0 ..< cellDatas[i].count{
+                        tableCellsHeight += cellHeight
+                    }
+                }
+                return Constants.SCREEN_FRAME.size.height.advanced(by:  -tableCellsHeight).advanced(by: -Constants.TAB_BAR_FRAM.size.height-Constants.STATUSBAR_FRAME.size.height)
+            }else{
+                return Constants.SCREEN_FRAME.size.height.divided(by: 2)
+
+            }
         }else{
             return 4
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        if section == cellDatas.count - 1{
+            return 4
+        }else{
+            return 0
         }
     }
     
@@ -82,6 +131,15 @@ extension MineViewController: UITableViewDelegate,UITableViewDataSource{
             return view
         }
         
+    }
+    
+   
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let view:UIView = UIView(frame: CGRect(x: 0, y: 0, width: self.mineTableView.bounds.size.width, height: 4.0))
+        view.backgroundColor = UIColor.groupTableViewBackground
+        
+        return view
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -118,6 +176,7 @@ extension MineViewController: UITableViewDelegate,UITableViewDataSource{
         }
         cell.textLabel?.text = model.title
         cell.imageView?.image = model.icon
+        cellHeight = cell.frame.size.height
         return cell
     }
 }
