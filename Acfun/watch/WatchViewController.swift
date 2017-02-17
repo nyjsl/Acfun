@@ -31,7 +31,10 @@ class WatchViewController: UIViewController {
     }
     
     fileprivate func setUpConetntView(_ viewToShow:UIView){
+        viewToShow.frame = CGRect(x: 0, y: 0, width: contentView.bounds.size.width, height:contentView.bounds.size.height-Constants.TAB_BAR_FRAM.size.height )
         contentView.insertSubview(viewToShow, at: 0)
+
+       
     }
     
     private func setNavBar(){

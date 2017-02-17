@@ -52,6 +52,10 @@
                 <constraint firstItem="fdn-2G-2Px" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="A9j-bG-hFb"/>
                 <constraint firstItem="fdn-2G-2Px" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="nLL-kH-r8K"/>
             </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="loginBtn" destination="Ino-h2-EjZ" id="5Do-g7-P7I"/>
             </connections>
